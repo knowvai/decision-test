@@ -1,0 +1,391 @@
+{
+  "inference_calls": 0,
+  "human_reviewers": 0,
+  "review_counts": {
+    "agrees": 5,
+    "disagrees": 16,
+    "ambiguous": 3
+  },
+  "cases": [
+    {
+      "review_id": "R01",
+      "case_id": "t2q:6784",
+      "fragment_id": "t2p:582207",
+      "input_sha256": "2f71c1ec91533f5ab9ef151b958ad7a9390dcc5273a21f7ebdb4282c1529184e",
+      "stratum": "tp",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "Specific brand, per-area prices and scope support a partial price answer, although no total project cost is given.",
+      "relation_to_original_label": "agrees"
+    },
+    {
+      "review_id": "R02",
+      "case_id": "t2q:12124",
+      "fragment_id": "t2p:427049",
+      "input_sha256": "5cbcd42f31cf523db97eb6254d53747ba7c6671d0739a628e69effb6cd449dfc",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "The venue address is not tied to the requested city or landmark; category overlap alone cannot establish the requested location.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R03",
+      "case_id": "t2q:11749",
+      "fragment_id": "t2p:309641",
+      "input_sha256": "3117703943f5e43960b7c4b5a452198cf89d050dce044a095c298944e9becde5",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "Material and jewelry taxonomy does not identify the requested riddle answer.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R04",
+      "case_id": "t2q:22628",
+      "fragment_id": "t2p:635940",
+      "input_sha256": "61826de1e100fe35de6f129fdff149dd110674ee90d1a2f08ac46bb9453f2fa8",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "yes",
+      "reason": "Names and descriptions of local dishes provide partial list content, without establishing an authoritative top-ten ordering.",
+      "relation_to_original_label": "agrees"
+    },
+    {
+      "review_id": "R05",
+      "case_id": "t2q:19617",
+      "fragment_id": "t2p:543628",
+      "input_sha256": "743120f2624df9e79a9e3c9f7e7531bd4228c18ec293dfe874667a247ccdfa4b",
+      "stratum": "tn",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "An author biography does not connect the quoted line to a poem title.",
+      "relation_to_original_label": "agrees"
+    },
+    {
+      "review_id": "R06",
+      "case_id": "t2q:17412",
+      "fragment_id": "t2p:204599",
+      "input_sha256": "5a36dbd20c0d35b63a3e5416d4ac2dcce2d134213792776465603f6ab1220403",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "A title and consultation teaser promise an answer but contain no custody rule or applicable condition.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R07",
+      "case_id": "t2q:16892",
+      "fragment_id": "t2p:537664",
+      "input_sha256": "c920a47d03074044e8a183c08c66c77bc8ef07020d4ea37463b805fca7c809b6",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "General symptom discussion does not establish suitability of the particular condiment asked about.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R08",
+      "case_id": "t2q:15988",
+      "fragment_id": "t2p:498429",
+      "input_sha256": "0a03065a18bdcf8bd284e6b848a2d5af57865b05b823ff2aaa620229c1795af1",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "Concrete interviewer techniques answer a plausible interpretation of a broad interview-improvement query; candidate/interviewer intent is underspecified.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R09",
+      "case_id": "t2q:6364",
+      "fragment_id": "t2p:468992",
+      "input_sha256": "879aa388d9056e8dc3d437864946d9a2208afe3071c81d3c8186bffd39e19852",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "ambiguous",
+      "reason": "A terse metaphor-like query and corrupted language wording leave the intended information need uncertain.",
+      "relation_to_original_label": "ambiguous"
+    },
+    {
+      "review_id": "R10",
+      "case_id": "t2q:10122",
+      "fragment_id": "t2p:586372",
+      "input_sha256": "ea8fea2aa77a012d75d3c49d2354ffe4d2a2cb8526486aad7091db0f0206c286",
+      "stratum": "tp",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "Explicit examination and observation suggestions address the requested assessment. Medical accuracy is not verified by this evidence judgment.",
+      "relation_to_original_label": "agrees"
+    },
+    {
+      "review_id": "R11",
+      "case_id": "t2q:22024",
+      "fragment_id": "t2p:127258",
+      "input_sha256": "03209fbf6ad48cb40f4e4d76b871703744bb30f93b16e572ebc44e20da634768",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "Concrete equipment attribute recommendations for the named game class provide partial selection evidence.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R12",
+      "case_id": "t2q:18354",
+      "fragment_id": "t2p:334063",
+      "input_sha256": "f01fd810029845b452fad0956bd923be0214c98418d0fe2db3de112834fcadff",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "ambiguous",
+      "reason": "The passage explicitly labels the proposed changes as speculation. It may support a caution, but not factual evaluation of a completed update.",
+      "relation_to_original_label": "ambiguous"
+    },
+    {
+      "review_id": "R13",
+      "case_id": "t2q:22628",
+      "fragment_id": "t2p:635942",
+      "input_sha256": "31cd215aecf91a6f569d56dede643259dc5bb9542749c963278766b8a23a2a85",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "Numbered local food entries directly supply part of the requested list.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R14",
+      "case_id": "t2q:8341",
+      "fragment_id": "t2p:447987",
+      "input_sha256": "d85f496f0bdba6fecfe59e15779588556cff1b296e813172f1273567def0e982",
+      "stratum": "fp",
+      "grade": 1,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "An explicit explanation and source attribution answer the phrase query; the correctness of the translation is not certified.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R15",
+      "case_id": "t2q:7548",
+      "fragment_id": "t2p:230085",
+      "input_sha256": "7be7a443cacdd426d9a2db891a33230b1161575272a5d523f2a220f581dfd3b0",
+      "stratum": "disagree",
+      "grade": 1,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "A user problem report about an unspecified app and flashed router supplies no resolution and does not identify the requested router-management app.",
+      "relation_to_original_label": "agrees"
+    },
+    {
+      "review_id": "R16",
+      "case_id": "t2q:7865",
+      "fragment_id": "t2p:414821",
+      "input_sha256": "2fe8d7fc9415768831ddfa96ad870ee9a1c68ab2ca9ed09e357230c6fd1f0ed3",
+      "stratum": "disagree",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": false
+      },
+      "judgment": "yes",
+      "reason": "A matching literary title and synopsis satisfy a plausible navigational interpretation of the terse query.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R17",
+      "case_id": "t2q:19991",
+      "fragment_id": "t2p:450136",
+      "input_sha256": "36d6b5aa5bc5f466d451192d3858ce11d7711246df240b2e05b8c677696f89ee",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "Description of much earlier institutions contains no explicit connection to the requested dynasty; a historical bridge would require outside knowledge.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R18",
+      "case_id": "t2q:19617",
+      "fragment_id": "t2p:33503",
+      "input_sha256": "fb9fd59846756253154f5fd7124c9ca0fdd72ee862fee78146dca86acb8cbc49",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "The passage explicitly pairs the requested quotation with the work title.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R19",
+      "case_id": "t2q:24061",
+      "fragment_id": "t2p:552227",
+      "input_sha256": "768f1ce3b911bd8f03623e44f175e03ed6e29d2064a7031e4bf2d3fe6bacb5b0",
+      "stratum": "disagree",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": false
+      },
+      "judgment": "yes",
+      "reason": "Specific conditional assessment and care-seeking information partially addresses what to do. Medical accuracy is not established.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R20",
+      "case_id": "t2q:15988",
+      "fragment_id": "t2p:617361",
+      "input_sha256": "b7341f35892a718d89ce2bc7f14f6e2c0f920ceb92a41e3b1b4e378a1468cd9f",
+      "stratum": "disagree",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": false
+      },
+      "judgment": "yes",
+      "reason": "Concrete interview communication techniques address improving interview performance.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R21",
+      "case_id": "t2q:16311",
+      "fragment_id": "t2p:482046",
+      "input_sha256": "e20111b2bc2668028695e96c879ac47b2d65799aeac2b0f7fac25cab14447633",
+      "stratum": "fn",
+      "grade": 2,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "no",
+      "reason": "Pet naming advice does not identify the species behind a vernacular name.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R22",
+      "case_id": "t2q:12605",
+      "fragment_id": "t2p:65934",
+      "input_sha256": "44659378de67a55e0963a50f5e6b63fab0d0789d3b46e5be3202af067a604285",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "yes",
+      "reason": "Concrete cache lookup order, disk-directory choices and version differences provide partial caching evidence.",
+      "relation_to_original_label": "disagrees"
+    },
+    {
+      "review_id": "R23",
+      "case_id": "t2q:22628",
+      "fragment_id": "t2p:699217",
+      "input_sha256": "5e2840e543260137ca13792709faecfc27cf80711000c86368c96dbc3b30ba6d",
+      "stratum": "fp",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": true,
+        "d3-flash": true
+      },
+      "judgment": "ambiguous",
+      "reason": "A restaurant ranking may or may not satisfy a dish-ranking query; the intended meaning of the broad food-list request is underspecified.",
+      "relation_to_original_label": "ambiguous"
+    },
+    {
+      "review_id": "R24",
+      "case_id": "t2q:7296",
+      "fragment_id": "t2p:130731",
+      "input_sha256": "b1d63d8d297427ef5f0fec7b74d05a0fd1acf9527a3e0c7bac55f731ab07c8c2",
+      "stratum": "tn",
+      "grade": 0,
+      "predictions": {
+        "d3-mini": false,
+        "d3-flash": false
+      },
+      "judgment": "yes",
+      "reason": "The later installation constraints provide partial evidence. Unmarked true/false exam statements elsewhere must not be treated as verified safety advice.",
+      "relation_to_original_label": "disagrees"
+    }
+  ],
+  "prompt_comparisons": 1286,
+  "prompt_matches": 1286,
+  "prompt_test_limit": "Text rendering only, not token IDs, weights, attention masks or GPU outputs.",
+  "ranking_metric_unit_cases": 4,
+  "source_sha256": {
+    "/home/researcher/gitrepo/decision-test/docs/research/2026-10-19-d3-evidence-blind-review.json": "1500f66f8b26b0bf8c40440f8d526dd1191c4a69320bb41fb3b15ae0a9615a4e",
+    "/private/tmp/d3-evidence-diagnosis-20261019/statistics.json": "1cf6fbe3fff6b316ba6fb1aefd610687b8fcad04db73bb7698f2ecf7b0745778",
+    "/private/tmp/d3-evidence-diagnosis-20261019/key.jsonl": "f8a25cda57a0899f07ff9567ad660bccf289d0619f9a0d2e30549cfc90d86b9c",
+    "/private/tmp/answer-evidence-20261018/vllm_srun/families/decision3/prompt.py": "2b9aaa512de14491f0dfce3b9aa894d87b80fdbc42e2c0377654c866a9a6ec26",
+    "/private/tmp/d3-deployment-research-20261019/d3_format.py": "187a0f359f6f89a844e723377769556f78133b118851e702e4b0fe5123ccb0f1",
+    "/private/tmp/d3-deployment-research-20261019/d3_format_current.py": "3badfbc70561bb3f5b8ec16a11d2c455b96ddb32caace0a8a54ca102eae1f3fa",
+    "/private/tmp/d3-deployment-research-20261019/chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+    "/home/researcher/gitrepo/decision-test/docs/research/2026-10-19-d3-review-verification.py": "c34399f7e9713692b3c390cff176742dbd567fc329af5b86ef5db25a1cfc3e15"
+  },
+  "limitations": [
+    "Error-enriched sample; cannot estimate population label-error rate.",
+    "Agent review is not independent human adjudication.",
+    "No GPU or official-reference numeric parity test in this diagnosis.",
+    "No threshold selection or old score replacement."
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "scope": "Reranker-only complete engineering-pool acceptance and offline input-length audit; not formal passage quality or full four-arm readiness",
+  "date": "2026-10-17",
+  "gpu_memory_utilization": 0.8,
+  "changed_deployment": false,
+  "formal_inference_calls": 0,
+  "validation_inference_calls": 0,
+  "length_audit": {
+    "artifact": "input-lengths-001.json",
+    "sha256": "ffefc66c66216b1da533bce3342f6e5e46a1dd93f907e2caf08c483aacbb24b2",
+    "capacity_dataset_protocol_sha256": "cccfd632a39605a01db2c2f9aa55804937376c698564fa8c59b8ea0a71e4ef53",
+    "method": "CPU-only HF tokenizer from deployed pinned model, deployed native scoring template with query/document roles, render then encode with add_special_tokens=True and truncation=False; no labels used",
+    "context_limit": 8192,
+    "model_max_position_embeddings": 40960,
+    "model_rope_scaling": null,
+    "groups": {
+      "engineering": {
+        "input_sha256": "40cf9e1ac7fb0f5961f41d21f2b322d3bc33e326c22360804109fadf18342e97",
+        "pools": 12,
+        "pairs": 226,
+        "max_tokens": 7374,
+        "over_service_context": 0
+      },
+      "validation": {
+        "input_sha256": "c826cb6047c52f87f833b78dd2ff0b8a9496400eb20f141dd804d216a5013e95",
+        "pools": 20,
+        "pairs": 333,
+        "max_tokens": 4414,
+        "over_service_context": 0
+      },
+      "formal": {
+        "input_sha256": "43db68e7446002da0a97edce9595d5df3482223179918b962f23bda4e66a6ce3",
+        "input_hash_scope": "Parent input JSONL, including non-reranking tasks; only its 200 reranking pools were tokenized",
+        "pools": 200,
+        "pairs": 3194,
+        "max_tokens": 54332,
+        "over_service_context": 6,
+        "affected_pools": 6,
+        "over_model_max_position_embeddings": 1,
+        "long_pair_tokens_ascending": [8355, 9312, 9788, 10439, 11529, 54332],
+        "longest_document_characters": 74920
+      }
+    }
+  },
+  "engineering_acceptance": {
+    "artifact": "engineering-acceptance-001.json",
+    "sha256": "3fb1efef0d77716ea1df64dd7965423bec8d9c18e1373ef0ad68990a923169a4",
+    "test_host_records": "passage-20261017/reranker-engineering-001/",
+    "completed_at_utc": "2026-10-16T21:42:43.539633+00:00",
+    "accepted": true,
+    "requests": 12,
+    "http_200": 12,
+    "complete_valid_pools": 12,
+    "complete_valid_pair_scores": 226,
+    "includes_capacity_excluded_long_pairs": 27,
+    "global_benchmark_http_concurrency": 1,
+    "request_timeout_seconds": 300,
+    "retries": 0,
+    "truncation": false,
+    "request_and_response_hashes_recorded": true,
+    "all_12_runtime_usage_totals_match_offline_token_counts": true,
+    "total_prompt_tokens": 167587,
+    "gpu_samples": 15,
+    "sampled_peak_total_used_mib": 35360,
+    "sampled_min_free_mib": 4965,
+    "sampling_limitation": "Nominal one-second interval plus sampling overhead; total GPU memory includes embedding. This is a sampled peak, not an exact peak or a no-interference guarantee.",
+    "embedding_container_id_pid_start_unchanged": true,
+    "embedding_health_http_status_after": 200
+  },
+  "conclusion": {
+    "engineering_memory_accepted_at_80_percent": true,
+    "85_percent_tested": false,
+    "full_formal_input_coverage_at_current_context": false,
+    "reason": "Six complete pairs in six pools exceed the deployed 8192-token context; one also exceeds the pinned model's configured native 40960 positions. More engine VRAM budget does not change either limit.",
+    "scope_guard": "Do not truncate, discard pools, split candidates, extend context or change RoPE without an explicit protocol/deployment decision. The existing plan records length preflight failures separately, retains all original denominators, and reports common complete-input coverage separately.",
+    "remaining_formal_gates": [
+      "Four-arm runner and focused tests",
+      "Each refiner's complete-input/native-mode and engineering acceptance",
+      "20-pool refiner threshold calibration",
+      "Explicit length-coverage records and frozen deployment/source/protocol/preservation manifests"
+    ]
+  }
+}

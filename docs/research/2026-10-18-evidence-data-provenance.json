@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "dataset_protocol_sha256": "329021e749f25803f02bc21d213485230e9ce075d07678f1e21e383032c5255e",
+  "original_sources_sha256": {
+    "collection.tsv": "07b84e543e9ba696124a727c00629d5bce586631648c436c98dd6e9b146da212",
+    "queries.dev.tsv": "1df544dd04bf9b6d0de0dd77e0f3a84a0d74fc4bb9a1ff67b7306de8169135ba",
+    "qrels.dev.tsv": "a0356bd3c6d72c532ca17a4d88d7765554857f321346cf0f9cb4ad480738b25a",
+    "t2reranking-dev.parquet": "ceaf1ba1a4777dbb7aecad86fb8aa9cae7a678af6d711d5529c238e89bb6adff"
+  },
+  "unique_passage_ids": 4153,
+  "source_ids_grades_and_full_text_rejoined": true,
+  "splits": {
+    "engineering": {
+      "pools": 12,
+      "pairs": 177,
+      "grades": {
+        "1": 29,
+        "0": 89,
+        "2": 48,
+        "3": 11
+      },
+      "conflicting_identical_text_labels": 0
+    },
+    "validation": {
+      "pools": 20,
+      "pairs": 327,
+      "grades": {
+        "2": 85,
+        "0": 180,
+        "3": 8,
+        "1": 54
+      },
+      "conflicting_identical_text_labels": 0
+    },
+    "formal": {
+      "pools": 200,
+      "pairs": 3105,
+      "grades": {
+        "0": 1716,
+        "2": 754,
+        "1": 454,
+        "3": 181
+      },
+      "conflicting_identical_text_labels": 0
+    },
+    "no_evidence": {
+      "pools": 40,
+      "pairs": 557,
+      "grades": {
+        "0": 476,
+        "1": 81
+      },
+      "conflicting_identical_text_labels": 0
+    }
+  },
+  "script_sha256": "ed6f1ea8f6ebf58eb378ff955fb4726c4ae720d37025a6becf8a0b23d07da091"
+}

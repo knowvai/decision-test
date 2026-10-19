@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-16T06:49:14.207217+00:00",
+  "completed_configs_checked": [
+    {
+      "model": "d3-edge",
+      "requests": 2388,
+      "failed": 0,
+      "id_hash_calls_and_metrics_checked": true,
+      "peak_concurrency": [
+        1,
+        5,
+        10,
+        20
+      ]
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "requests": 2388,
+      "failed": 0,
+      "id_hash_calls_and_metrics_checked": true,
+      "peak_concurrency": [
+        1,
+        5,
+        10,
+        20
+      ]
+    }
+  ],
+  "preserved_artifacts_unchanged": true,
+  "source_unchanged": true,
+  "current_stage": "measuring",
+  "current_model": "vela-2.0-0.8b",
+  "not_final_audit": true
+}

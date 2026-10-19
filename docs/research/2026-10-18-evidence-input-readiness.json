@@ -1,0 +1,39 @@
+{
+  "at_utc": "2026-10-17T21:32:35.966002+00:00",
+  "scope": "PPLX native CPU encoding only; not all-model readiness",
+  "passed": false,
+  "reason": "Complete selected inputs exceed the unchanged deployed context ceiling",
+  "inference_calls": 0,
+  "truncations": 0,
+  "excluded_pairs": 0,
+  "context_changed": false,
+  "context_ceiling_tokens": 8192,
+  "effective_limit_caveat": "Runtime reserved tokens can lower the effective input limit; below-ceiling counts alone do not prove acceptance",
+  "model": "pplx-decider-v1.1-27b",
+  "container_id": "8374099973cd6a008f074b59384a4794ef985b8de82141e7a8544aaf54dddb03",
+  "container_pid": 1111860,
+  "container_started_at": "2026-10-17T11:52:14.766877532Z",
+  "container_identity_unchanged": true,
+  "image_id": "sha256:a682ef469e9900ec254bb6d98e9c6052d0e0c727dcb005b4ea1a229b77424fae",
+  "encoder_sha256": "b22a60b74f952e571712e10131f4d9a6a61edc48e30a26e3746d55104cdc1a29",
+  "tokenizer_sha256": "6f32ce20dc35f57a7f9ad1eac03525bd7d30f9df8cea6507e958279cc3657706",
+  "script_sha256": "37905ca280a1dbb2856ca73e82959f46c59948a693103cd57d28ce1b46a9b121",
+  "dataset_protocol_sha256": "329021e749f25803f02bc21d213485230e9ce075d07678f1e21e383032c5255e",
+  "full_encoding_records_sha256": "e5881812e1c63a62363f20761546c9f1c251e605152cbe31c4520727f5d836d3",
+  "splits": {
+    "engineering": {"pairs": 177, "max_tokens": 5771, "over_limit_pairs": 0, "over_limit_pools": 0},
+    "validation": {"pairs": 327, "max_tokens": 3049, "over_limit_pairs": 0, "over_limit_pools": 0},
+    "formal": {"pairs": 3105, "max_tokens": 26955, "over_limit_pairs": 5, "over_limit_pools": 2},
+    "no_evidence": {"pairs": 557, "max_tokens": 13298, "over_limit_pairs": 2, "over_limit_pools": 2}
+  },
+  "unsupported_pairs": [
+    {"phase": "formal", "qid": "17097", "pid": "437254", "grade": 0, "choice_tokens": 26577, "noul_tokens": 26589},
+    {"phase": "formal", "qid": "17097", "pid": "740097", "grade": 0, "choice_tokens": 26943, "noul_tokens": 26955},
+    {"phase": "formal", "qid": "17097", "pid": "61790", "grade": 0, "choice_tokens": 8673, "noul_tokens": 8685},
+    {"phase": "formal", "qid": "20113", "pid": "254420", "grade": 2, "choice_tokens": 10411, "noul_tokens": 10423},
+    {"phase": "formal", "qid": "20113", "pid": "173437", "grade": 0, "choice_tokens": 10411, "noul_tokens": 10423},
+    {"phase": "no_evidence", "qid": "14629", "pid": "618820", "grade": 1, "choice_tokens": 13286, "noul_tokens": 13298},
+    {"phase": "no_evidence", "qid": "14520", "pid": "426183", "grade": 0, "choice_tokens": 9302, "noul_tokens": 9314}
+  ],
+  "protocol_decision": "Pending user choice; no filtering, common-subset scoring or context extension applied"
+}

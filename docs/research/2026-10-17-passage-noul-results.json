@@ -1,0 +1,6081 @@
+{
+  "at": "2026-10-17T12:06:15.708011+00:00",
+  "script_sha256": "19d0a4b85c295de3231e93336d7070744ff55df3b5c23b931db5f24bd5d6fc03",
+  "state": {
+    "pid": 1075495,
+    "completed": [
+      "d3-edge",
+      "vela-2.0-0.3b",
+      "vela-2.0-0.8b",
+      "laya-multilingual",
+      "d3-mini",
+      "vela-2.0-4b",
+      "neohorse-jev-4b",
+      "jeva-4b",
+      "d3-flash",
+      "clef-flash",
+      "vela-2.0-9b",
+      "jev-27b",
+      "pplx-decider-v1.1-27b"
+    ],
+    "stage": "complete",
+    "at": "2026-10-17T12:05:07.912254+00:00",
+    "model": null,
+    "completed_pairs": 333,
+    "case_id": null
+  },
+  "service": {
+    "Restart": "no",
+    "MainPID": "0",
+    "Result": "success",
+    "ExecMainStatus": "0",
+    "LoadState": "not-found",
+    "ActiveState": "inactive",
+    "SubState": "dead"
+  },
+  "unit_journal": [
+    {
+      "__REALTIME_TIMESTAMP": "1792233913406291",
+      "MESSAGE": "Starting /usr/bin/env PYTHONDONTWRITEBYTECODE=1 /data/sdb/decision-model-eval/classification-20261015/venv/bin/python -u /data/sdb/decision-model-eval/passage-noul-20261017/source-r1/evaluation/runner/scripts/decision_noul_validation.py --service-source /data/sdb/decision-model-eval/passage-noul-20261017/source-r1/deploy/docker/decision-eval --dataset /data/sdb/decision-model-eval/passage-20261017/dataset-six-mask-v1 --baseline /data/sdb/decision-model-eval/passage-20261017/run-001 --runtime /data/sdb/decision-model-eval/passage-noul-20261017/runtime-r1 --output /data/sdb/decision-model-eval/passage-noul-20261017/run-001 --env-file /data/sdb/decision-model-eval/source-decision-v3-r3-20261012/.env --lock /data/sdb/decision-model-eval/classification-20261015/classification.lock --preservation /data/sdb/decision-model-eval/passage-noul-20261017/preparation-r1/preservation.json --support /data/sdb/decision-model-eval/passage-noul-20261017/preparation-r1/support.json...",
+      "UNIT_RESULT": null,
+      "EXIT_CODE": null,
+      "EXIT_STATUS": null
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1792233913406983",
+      "MESSAGE": "Started /usr/bin/env PYTHONDONTWRITEBYTECODE=1 /data/sdb/decision-model-eval/classification-20261015/venv/bin/python -u /data/sdb/decision-model-eval/passage-noul-20261017/source-r1/evaluation/runner/scripts/decision_noul_validation.py --service-source /data/sdb/decision-model-eval/passage-noul-20261017/source-r1/deploy/docker/decision-eval --dataset /data/sdb/decision-model-eval/passage-20261017/dataset-six-mask-v1 --baseline /data/sdb/decision-model-eval/passage-20261017/run-001 --runtime /data/sdb/decision-model-eval/passage-noul-20261017/runtime-r1 --output /data/sdb/decision-model-eval/passage-noul-20261017/run-001 --env-file /data/sdb/decision-model-eval/source-decision-v3-r3-20261012/.env --lock /data/sdb/decision-model-eval/classification-20261015/classification.lock --preservation /data/sdb/decision-model-eval/passage-noul-20261017/preparation-r1/preservation.json --support /data/sdb/decision-model-eval/passage-noul-20261017/preparation-r1/support.json.",
+      "UNIT_RESULT": null,
+      "EXIT_CODE": null,
+      "EXIT_STATUS": null
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1792238707978091",
+      "MESSAGE": "decision-passage-noul-20261017-r1.service: Deactivated successfully.",
+      "UNIT_RESULT": null,
+      "EXIT_CODE": null,
+      "EXIT_STATUS": null
+    },
+    {
+      "__REALTIME_TIMESTAMP": "1792238707979918",
+      "MESSAGE": "decision-passage-noul-20261017-r1.service: Consumed 1min 6.204s CPU time.",
+      "UNIT_RESULT": null,
+      "EXIT_CODE": null,
+      "EXIT_STATUS": null
+    }
+  ],
+  "shared_lock_released": true,
+  "complete": true,
+  "protocol_sha256": "572d709118f70a15adff2e94de1c4f952192ede439dfd8f8e67b97f99d9b0756",
+  "preserved_files": 1418,
+  "preserved_bytes": 355333380,
+  "old_evidence_unchanged": true,
+  "source_unchanged": true,
+  "tests": {
+    "passed": 127,
+    "failed": 0,
+    "seconds": 3.84
+  },
+  "dataset": {
+    "pools": 20,
+    "candidates": 333,
+    "positives": 116,
+    "negatives": 217
+  },
+  "models": {
+    "d3-edge": {
+      "model": "d3-edge",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 2,
+          "tn": 164,
+          "fn": 55,
+          "fp": 53,
+          "tp": 61
+        },
+        "candidate_accuracy": 0.6756756756756757,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.45771825396825394,
+            "confidence": 0.95,
+            "low": 0.31660714285714286,
+            "high": 0.6002063492063491,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.48781512605042016,
+            "confidence": 0.95,
+            "low": 0.347359068627451,
+            "high": 0.6233917191876749,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4163897644501093,
+            "confidence": 0.95,
+            "low": 0.3011491563991564,
+            "high": 0.5215021166572891,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.125,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.47058823529411764,
+            "f1": 0.5517241379310345
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.5714285714285714,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.4,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.375,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7777777777777778
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.6666666666666666,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.7333333333333333,
+            "f1": 0.8461538461538461
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "tn": 142,
+          "fn": 40,
+          "fp": 75,
+          "tp": 76
+        },
+        "candidate_accuracy": 0.6546546546546547,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.43064158064158065,
+            "confidence": 0.95,
+            "low": 0.317298402985903,
+            "high": 0.548700806138306,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.6187675070028011,
+            "confidence": 0.95,
+            "low": 0.4609513305322129,
+            "high": 0.7667655812324929,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4761488615621476,
+            "confidence": 0.95,
+            "low": 0.35848140509619975,
+            "high": 0.5823051284907902,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.18181818181818182,
+            "recall": 1.0,
+            "f1": 0.3076923076923077
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.25,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.47058823529411764,
+            "f1": 0.5517241379310345
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.8571428571428571,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.4,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5714285714285714,
+            "recall": 1.0,
+            "f1": 0.7272727272727273
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.875,
+            "recall": 0.7,
+            "f1": 0.7777777777777778
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9230769230769231,
+            "recall": 0.8,
+            "f1": 0.8571428571428571
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.027076673326673326,
+          "confidence": 0.95,
+          "low": -0.053662400099900094,
+          "high": 0.1211482683982683,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.13095238095238096,
+          "confidence": 0.95,
+          "low": -0.21174553571428573,
+          "high": -0.061724702380952394,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.05975909711203829,
+          "confidence": 0.95,
+          "low": -0.11540494330016389,
+          "high": -0.014980006105006142,
+          "samples": 2000
+        }
+      },
+      "flips": 37,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 55.11311005294748,
+          "p50_ms": 27.658130042254925,
+          "p95_ms": 32.16728960396721,
+          "p99_ms": 46.73227173276247
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 55.11311005294748,
+          "p50_ms": 27.658130042254925,
+          "p95_ms": 32.16728960396721,
+          "p99_ms": 46.73227173276247
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 28.232729198255885,
+          "p50_ms": 27.4744360067416,
+          "p95_ms": 32.3607362108305,
+          "p99_ms": 40.086354861268774
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 28.232729198255885,
+          "p50_ms": 27.4744360067416,
+          "p95_ms": 32.3607362108305,
+          "p99_ms": 40.086354861268774
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "4d3eff5c2640239d18bb757c50dd1422eacc2d237f858d35707b3c6881bd0082",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "d5631bd7d555e868f71530372bbe302992ee053fc12adbb19c8863d3c8fa20be",
+        "container.json": "058f885564dec92b0c2893ebbea28be13b15a5b90535ac575fedc27855157a9f",
+        "intents.jsonl": "2982a344a6ef421ff0988a22bee9f98b4283468a65c9cad4ffc90f60d2cdab0b",
+        "requests.jsonl": "51ef18dc7a17b380feed1a262c088a17c7df3d4bfaca8aabf91e4861bb73bad0"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "vela-2.0-0.3b": {
+      "model": "vela-2.0-0.3b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 3,
+          "tn": 157,
+          "fn": 57,
+          "tp": 59,
+          "fp": 60
+        },
+        "candidate_accuracy": 0.6486486486486487,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4101622315592904,
+            "confidence": 0.95,
+            "low": 0.29136119864612514,
+            "high": 0.534939659197012,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.4356022408963586,
+            "confidence": 0.95,
+            "low": 0.30584016106442574,
+            "high": 0.5705601365546218,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4014523086636623,
+            "confidence": 0.95,
+            "low": 0.28615460987026387,
+            "high": 0.5278768102171573,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.16666666666666666,
+            "recall": 0.5,
+            "f1": 0.25
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.125,
+            "f1": 0.2
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.29411764705882354,
+            "recall": 0.5882352941176471,
+            "f1": 0.39215686274509803
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.2857142857142857,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5714285714285714,
+            "recall": 0.5714285714285714,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.4,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.3333333333333333,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.625,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8888888888888888,
+            "recall": 0.8,
+            "f1": 0.8421052631578947
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9285714285714286,
+            "recall": 0.8666666666666667,
+            "f1": 0.896551724137931
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 205,
+          "tp": 113,
+          "tn": 12,
+          "fn": 3
+        },
+        "candidate_accuracy": 0.37537537537537535,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.34847849862555746,
+            "confidence": 0.95,
+            "low": 0.2840936147186147,
+            "high": 0.4255925102267013,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.95,
+            "confidence": 0.95,
+            "low": 0.875,
+            "high": 1.0,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4869648010953514,
+            "confidence": 0.95,
+            "low": 0.4162518497484251,
+            "high": 0.565356610164261,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.15384615384615385,
+            "recall": 1.0,
+            "f1": 0.26666666666666666
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.125,
+            "recall": 1.0,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.38095238095238093,
+            "recall": 1.0,
+            "f1": 0.5517241379310345
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.36363636363636365,
+            "recall": 1.0,
+            "f1": 0.5333333333333333
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.30357142857142855,
+            "recall": 1.0,
+            "f1": 0.4657534246575342
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.1111111111111111,
+            "recall": 1.0,
+            "f1": 0.2
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.4117647058823529,
+            "recall": 1.0,
+            "f1": 0.5833333333333334
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.23076923076923078,
+            "recall": 1.0,
+            "f1": 0.375
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2727272727272727,
+            "recall": 1.0,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2727272727272727,
+            "recall": 1.0,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.8823529411764706,
+            "recall": 1.0,
+            "f1": 0.9375
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.06168373293373294,
+          "confidence": 0.95,
+          "low": -0.026474272459566572,
+          "high": 0.14751316820434462,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.5143977591036415,
+          "confidence": 0.95,
+          "low": -0.6443426995798319,
+          "high": -0.3763550420168067,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.08551249243168906,
+          "confidence": 0.95,
+          "low": -0.1825516826476034,
+          "high": 0.009490922969297893,
+          "samples": 2000
+        }
+      },
+      "flips": 201,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 20.59922828922865,
+          "p50_ms": 15.676990966312587,
+          "p95_ms": 52.9370366130024,
+          "p99_ms": 63.10352622298525
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 20.59922828922865,
+          "p50_ms": 15.676990966312587,
+          "p95_ms": 52.9370366130024,
+          "p99_ms": 63.10352622298525
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 19.36673528510258,
+          "p50_ms": 15.4899769986514,
+          "p95_ms": 40.51076581818047,
+          "p99_ms": 59.06136202276687
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 19.36673528510258,
+          "p50_ms": 15.4899769986514,
+          "p95_ms": 40.51076581818047,
+          "p99_ms": 59.06136202276687
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "b4e5a2c09c62ca3eaf5161467258d816ff68cf5ec1ed6e99bb5d60757e0caea5",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "5554b0a77dcb39aa1842de132a4949fee49890f13649a23273716a9ce08fa152",
+        "container.json": "fc13d92bc3dc05248cbd20bc6bfc1b42e16528ecbd9222507ff92975f7eb07e9",
+        "intents.jsonl": "d294dfb8600f0b4bfaca4506da0acba752f670d460906fcee71bf63c02145657",
+        "requests.jsonl": "3359a6bdd815cda508b7e848365b2c1481e2d6f12fc34e207405b1aa8ae70ff8"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "vela-2.0-0.8b": {
+      "model": "vela-2.0-0.8b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "tn": 135,
+          "fn": 35,
+          "fp": 82,
+          "tp": 81
+        },
+        "candidate_accuracy": 0.6486486486486487,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.46538690476190475,
+            "confidence": 0.95,
+            "low": 0.3740409226190476,
+            "high": 0.5600131448412698,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.6695658263305322,
+            "confidence": 0.95,
+            "low": 0.5496018907563025,
+            "high": 0.7763725490196077,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.521601831385987,
+            "confidence": 0.95,
+            "low": 0.4348561328377505,
+            "high": 0.6077314886252267,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.08333333333333333,
+            "recall": 0.5,
+            "f1": 0.14285714285714285
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.375,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5294117647058824,
+            "f1": 0.5142857142857142
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.7142857142857143,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.4,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.6,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5833333333333334,
+            "recall": 0.875,
+            "f1": 0.7
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8571428571428571,
+            "recall": 0.6,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.5,
+            "f1": 0.4444444444444444
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 156,
+          "tn": 61,
+          "tp": 109,
+          "fn": 7
+        },
+        "candidate_accuracy": 0.5105105105105106,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4141762159409218,
+            "confidence": 0.95,
+            "low": 0.34295563566335624,
+            "high": 0.5026021003098209,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.9445588235294118,
+            "confidence": 0.95,
+            "low": 0.88,
+            "high": 0.99,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5536848241627653,
+            "confidence": 0.95,
+            "low": 0.4878156113698393,
+            "high": 0.6309994447954007,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 1.0,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 1.0,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.3137254901960784,
+            "recall": 0.9411764705882353,
+            "f1": 0.47058823529411764
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.4666666666666667,
+            "recall": 1.0,
+            "f1": 0.6363636363636364
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.36363636363636365,
+            "recall": 0.8,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.8823529411764706,
+            "recall": 1.0,
+            "f1": 0.9375
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.5,
+            "f1": 0.36363636363636365
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.05121068882098294,
+          "confidence": 0.95,
+          "low": 0.005849230222391979,
+          "high": 0.09203905918427975,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.27499299719887954,
+          "confidence": 0.95,
+          "low": -0.3899859943977591,
+          "high": -0.17415484943977597,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.032082992776778355,
+          "confidence": 0.95,
+          "low": -0.0909762913530703,
+          "high": 0.01915725370060039,
+          "samples": 2000
+        }
+      },
+      "flips": 102,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 178.7873952969064,
+          "p50_ms": 83.63132498925552,
+          "p95_ms": 87.232132605277,
+          "p99_ms": 93.4188006562181
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 178.7873952969064,
+          "p50_ms": 83.63132498925552,
+          "p95_ms": 87.232132605277,
+          "p99_ms": 93.4188006562181
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 85.50411845153958,
+          "p50_ms": 84.97874101158231,
+          "p95_ms": 89.30427021696232,
+          "p99_ms": 92.1971134818159
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 85.50411845153958,
+          "p50_ms": 84.97874101158231,
+          "p95_ms": 89.30427021696232,
+          "p99_ms": 92.1971134818159
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "033b54b3bdb4f795c6845c34ce64a5310bb7efd7f051456ce2f2a27c3d198d79",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "610df23108ade751be640827428fe90d1b1ec107eca514025a798b59652c48a2",
+        "container.json": "330bb2bd687ed3171476fd44c42975400175623cc3ec517a55278979219c0ff9",
+        "intents.jsonl": "3016e3b0866d641b0c3eff93c64fda88dba5e6d7d2e2a7d1edca3798b487ee77",
+        "requests.jsonl": "d9f405782039eddb9f4b60c40157b0e25268a4e77eea65e410d6b197e0d1fd98"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "laya-multilingual": {
+      "model": "laya-multilingual",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "fp": 61,
+          "tn": 156,
+          "fn": 51,
+          "tp": 65
+        },
+        "candidate_accuracy": 0.6636636636636637,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.49322052947052947,
+            "confidence": 0.95,
+            "low": 0.38601057276057277,
+            "high": 0.6042377102064602,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.5740651260504201,
+            "confidence": 0.95,
+            "low": 0.4442469362745098,
+            "high": 0.7013892682072828,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4761443819338556,
+            "confidence": 0.95,
+            "low": 0.38300528638028636,
+            "high": 0.5682180867378235,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.375,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6153846153846154,
+            "recall": 0.47058823529411764,
+            "f1": 0.5333333333333333
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.42857142857142855,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.8333333333333334,
+            "recall": 1.0,
+            "f1": 0.9090909090909091
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.6666666666666666,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.75,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.1,
+            "f1": 0.16666666666666666
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.3333333333333333,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.7333333333333333,
+            "f1": 0.8461538461538461
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.25,
+            "f1": 0.2857142857142857
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 2,
+          "tn": 172,
+          "fn": 67,
+          "fp": 45,
+          "tp": 49
+        },
+        "candidate_accuracy": 0.6636636636636637,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.45726190476190476,
+            "confidence": 0.95,
+            "low": 0.34225,
+            "high": 0.5714404761904761,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.439359243697479,
+            "confidence": 0.95,
+            "low": 0.31681004901960785,
+            "high": 0.5611982668067226,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4075141525141525,
+            "confidence": 0.95,
+            "low": 0.30387642912642915,
+            "high": 0.5106566489066489,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.14285714285714285,
+            "recall": 0.5,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.25,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.17647058823529413,
+            "f1": 0.2727272727272727
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.42857142857142855,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.75,
+            "recall": 0.8571428571428571,
+            "f1": 0.8
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.2,
+            "f1": 0.2
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.7142857142857143,
+            "recall": 0.625,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.1,
+            "f1": 0.16666666666666666
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.3333333333333333,
+            "f1": 0.25
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.3333333333333333,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.6,
+            "f1": 0.75
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.25,
+            "f1": 0.2857142857142857
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.03595862470862471,
+          "confidence": 0.95,
+          "low": -0.054336985930735916,
+          "high": 0.14950585872460853,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": 0.13470588235294118,
+          "confidence": 0.95,
+          "low": 0.06999999999999999,
+          "high": 0.20483578431372543,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": 0.0686302294197031,
+          "confidence": 0.95,
+          "low": 0.016737900257637096,
+          "high": 0.12462538083261766,
+          "samples": 2000
+        }
+      },
+      "flips": 42,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 29.48865590651321,
+          "p50_ms": 26.91805496579036,
+          "p95_ms": 30.706895049661387,
+          "p99_ms": 39.5286013162695
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 29.48865590651321,
+          "p50_ms": 26.91805496579036,
+          "p95_ms": 30.706895049661387,
+          "p99_ms": 39.5286013162695
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 27.83080757979804,
+          "p50_ms": 27.15817600255832,
+          "p95_ms": 30.80036598839796,
+          "p99_ms": 38.94833537051454
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 27.83080757979804,
+          "p50_ms": 27.15817600255832,
+          "p95_ms": 30.80036598839796,
+          "p99_ms": 38.94833537051454
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "c4e3e38abfd898aec8ca3f81f26bae4536b53a8be6ffdb1913532389cb7cdb3c",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "675fa750b264a840b3ae22261fbc7b3ba50f743bf9b0a5d15a6cdfadf5e9e92c",
+        "container.json": "17936fc1c57422b257a4f1e0e17fd6bebf63ed6ab7dc9b1b086e388c77ccf208",
+        "intents.jsonl": "294d2e627265e448fc607822a55b0c487d75a88abc803a40fc5e5dd3e0c2a36d",
+        "requests.jsonl": "f77291d8855527e162a5de62082f1a553ca108b339b2543520ce444f4489f79a"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "d3-mini": {
+      "model": "d3-mini",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 121,
+          "fn": 29,
+          "fp": 96,
+          "tp": 87
+        },
+        "candidate_accuracy": 0.6246246246246246,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.428235883268778,
+            "confidence": 0.95,
+            "low": 0.33589547258297253,
+            "high": 0.5299958252639173,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7258998599439775,
+            "confidence": 0.95,
+            "low": 0.5965076155462185,
+            "high": 0.8383335084033614,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5150007290999001,
+            "confidence": 0.95,
+            "low": 0.4178009841895291,
+            "high": 0.6109047076947931,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.75,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.2727272727272727,
+            "recall": 0.375,
+            "f1": 0.3157894736842105
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5263157894736842,
+            "recall": 0.5882352941176471,
+            "f1": 0.5555555555555556
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.7142857142857143,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.8571428571428571,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.6,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8888888888888888,
+            "recall": 0.8,
+            "f1": 0.8421052631578947
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.25,
+            "f1": 0.2857142857142857
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 108,
+          "fn": 27,
+          "fp": 109,
+          "tp": 89
+        },
+        "candidate_accuracy": 0.5915915915915916,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.40179743867243867,
+            "confidence": 0.95,
+            "low": 0.3106069624819625,
+            "high": 0.5076706574675325,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7338410364145658,
+            "confidence": 0.95,
+            "low": 0.6028775385154062,
+            "high": 0.8472405462184873,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4981634105017457,
+            "confidence": 0.95,
+            "low": 0.3992061504349624,
+            "high": 0.5983229622752493,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.5,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.75,
+            "f1": 0.375
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.375,
+            "f1": 0.3
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.6470588235294118,
+            "f1": 0.5641025641025641
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.7142857142857143,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.6,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.75,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.25,
+            "f1": 0.25
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.026438444596339327,
+          "confidence": 0.95,
+          "low": 0.01253575225943646,
+          "high": 0.041057150451887285,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.007941176470588234,
+          "confidence": 0.95,
+          "low": -0.02088235294117647,
+          "high": 0.0,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": 0.016837318598154512,
+          "confidence": 0.95,
+          "low": 0.0033111826039457664,
+          "high": 0.030314338353425032,
+          "samples": 2000
+        }
+      },
+      "flips": 15,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 127.53233400312624,
+          "p50_ms": 71.16771797882393,
+          "p95_ms": 99.42362856818359,
+          "p99_ms": 183.43047741800575
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 127.53233400312624,
+          "p50_ms": 71.16771797882393,
+          "p95_ms": 99.42362856818359,
+          "p99_ms": 183.43047741800575
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 77.5974617048108,
+          "p50_ms": 74.25442498060875,
+          "p95_ms": 97.61426039040084,
+          "p99_ms": 151.02040420286357
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 77.5974617048108,
+          "p50_ms": 74.25442498060875,
+          "p95_ms": 97.61426039040084,
+          "p99_ms": 151.02040420286357
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "5484f640d717503d2d8144fceecf8ead2c1ad8ad3575bd0a6d34c1c4752cdcd2",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "ca3633b2a27d938a3d8d1cc40cc1f3b3190e51b2a7553b2f1e56dfa553fa2a49",
+        "container.json": "8f3b9732cd7a69382c58320cb4231a54c4dc23008ea2b11d4bc4054ad8e5b2e0",
+        "intents.jsonl": "3bf164b074f018bef574d13df8b624db2f57f5789770eee7360ca172768a0731",
+        "requests.jsonl": "8c6cd29928dc99619dbcc27d3c7535a58623c0d5d3378197a565bf90a1dee750"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "vela-2.0-4b": {
+      "model": "vela-2.0-4b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 133,
+          "fn": 33,
+          "fp": 84,
+          "tp": 83
+        },
+        "candidate_accuracy": 0.6486486486486487,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.45188339438339437,
+            "confidence": 0.95,
+            "low": 0.3492852182539683,
+            "high": 0.5568090277777776,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.6997093837535014,
+            "confidence": 0.95,
+            "low": 0.5606995798319327,
+            "high": 0.8235871848739496,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5207318619605147,
+            "confidence": 0.95,
+            "low": 0.4157058611323317,
+            "high": 0.6215348019706414,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.75,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.375,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.7142857142857143,
+            "recall": 0.5882352941176471,
+            "f1": 0.6451612903225806
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 1.0,
+            "f1": 0.8
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333334
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5384615384615384,
+            "recall": 1.0,
+            "f1": 0.7
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.2,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.75,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8571428571428571,
+            "recall": 0.6,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9333333333333333,
+            "recall": 0.9333333333333333,
+            "f1": 0.9333333333333333
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.25,
+            "f1": 0.25
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 127,
+          "fn": 29,
+          "fp": 90,
+          "tp": 87
+        },
+        "candidate_accuracy": 0.6426426426426426,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.45303724053724054,
+            "confidence": 0.95,
+            "low": 0.36510821123321124,
+            "high": 0.5476850198412698,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7384593837535014,
+            "confidence": 0.95,
+            "low": 0.6158403361344538,
+            "high": 0.8457891281512605,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5352269986635312,
+            "confidence": 0.95,
+            "low": 0.4433104069992615,
+            "high": 0.6196170881492088,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.75,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.375,
+            "f1": 0.35294117647058826
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.5882352941176471,
+            "f1": 0.6060606060606061
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692307692307693
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.6,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.875,
+            "f1": 0.6363636363636364
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8571428571428571,
+            "recall": 0.6,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.46153846153846156,
+            "recall": 1.0,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9333333333333333,
+            "recall": 0.9333333333333333,
+            "f1": 0.9333333333333333
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.5,
+            "f1": 0.4444444444444444
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": -0.0011538461538461553,
+          "confidence": 0.95,
+          "low": -0.03422722069597069,
+          "high": 0.03131879578754578,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.03875,
+          "confidence": 0.95,
+          "low": -0.08625,
+          "high": 0.0,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.014495136703016461,
+          "confidence": 0.95,
+          "low": -0.05333282485488368,
+          "high": 0.01975001830371099,
+          "samples": 2000
+        }
+      },
+      "flips": 14,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 207.84075494034792,
+          "p50_ms": 108.75969601329416,
+          "p95_ms": 114.67911774525419,
+          "p99_ms": 166.5665406547487
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 207.84075494034792,
+          "p50_ms": 108.75969601329416,
+          "p95_ms": 114.67911774525419,
+          "p99_ms": 166.5665406547487
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 116.05592448725477,
+          "p50_ms": 114.0222690301016,
+          "p95_ms": 119.84134939266369,
+          "p99_ms": 158.17463713348843
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 116.05592448725477,
+          "p50_ms": 114.0222690301016,
+          "p95_ms": 119.84134939266369,
+          "p99_ms": 158.17463713348843
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "4e9a78b76dc530bf1c0c657fbc877f93c2f02e9ecf6d25d2c50ec67c377f6b88",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "9c8591a1b2f9d7e46f5c9a81efb344c2373b845eba23cdbcf5e35da8df0ae726",
+        "container.json": "aca77fb764e3c5943a87d61b83947f4ef1924e29d9356510db53d6d87a79cc67",
+        "intents.jsonl": "08fb9abd4cbc80acf51793be612a2e345b1ccb1eb89d53faf905bae1d3ce7096",
+        "requests.jsonl": "42ef6ba6b0f936d2410501f8780f0b636bc4da709ffe4a5cac1e07b0ce0b12f6"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "neohorse-jev-4b": {
+      "model": "neohorse-jev-4b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 131,
+          "tn": 86,
+          "tp": 102,
+          "fn": 14
+        },
+        "candidate_accuracy": 0.5645645645645646,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4200120018870019,
+            "confidence": 0.95,
+            "low": 0.34192996933621933,
+            "high": 0.5133970959595958,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.8873074229691876,
+            "confidence": 0.95,
+            "low": 0.827,
+            "high": 0.945297619047619,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5442056933822639,
+            "confidence": 0.95,
+            "low": 0.4714330380051942,
+            "high": 0.6272391167830471,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.18181818181818182,
+            "recall": 1.0,
+            "f1": 0.3076923076923077
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.125,
+            "recall": 1.0,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6363636363636364,
+            "recall": 0.8235294117647058,
+            "f1": 0.717948717948718
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.8571428571428571,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.6666666666666666,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.6,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2222222222222222,
+            "recall": 0.6666666666666666,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5384615384615384,
+            "recall": 0.875,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8181818181818182,
+            "recall": 0.9,
+            "f1": 0.8571428571428571
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 143,
+          "tn": 74,
+          "tp": 108,
+          "fn": 8
+        },
+        "candidate_accuracy": 0.5465465465465466,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4148199807438938,
+            "confidence": 0.95,
+            "low": 0.3406798830698287,
+            "high": 0.505288532798723,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.9565336134453781,
+            "confidence": 0.95,
+            "low": 0.9258490021008403,
+            "high": 0.98375,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5517516981021816,
+            "confidence": 0.95,
+            "low": 0.4847949640938771,
+            "high": 0.6287885022283967,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.18181818181818182,
+            "recall": 1.0,
+            "f1": 0.3076923076923077
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.125,
+            "recall": 1.0,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.35,
+            "recall": 0.875,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.36363636363636365,
+            "recall": 1.0,
+            "f1": 0.5333333333333333
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6086956521739131,
+            "recall": 0.8235294117647058,
+            "f1": 0.7
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.8571428571428571,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.4375,
+            "recall": 1.0,
+            "f1": 0.6086956521739131
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.36363636363636365,
+            "recall": 0.8,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5384615384615384,
+            "recall": 0.875,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8181818181818182,
+            "recall": 0.9,
+            "f1": 0.8571428571428571
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.36363636363636365,
+            "recall": 1.0,
+            "f1": 0.5333333333333333
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.005192021143108095,
+          "confidence": 0.95,
+          "low": -0.013879892676767676,
+          "high": 0.023305397727272713,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.06922619047619048,
+          "confidence": 0.95,
+          "low": -0.12250000000000001,
+          "high": -0.022500000000000003,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.007546004719917768,
+          "confidence": 0.95,
+          "low": -0.03382791255274094,
+          "high": 0.015517757128455052,
+          "samples": 2000
+        }
+      },
+      "flips": 18,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 809.670044680814,
+          "p50_ms": 533.0179900047369,
+          "p95_ms": 2407.5738487997983,
+          "p99_ms": 4334.518464128488
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 809.670044680814,
+          "p50_ms": 533.0179900047369,
+          "p95_ms": 2407.5738487997983,
+          "p99_ms": 4334.518464128488
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 808.6860581246441,
+          "p50_ms": 548.5070580325555,
+          "p95_ms": 2335.3966671915236,
+          "p99_ms": 4199.156820323551
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 808.6860581246441,
+          "p50_ms": 548.5070580325555,
+          "p95_ms": 2335.3966671915236,
+          "p99_ms": 4199.156820323551
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "588e0efe38c636aa906b2c82a8619cfd950c2f0251b23ce3dc80602dcb1b352f",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "fef7583047ea185faa34721f1639fb78e9adf3a6ee504f6bb893dc532b0d3ca7",
+        "container.json": "7031410f810d8f59d8d5960e2df1afddbf0bcef2e310637098ed9548a1c7cea1",
+        "intents.jsonl": "fc6ae9aee5457cf2bcc7025e2e5ff1960aeb28f8da093095d514dfa40d8ea8d4",
+        "requests.jsonl": "17e9282b3da87a030e285931def5313a97f9e7d1e806b5e83a2fd090dc51aa2f"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "jeva-4b": {
+      "model": "jeva-4b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 5,
+          "tn": 184,
+          "fn": 67,
+          "fp": 33,
+          "tp": 49
+        },
+        "candidate_accuracy": 0.6996996996996997,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.41228535353535356,
+            "confidence": 0.95,
+            "low": 0.2555397727272727,
+            "high": 0.5715312499999999,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.3765511204481793,
+            "confidence": 0.95,
+            "low": 0.2347687324929972,
+            "high": 0.530123949579832,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.3437674165502898,
+            "confidence": 0.95,
+            "low": 0.2190405374235959,
+            "high": 0.4738787648434994,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.18181818181818182,
+            "recall": 1.0,
+            "f1": 0.3076923076923077
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.25,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.75,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.8333333333333334,
+            "recall": 0.29411764705882354,
+            "f1": 0.43478260869565216
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.8,
+            "recall": 0.8,
+            "f1": 0.8
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.42857142857142855,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.625,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.2,
+            "f1": 0.3076923076923077
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.6666666666666666,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1": 0.9655172413793104
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 5,
+          "tn": 188,
+          "fn": 62,
+          "fp": 29,
+          "tp": 54
+        },
+        "candidate_accuracy": 0.7267267267267268,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4617857142857143,
+            "confidence": 0.95,
+            "low": 0.3138690476190476,
+            "high": 0.6094717261904758,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.4029096638655462,
+            "confidence": 0.95,
+            "low": 0.2669498424369748,
+            "high": 0.5415526960784314,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.39804895009205354,
+            "confidence": 0.95,
+            "low": 0.27628849113051696,
+            "high": 0.5164795009827337,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.5,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.5,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.25,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.875,
+            "recall": 0.4117647058823529,
+            "f1": 0.56
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.2857142857142857,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.75,
+            "recall": 0.6,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.2857142857142857,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.625,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8333333333333334,
+            "recall": 0.5,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.8333333333333334,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1": 0.9655172413793104
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": -0.049500360750360746,
+          "confidence": 0.95,
+          "low": -0.14511954365079366,
+          "high": 0.04418123196248182,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.026358543417366945,
+          "confidence": 0.95,
+          "low": -0.12947163865546218,
+          "high": 0.07411887254901961,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.05428153354176372,
+          "confidence": 0.95,
+          "low": -0.13522725114293208,
+          "high": 0.01674687347676477,
+          "samples": 2000
+        }
+      },
+      "flips": 25,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 289.26595429716457,
+          "p50_ms": 141.99387904955074,
+          "p95_ms": 159.0784112107939,
+          "p99_ms": 238.62038887804397
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 289.26595429716457,
+          "p50_ms": 141.99387904955074,
+          "p95_ms": 159.0784112107939,
+          "p99_ms": 238.62038887804397
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 143.29315009215767,
+          "p50_ms": 140.08013199782,
+          "p95_ms": 154.52384160598726,
+          "p99_ms": 211.24353143386543
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 143.29315009215767,
+          "p50_ms": 140.08013199782,
+          "p95_ms": 154.52384160598726,
+          "p99_ms": 211.24353143386543
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "2cf4a4f749c2f917e3d08c6b64ab14e63e66f935d98cd39fc92100b8bd8cb107",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "20d324d22025f35ed51fc607d2baf4bdea3929cfb8f1689bc60fa1ce1216c405",
+        "container.json": "5ba6993b5fad6970faa75b2b744dce887c614a664093680b8631885bab003b03",
+        "intents.jsonl": "b17cb0facda1158288fab40688f59712b232d2a4c20136254cb40148699cea01",
+        "requests.jsonl": "015fcc8525e3828977e99a546fe33ef0c329a4208ad1b12f15787d38572b3a8d"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "d3-flash": {
+      "model": "d3-flash",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 2,
+          "tn": 135,
+          "tp": 84,
+          "fp": 82,
+          "fn": 32
+        },
+        "candidate_accuracy": 0.6576576576576577,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4350108225108225,
+            "confidence": 0.95,
+            "low": 0.3278499729437229,
+            "high": 0.5452045454545453,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.6888060224089636,
+            "confidence": 0.95,
+            "low": 0.5567776610644257,
+            "high": 0.8050147934173669,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5121247040712985,
+            "confidence": 0.95,
+            "low": 0.4021728639222834,
+            "high": 0.6172815680728799,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.5,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.375,
+            "f1": 0.375
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5714285714285714,
+            "recall": 0.7058823529411765,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333334
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.6,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.75,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4166666666666667,
+            "recall": 0.8333333333333334,
+            "f1": 0.5555555555555556
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9333333333333333,
+            "recall": 0.9333333333333333,
+            "f1": 0.9333333333333333
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 127,
+          "tp": 91,
+          "fp": 90,
+          "fn": 25
+        },
+        "candidate_accuracy": 0.6546546546546547,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.43701541514041514,
+            "confidence": 0.95,
+            "low": 0.3283204746642247,
+            "high": 0.548970486111111,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7418067226890757,
+            "confidence": 0.95,
+            "low": 0.5999159663865546,
+            "high": 0.8631822478991595,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5290149901750614,
+            "confidence": 0.95,
+            "low": 0.4135242182736261,
+            "high": 0.6335884355146002,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.375,
+            "f1": 0.375
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5416666666666666,
+            "recall": 0.7647058823529411,
+            "f1": 0.6341463414634146
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.7142857142857143,
+            "recall": 1.0,
+            "f1": 0.8333333333333334
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.8571428571428571,
+            "f1": 0.75
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.6666666666666666,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.6,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5833333333333334,
+            "recall": 0.875,
+            "f1": 0.7
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.46153846153846156,
+            "recall": 1.0,
+            "f1": 0.631578947368421
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": -0.00200459262959263,
+          "confidence": 0.95,
+          "low": -0.016668779137529136,
+          "high": 0.013047220140970133,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.053000700280112036,
+          "confidence": 0.95,
+          "low": -0.0919162289915966,
+          "high": -0.019166666666666665,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.016890286103762857,
+          "confidence": 0.95,
+          "low": -0.03775237969817714,
+          "high": 0.0027364300383511744,
+          "samples": 2000
+        }
+      },
+      "flips": 15,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 134.05819861976957,
+          "p50_ms": 71.40296907164156,
+          "p95_ms": 145.4257027944549,
+          "p99_ms": 278.0331622087401
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 134.05819861976957,
+          "p50_ms": 71.40296907164156,
+          "p95_ms": 145.4257027944549,
+          "p99_ms": 278.0331622087401
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 83.23862953632427,
+          "p50_ms": 72.26887298747897,
+          "p95_ms": 144.25301880110055,
+          "p99_ms": 234.81349451700225
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 83.23862953632427,
+          "p50_ms": 72.26887298747897,
+          "p95_ms": 144.25301880110055,
+          "p99_ms": 234.81349451700225
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "175829608ad86e5d8b553419fe2ad863e9d3db797269cd66bce11105bfb4d101",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "fb59ce21b87e6f905d9dd325f9c56028e7fcb298ff7e58c5b1b080a5c867334e",
+        "container.json": "5466681a9e00238a62dfec7ebef4d66e74b6365e921cbffa6ca9e912f938be53",
+        "intents.jsonl": "605d5a4e32edc9d98b752ac4f14aff9fcfb3b4b6bf2ce4a325eb0570ab32a58a",
+        "requests.jsonl": "d91fdc01bdbf0ca375db5bb01aacf144abf0af518f3da60437e7f88903237e15"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "clef-flash": {
+      "model": "clef-flash",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 3,
+          "tn": 152,
+          "fn": 48,
+          "fp": 65,
+          "tp": 68
+        },
+        "candidate_accuracy": 0.6606606606606606,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.3887934981684982,
+            "confidence": 0.95,
+            "low": 0.2828368437118437,
+            "high": 0.5037592719780218,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.5443277310924369,
+            "confidence": 0.95,
+            "low": 0.38269826680672264,
+            "high": 0.7035539215686274,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4197442078004222,
+            "confidence": 0.95,
+            "low": 0.30517328749681694,
+            "high": 0.5372570884108775,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.15384615384615385,
+            "recall": 1.0,
+            "f1": 0.26666666666666666
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.375,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.5294117647058824,
+            "f1": 0.5625
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.14285714285714285,
+            "f1": 0.2
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.625,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8333333333333334,
+            "recall": 0.5,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 4,
+          "tn": 143,
+          "fn": 43,
+          "fp": 74,
+          "tp": 73
+        },
+        "candidate_accuracy": 0.6486486486486487,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.37721230158730157,
+            "confidence": 0.95,
+            "low": 0.26633655753968255,
+            "high": 0.4943621031746031,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.5686029411764706,
+            "confidence": 0.95,
+            "low": 0.4078700105042017,
+            "high": 0.728203431372549,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.4252575547475927,
+            "confidence": 0.95,
+            "low": 0.3086542580403468,
+            "high": 0.5426600710326991,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 0.75,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.14285714285714285,
+            "recall": 1.0,
+            "f1": 0.25
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.375,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.6470588235294118,
+            "f1": 0.5641025641025641
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.7142857142857143,
+            "f1": 0.625
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.2857142857142857,
+            "f1": 0.36363636363636365
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.3333333333333333,
+            "f1": 0.25
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.8571428571428571,
+            "recall": 0.6,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.011581196581196588,
+          "confidence": 0.95,
+          "low": -0.021369047619047603,
+          "high": 0.04993635531135516,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.024275210084033612,
+          "confidence": 0.95,
+          "low": -0.0478203781512605,
+          "high": -0.005882352941176472,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.005513346947170472,
+          "confidence": 0.95,
+          "low": -0.03092800245098039,
+          "high": 0.019887955182072842,
+          "samples": 2000
+        }
+      },
+      "flips": 18,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 85.72994735107306,
+          "p50_ms": 74.53765999525785,
+          "p95_ms": 128.05347697576502,
+          "p99_ms": 234.56688969163244
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 85.72994735107306,
+          "p50_ms": 74.53765999525785,
+          "p95_ms": 128.05347697576502,
+          "p99_ms": 234.56688969163244
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 77.4020657054143,
+          "p50_ms": 70.14769199304283,
+          "p95_ms": 118.9602906233631,
+          "p99_ms": 188.15751936286688
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 77.4020657054143,
+          "p50_ms": 70.14769199304283,
+          "p95_ms": 118.9602906233631,
+          "p99_ms": 188.15751936286688
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "e41f64d8a995b8a0db059abb6501835dc3f55720d3b0166153f265637fd564e8",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "da147c61bdfbf0d0c60e0b81445f1b1b4b6372423a93041b12d2c60c5c4fc9ca",
+        "container.json": "bdbd426114ace7cea320c3946eb5bf20722f1236bfd55d7c44bc20d621e21bdc",
+        "intents.jsonl": "998645516f41972f13efe80b607023e59e8b4a5da2eb3266c74768bdb99602f9",
+        "requests.jsonl": "96b22bef514ff59101d893a9c9d13735d01b5959db3d2e1d37416e9a09d40c02"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "vela-2.0-9b": {
+      "model": "vela-2.0-9b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 132,
+          "fn": 33,
+          "fp": 85,
+          "tp": 83
+        },
+        "candidate_accuracy": 0.6456456456456456,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.45411477411477413,
+            "confidence": 0.95,
+            "low": 0.36211248473748475,
+            "high": 0.5589552426739927,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7246148459383753,
+            "confidence": 0.95,
+            "low": 0.6107515756302522,
+            "high": 0.8300381652661064,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5275513337592979,
+            "confidence": 0.95,
+            "low": 0.43955063014041346,
+            "high": 0.6186035186537479,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3076923076923077,
+            "recall": 1.0,
+            "f1": 0.47058823529411764
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.375,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.75,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5238095238095238,
+            "recall": 0.6470588235294118,
+            "f1": 0.5789473684210527
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 1.0,
+            "f1": 0.7692307692307693
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.7142857142857143,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.6666666666666666,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 0.625,
+            "f1": 0.5882352941176471
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4166666666666667,
+            "recall": 0.8333333333333334,
+            "f1": 0.5555555555555556
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 1.0,
+            "recall": 0.9333333333333333,
+            "f1": 0.9655172413793104
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.6666666666666666,
+            "recall": 0.5,
+            "f1": 0.5714285714285714
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 93,
+          "tn": 124,
+          "fn": 28,
+          "tp": 88
+        },
+        "candidate_accuracy": 0.6366366366366366,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4599942991790818,
+            "confidence": 0.95,
+            "low": 0.384498745819398,
+            "high": 0.5496736868204259,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7634488795518207,
+            "confidence": 0.95,
+            "low": 0.6547574404761904,
+            "high": 0.8614251575630252,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5403734827264239,
+            "confidence": 0.95,
+            "low": 0.4657235060690943,
+            "high": 0.6236769374416433,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3076923076923077,
+            "recall": 1.0,
+            "f1": 0.47058823529411764
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 0.375,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5217391304347826,
+            "recall": 0.7058823529411765,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.6666666666666666,
+            "f1": 0.4444444444444444
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.2,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.75,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4166666666666667,
+            "recall": 0.8333333333333334,
+            "f1": 0.5555555555555556
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9333333333333333,
+            "recall": 0.9333333333333333,
+            "f1": 0.9333333333333333
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.5,
+            "f1": 0.4444444444444444
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": -0.005879525064307672,
+          "confidence": 0.95,
+          "low": -0.06742266414141414,
+          "high": 0.04689867424242421,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.038834033613445375,
+          "confidence": 0.95,
+          "low": -0.07125420168067227,
+          "high": -0.01,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.012822148967126,
+          "confidence": 0.95,
+          "low": -0.0498113183685939,
+          "high": 0.021264006707264936,
+          "samples": 2000
+        }
+      },
+      "flips": 13,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 216.922105499753,
+          "p50_ms": 112.32387903146446,
+          "p95_ms": 157.32610679697223,
+          "p99_ms": 247.22349666524684
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 216.922105499753,
+          "p50_ms": 112.32387903146446,
+          "p95_ms": 157.32610679697223,
+          "p99_ms": 247.22349666524684
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 117.94516110534755,
+          "p50_ms": 111.767420952674,
+          "p95_ms": 152.92838442837808,
+          "p99_ms": 239.64736038586125
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 117.94516110534755,
+          "p50_ms": 111.767420952674,
+          "p95_ms": 152.92838442837808,
+          "p99_ms": 239.64736038586125
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "107f3d145e8486b14a991c364103c068455f22174fe67ca9f0fe03d725df0e1a",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "5c6d2ee38bd80ddfeef26a1bc2e7c57cbc96e745f1af78af08f6dc5260484337",
+        "container.json": "4247160357fa0ded721c45f1a82cb6046630c4ad11ed2ee0df040f4176feda0c",
+        "intents.jsonl": "c5685b67eb61c101ed0d6b1d10feda1db5f0eb68f5b5c710169b0d9fc59d5aaa",
+        "requests.jsonl": "75cdd5249ab7700ef2b64a50780a81eff865284b9b1c5b3176929cee807a5747"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "jev-27b": {
+      "model": "jev-27b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 116,
+          "fn": 24,
+          "tn": 101,
+          "tp": 92
+        },
+        "candidate_accuracy": 0.5795795795795796,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.42121121933621936,
+            "confidence": 0.95,
+            "low": 0.3417821293290043,
+            "high": 0.5184843299062049,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7993417366946779,
+            "confidence": 0.95,
+            "low": 0.7031370798319327,
+            "high": 0.8957142857142857,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.524346166000838,
+            "confidence": 0.95,
+            "low": 0.44284972889178414,
+            "high": 0.6166512002483563,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.1,
+            "recall": 0.5,
+            "f1": 0.16666666666666666
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.5,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.125,
+            "recall": 1.0,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.7058823529411765,
+            "f1": 0.5853658536585366
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 0.8,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.6,
+            "recall": 0.8571428571428571,
+            "f1": 0.7058823529411765
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.2,
+            "f1": 0.25
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.75,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.75,
+            "f1": 0.46153846153846156
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 0,
+          "fp": 135,
+          "tp": 100,
+          "tn": 82,
+          "fn": 16
+        },
+        "candidate_accuracy": 0.5465465465465466,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.41375242812742813,
+            "confidence": 0.95,
+            "low": 0.33939242181429685,
+            "high": 0.509144947066822,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.8860329131652661,
+            "confidence": 0.95,
+            "low": 0.8144608718487395,
+            "high": 0.952187324929972,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5394649448894532,
+            "confidence": 0.95,
+            "low": 0.46740124038695824,
+            "high": 0.6246226126513275,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.16666666666666666,
+            "recall": 1.0,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.2,
+            "recall": 0.5,
+            "f1": 0.2857142857142857
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.125,
+            "recall": 1.0,
+            "f1": 0.2222222222222222
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.26666666666666666,
+            "recall": 0.5,
+            "f1": 0.34782608695652173
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.7647058823529411,
+            "f1": 0.6046511627906976
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.46153846153846156,
+            "recall": 0.8571428571428571,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.2222222222222222,
+            "recall": 0.6666666666666666,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 0.8,
+            "f1": 0.5333333333333333
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.4666666666666667,
+            "recall": 0.875,
+            "f1": 0.6086956521739131
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 1.0,
+            "f1": 0.46153846153846156
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.007458791208791199,
+          "confidence": 0.95,
+          "low": -0.013499542124542135,
+          "high": 0.02950984432234427,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.08669117647058823,
+          "confidence": 0.95,
+          "low": -0.1687610294117647,
+          "high": -0.01875,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.015118778888615082,
+          "confidence": 0.95,
+          "low": -0.05393998439676226,
+          "high": 0.01748914853262681,
+          "samples": 2000
+        }
+      },
+      "flips": 27,
+      "readouts": {
+        "native_choice": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 390.18058118636947,
+          "p50_ms": 309.43877302343026,
+          "p95_ms": 738.4021296165877,
+          "p99_ms": 1603.8315499364414
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 390.18058118636947,
+          "p50_ms": 309.43877302343026,
+          "p95_ms": 738.4021296165877,
+          "p99_ms": 1603.8315499364414
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 355.02063937106954,
+          "p50_ms": 300.991432974115,
+          "p95_ms": 658.5912339854983,
+          "p99_ms": 1130.7906073448248
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 355.02063937106954,
+          "p50_ms": 300.991432974115,
+          "p95_ms": 658.5912339854983,
+          "p99_ms": 1130.7906073448248
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "8a3c8f4fe549bc214fef0006cebe8779b2d6691fb517ea3612bd2ed638da61ec",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "2e0aa3a2e3c7931e97afa96d11435e0ee61f95328f4753cfb851bc0fd65e295a",
+        "container.json": "0145875616258f99786aeb482417c0ea42a0f079822cb35c104745d00dd6b59e",
+        "intents.jsonl": "145bddc78b6f397b683e5e76a4d9106e0b062eb128b30cf9a5810b29ba7b3ced",
+        "requests.jsonl": "43ea73069565c716ea66df1f5b445549220217827be78e43f94826bea2ca2ec6"
+      },
+      "status": "complete",
+      "binary_probability_ties": 0,
+      "returned_scalar_half": 0
+    },
+    "pplx-decider-v1.1-27b": {
+      "model": "pplx-decider-v1.1-27b",
+      "passed": true,
+      "noul": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 122,
+          "fn": 26,
+          "fp": 95,
+          "tp": 90
+        },
+        "candidate_accuracy": 0.6366366366366366,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.44138979076479073,
+            "confidence": 0.95,
+            "low": 0.3480050054112554,
+            "high": 0.53868998015873,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7230567226890756,
+            "confidence": 0.95,
+            "low": 0.5928556547619047,
+            "high": 0.8444897584033613,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5219096247802223,
+            "confidence": 0.95,
+            "low": 0.42322371252341867,
+            "high": 0.6174827142441746,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.75,
+            "f1": 0.42857142857142855
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5416666666666666,
+            "recall": 0.7647058823529411,
+            "f1": 0.6341463414634146
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5454545454545454,
+            "recall": 0.8571428571428571,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5555555555555556,
+            "recall": 1.0,
+            "f1": 0.7142857142857143
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.3333333333333333,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.6,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 0.625,
+            "f1": 0.5555555555555556
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.25,
+            "f1": 0.2857142857142857
+          }
+        ]
+      },
+      "choice": {
+        "pools": 20,
+        "valid_pools": 20,
+        "candidates": 333,
+        "counts": {
+          "empty_pools": 1,
+          "tn": 113,
+          "fn": 21,
+          "fp": 104,
+          "tp": 95
+        },
+        "candidate_accuracy": 0.6246246246246246,
+        "quality": {
+          "precision": {
+            "independent_cases": 20,
+            "point": 0.4280312049062049,
+            "confidence": 0.95,
+            "low": 0.33505776515151514,
+            "high": 0.5302205762987012,
+            "samples": 2000
+          },
+          "recall": {
+            "independent_cases": 20,
+            "point": 0.7614495798319327,
+            "confidence": 0.95,
+            "low": 0.6363435749299721,
+            "high": 0.8735563725490196,
+            "samples": 2000
+          },
+          "f1": {
+            "independent_cases": 20,
+            "point": 0.5270537420410444,
+            "confidence": 0.95,
+            "low": 0.42870704200527865,
+            "high": 0.6263645425199963,
+            "samples": 2000
+          }
+        },
+        "cases": [
+          {
+            "case_id": "t2:2313",
+            "valid": true,
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:4486",
+            "valid": true,
+            "precision": 0.2727272727272727,
+            "recall": 0.75,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:1483",
+            "valid": true,
+            "precision": 0.13333333333333333,
+            "recall": 1.0,
+            "f1": 0.23529411764705882
+          },
+          {
+            "case_id": "t2:2064",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.625,
+            "f1": 0.43478260869565216
+          },
+          {
+            "case_id": "t2:3812",
+            "valid": true,
+            "precision": 0.4444444444444444,
+            "recall": 1.0,
+            "f1": 0.6153846153846154
+          },
+          {
+            "case_id": "t2:1975",
+            "valid": true,
+            "precision": 0.5416666666666666,
+            "recall": 0.7647058823529411,
+            "f1": 0.6341463414634146
+          },
+          {
+            "case_id": "t2:5646",
+            "valid": true,
+            "precision": 0.4,
+            "recall": 1.0,
+            "f1": 0.5714285714285714
+          },
+          {
+            "case_id": "t2:3183",
+            "valid": true,
+            "precision": 0.5833333333333334,
+            "recall": 1.0,
+            "f1": 0.7368421052631579
+          },
+          {
+            "case_id": "t2:4104",
+            "valid": true,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4398",
+            "valid": true,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          },
+          {
+            "case_id": "t2:4885",
+            "valid": true,
+            "precision": 0.625,
+            "recall": 0.7142857142857143,
+            "f1": 0.6666666666666666
+          },
+          {
+            "case_id": "t2:4510",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "f1": 0.3333333333333333
+          },
+          {
+            "case_id": "t2:26",
+            "valid": true,
+            "precision": 0.3,
+            "recall": 0.6,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:5702",
+            "valid": true,
+            "precision": 0.2857142857142857,
+            "recall": 0.6666666666666666,
+            "f1": 0.4
+          },
+          {
+            "case_id": "t2:2515",
+            "valid": true,
+            "precision": 0.5833333333333334,
+            "recall": 0.875,
+            "f1": 0.7
+          },
+          {
+            "case_id": "t2:5666",
+            "valid": true,
+            "precision": 0.9,
+            "recall": 0.9,
+            "f1": 0.9
+          },
+          {
+            "case_id": "t2:359",
+            "valid": true,
+            "precision": 0.375,
+            "recall": 1.0,
+            "f1": 0.5454545454545454
+          },
+          {
+            "case_id": "t2:4635",
+            "valid": true,
+            "precision": 0.42857142857142855,
+            "recall": 1.0,
+            "f1": 0.6
+          },
+          {
+            "case_id": "t2:1826",
+            "valid": true,
+            "precision": 0.9375,
+            "recall": 1.0,
+            "f1": 0.967741935483871
+          },
+          {
+            "case_id": "t2:5376",
+            "valid": true,
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4
+          }
+        ]
+      },
+      "paired_delta": {
+        "precision": {
+          "independent_cases": 20,
+          "point": 0.013358585858585856,
+          "confidence": 0.95,
+          "low": -0.007071338383838401,
+          "high": 0.03692045454545454,
+          "samples": 2000
+        },
+        "recall": {
+          "independent_cases": 20,
+          "point": -0.038392857142857145,
+          "confidence": 0.95,
+          "low": -0.07776785714285714,
+          "high": -0.00625,
+          "samples": 2000
+        },
+        "f1": {
+          "independent_cases": 20,
+          "point": -0.005144117260822062,
+          "confidence": 0.95,
+          "low": -0.03023882413670741,
+          "high": 0.016539450633272154,
+          "samples": 2000
+        }
+      },
+      "flips": 14,
+      "readouts": {
+        "fixed_binary_argmax_false_on_tie": 333
+      },
+      "requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 262.4178645678225,
+          "p50_ms": 189.1189570305869,
+          "p95_ms": 644.3130808300317,
+          "p99_ms": 1050.5560864671133
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 262.4178645678225,
+          "p50_ms": 189.1189570305869,
+          "p95_ms": 644.3130808300317,
+          "p99_ms": 1050.5560864671133
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "historical_choice_requests": {
+        "attempted": 333,
+        "http_calls": 333,
+        "valid": 333,
+        "failed": 0,
+        "successful_latency_ms": {
+          "n": 333,
+          "mean_ms": 264.18558278438485,
+          "p50_ms": 191.64297095267102,
+          "p95_ms": 641.533279768189,
+          "p99_ms": 1041.8431770033203
+        },
+        "timeouts": 0,
+        "all_attempt_latency_ms": {
+          "n": 333,
+          "mean_ms": 264.18558278438485,
+          "p50_ms": 191.64297095267102,
+          "p95_ms": 641.533279768189,
+          "p99_ms": 1041.8431770033203
+        },
+        "http_statuses": {
+          "200": 333
+        },
+        "failure_types": {}
+      },
+      "input_and_request_hashes_verified": true,
+      "native_readout_recomputed": true,
+      "unique_calls_and_nonoverlap": true,
+      "evidence_sha256": {
+        "audit.json": "dd1cacd2014639669292cc0e41c1cdd7b73c8e92d2c43a35de55e96153a39484",
+        "auth.json": "bfebf7cd8412205f733d1da57829bda081dd2cc9fa6e0b85cf1d242f041a9a46",
+        "deployment.json": "9c67000eee651bcf59096c5088c4d5d63755bc1ff0c34882ce784125cde66a30",
+        "container.json": "8d0b1834ea39690e032a51fe31472d8ef81d28572d3a76614c53d773347c0fbe",
+        "intents.jsonl": "432b58afdd13a49c967d01112f84fcec1c9bb4b850e4b1837f943e7a49c95afb",
+        "requests.jsonl": "3c9e5027c4b5746c72e4b64441379b1859a3acd02717dd57bfd6436fdd73de6f"
+      },
+      "status": "complete",
+      "binary_probability_ties": 2,
+      "returned_scalar_half": 2
+    }
+  },
+  "total_requests": 4329,
+  "total_valid": 4329,
+  "total_failed": 0,
+  "total_timeouts": 0,
+  "final_container": {
+    "id": "8374099973cd6a008f074b59384a4794ef985b8de82141e7a8544aaf54dddb03",
+    "image_id": "sha256:a682ef469e9900ec254bb6d98e9c6052d0e0c727dcb005b4ea1a229b77424fae",
+    "pid": 1111860,
+    "started_at": "2026-10-17T11:52:14.766877532Z",
+    "running": true,
+    "owned": "true"
+  },
+  "passed": true,
+  "unique_calls": true,
+  "global_nonoverlap": true
+}

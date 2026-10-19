@@ -1,0 +1,3 @@
+ARG EVAL_BASE_IMAGE=decision-eval-runtime:torch2.9.1-transformers5.17.0-laya0.4.1
+FROM ${EVAL_BASE_IMAGE}
+COPY server.py qwen_reranker.py /app/

@@ -1,0 +1,23 @@
+ARG BASE_IMAGE=decision-eval-runtime:decision-v3-choice-batch4
+FROM ${BASE_IMAGE}
+USER root
+ARG PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/
+COPY wheels/ /opt/wheels/
+RUN python -m pip install --no-cache-dir --index-url ${PIP_INDEX_URL} --no-deps \
+    peft==0.21.2 einops==0.8.1 fla-core==0.5.2 flash-linear-attention==0.5.2 \
+    uvloop==0.22.1 httptools==0.7.1 prometheus-client==0.24.1 \
+    /opt/wheels/*.whl
+# Sources are pinned in the deployment evidence, not fetched at container startup.
+COPY jeva-source/ /opt/jeva/
+COPY vela-source/ /opt/vela/
+RUN python -m pip install --no-cache-dir --no-deps --index-url ${PIP_INDEX_URL} \
+    /opt/jeva /opt/vela
+RUN python -m pip install --no-cache-dir --no-deps --index-url ${PIP_INDEX_URL} ninja==1.13.0
+RUN python -m pip check
+RUN groupadd --gid 10001 inference && useradd --uid 10001 --gid 10001 --home-dir /runtime inference
+RUN sed -i 's|http://deb.debian.org|https://mirrors.aliyun.com|g' /etc/apt/sources.list.d/debian.sources \
+    && apt-get update -o Acquire::Retries=3 \
+    && apt-get install -y --no-install-recommends gcc libc6-dev \
+    && rm -rf /var/lib/apt/lists/*
+COPY service/server.py service/jeva_backend.py /app/
+USER 10001:10001

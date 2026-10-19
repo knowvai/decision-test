@@ -1,0 +1,3 @@
+ARG BASE_IMAGE=decision-eval-runtime:jeva-vela-preflight-20261015
+FROM ${BASE_IMAGE}
+COPY server.py jeva_backend.py neohorse_backend.py laya_http.py decision_reranker.py /app/

@@ -1,0 +1,1002 @@
+{
+  "dataset_protocol_sha256": "329021e749f25803f02bc21d213485230e9ce075d07678f1e21e383032c5255e",
+  "coverage_sha256": "7da355f3bc4fe93ce5d3afccf5ac4df034d0d0ff62fdd35a1ec94c26e6ac2a94",
+  "inference_calls": 0,
+  "native_conditions": 29,
+  "original": {
+    "engineering": {
+      "pools": 12,
+      "pairs": 177,
+      "grades": {
+        "2": 48,
+        "1": 29,
+        "0": 89,
+        "3": 11
+      },
+      "no_evidence_pools": 1,
+      "max_pair_chars": 5977
+    },
+    "validation": {
+      "pools": 20,
+      "pairs": 327,
+      "grades": {
+        "3": 8,
+        "2": 85,
+        "1": 54,
+        "0": 180
+      },
+      "no_evidence_pools": 4,
+      "max_pair_chars": 4345
+    },
+    "formal": {
+      "pools": 200,
+      "pairs": 3105,
+      "grades": {
+        "3": 181,
+        "2": 754,
+        "1": 454,
+        "0": 1716
+      },
+      "no_evidence_pools": 14,
+      "max_pair_chars": 28918
+    },
+    "no_evidence": {
+      "pools": 40,
+      "pairs": 557,
+      "grades": {
+        "1": 81,
+        "0": 476
+      },
+      "no_evidence_pools": 40,
+      "max_pair_chars": 14952
+    }
+  },
+  "common": {
+    "engineering": {
+      "pools": 12,
+      "pairs": 177,
+      "grades": {
+        "2": 48,
+        "1": 29,
+        "0": 89,
+        "3": 11
+      },
+      "no_evidence_pools": 1,
+      "candidate_le10_pools": 2,
+      "top10_refine_pairs": 120
+    },
+    "validation": {
+      "pools": 20,
+      "pairs": 327,
+      "grades": {
+        "3": 8,
+        "2": 85,
+        "1": 54,
+        "0": 180
+      },
+      "no_evidence_pools": 4,
+      "candidate_le10_pools": 3,
+      "top10_refine_pairs": 194
+    },
+    "formal": {
+      "pools": 197,
+      "pairs": 3054,
+      "grades": {
+        "3": 181,
+        "2": 743,
+        "1": 451,
+        "0": 1679
+      },
+      "no_evidence_pools": 14,
+      "candidate_le10_pools": 18,
+      "top10_refine_pairs": 1954
+    },
+    "no_evidence": {
+      "pools": 38,
+      "pairs": 517,
+      "grades": {
+        "1": 74,
+        "0": 443
+      },
+      "no_evidence_pools": 38,
+      "candidate_le10_pools": 5,
+      "top10_refine_pairs": 375
+    }
+  },
+  "unsupported_pairs": [
+    {
+      "phase": "formal",
+      "case_id": "t2q:17097",
+      "fragment_id": "t2p:437254",
+      "grade": 0,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 27437,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 27450,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.8b.choice",
+          "tokens": 26563,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.8b.noul",
+          "tokens": 26573,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 27441,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 27448,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-4b.choice",
+          "tokens": 26563,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-4b.noul",
+          "tokens": 26573,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 26473,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 26462,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 26468,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 26469,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 26577,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 26589,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-9b.choice",
+          "tokens": 26563,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-9b.noul",
+          "tokens": 26573,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 26490,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 26481,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 26577,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 26589,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 27262,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 26482,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 27198,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:17097",
+      "fragment_id": "t2p:61790",
+      "grade": 0,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 8832,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 8845,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 8836,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 8843,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 8569,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 8558,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 8564,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 8565,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 8673,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 8685,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 8586,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 8577,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 8673,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 8685,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 8765,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 8578,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 8703,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:17097",
+      "fragment_id": "t2p:740097",
+      "grade": 0,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 27792,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 27805,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.8b.choice",
+          "tokens": 26929,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.8b.noul",
+          "tokens": 26939,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 27796,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 27803,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-4b.choice",
+          "tokens": 26929,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-4b.noul",
+          "tokens": 26939,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 26839,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 26828,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 26834,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 26835,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 26943,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 26955,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-9b.choice",
+          "tokens": 26929,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-9b.noul",
+          "tokens": 26939,
+          "effective_limit": 16384,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 26856,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 26847,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 26943,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 26955,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 27631,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 26848,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 27568,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:20113",
+      "fragment_id": "t2p:173437",
+      "grade": 0,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 11508,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 11521,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 11510,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 11517,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 10307,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 10296,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 10302,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 10303,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 10411,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 10423,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 10324,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 10315,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 10411,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 10423,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 11257,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 10316,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 11193,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:20113",
+      "fragment_id": "t2p:254420",
+      "grade": 2,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 11508,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 11521,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 11510,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 11517,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 10307,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 10296,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 10302,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 10303,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 10411,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 10423,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 10324,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 10315,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 10411,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 10423,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 11257,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 10316,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 11193,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "no_evidence",
+      "case_id": "t2q:14629",
+      "fragment_id": "t2p:618820",
+      "grade": 1,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 13184,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 13197,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 13187,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 13194,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 13182,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 13171,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 13177,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 13178,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 13286,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 13298,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 13199,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 13190,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 13286,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 13298,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 13356,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 13191,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 13291,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "no_evidence",
+      "case_id": "t2q:14520",
+      "fragment_id": "t2p:426183",
+      "grade": 0,
+      "checks": [
+        {
+          "condition": "vela-2.0-0.3b.choice",
+          "tokens": 9809,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "vela-2.0-0.3b.noul",
+          "tokens": 9822,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.choice",
+          "tokens": 9813,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "laya-multilingual.noul",
+          "tokens": 9820,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.choice",
+          "tokens": 9196,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "neohorse-jev-4b.noul",
+          "tokens": 9185,
+          "effective_limit": 12288,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.choice",
+          "tokens": 9193,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jeva-4b.noul",
+          "tokens": 9194,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.choice",
+          "tokens": 9302,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "clef-flash.noul",
+          "tokens": 9314,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.choice",
+          "tokens": 9215,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "jev-27b.noul",
+          "tokens": 9206,
+          "effective_limit": 8191,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.choice",
+          "tokens": 9302,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "pplx-decider-v1.1-27b.noul",
+          "tokens": 9314,
+          "effective_limit": 8185,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 10419,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "qwen3.8-27b.choice",
+          "tokens": 9207,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        },
+        {
+          "condition": "reranker",
+          "tokens": 10354,
+          "effective_limit": 8192,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:17809",
+      "fragment_id": "t2p:598988",
+      "grade": 2,
+      "checks": [
+        {
+          "condition": "qwen3-30b-a3b-instruct-2507.choice",
+          "tokens": 8197,
+          "effective_limit": 8128,
+          "reason": "native_complete_input_exceeds_budget"
+        }
+      ]
+    }
+  ],
+  "excluded_whole_pools": [
+    {
+      "phase": "formal",
+      "case_id": "t2q:17097",
+      "pairs": 14,
+      "positives": 1
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:20113",
+      "pairs": 22,
+      "positives": 7
+    },
+    {
+      "phase": "no_evidence",
+      "case_id": "t2q:14629",
+      "pairs": 13,
+      "positives": 0
+    },
+    {
+      "phase": "no_evidence",
+      "case_id": "t2q:14520",
+      "pairs": 27,
+      "positives": 0
+    },
+    {
+      "phase": "formal",
+      "case_id": "t2q:17809",
+      "pairs": 15,
+      "positives": 3
+    }
+  ],
+  "planned_calls": {
+    "engineering": 8652,
+    "validation": 15148,
+    "formal": 145740,
+    "no_evidence": 26040
+  }
+}

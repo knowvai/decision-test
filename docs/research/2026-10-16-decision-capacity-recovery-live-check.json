@@ -1,0 +1,216 @@
+{
+  "checked_at_utc": "2026-10-16T07:21:28.757353+00:00",
+  "status": {
+    "pid": 680622,
+    "models": [
+      "laya-multilingual",
+      "d3-mini",
+      "vela-2.0-4b",
+      "neohorse-jev-4b",
+      "jeva-4b",
+      "d3-flash",
+      "clef-flash",
+      "vela-2.0-9b",
+      "jev-27b",
+      "pplx-decider-v1.1-27b",
+      "qwen3-30b-a3b-instruct-2507",
+      "qwen3.8-27b",
+      "qwen3.8-27b-thinking"
+    ],
+    "completed": [
+      "laya-multilingual"
+    ],
+    "stage": "loading",
+    "updated_at_utc": "2026-10-16T07:19:47.493328+00:00",
+    "model": "d3-mini",
+    "concurrency": null,
+    "repeat": null
+  },
+  "systemd": "MainPID=680622\nExecMainStartTimestamp=Fri 2026-10-16 15:18:25 CST\nActiveState=active\nSubState=running\n",
+  "shared_lock": [
+    "680622 python          /data/sdb/decision-model-eval/classification-20261015/classification.lock"
+  ],
+  "laya_auth": {
+    "ready": 200,
+    "unauthorized": [
+      401,
+      401,
+      401
+    ]
+  },
+  "laya_image_command_and_other_env_unchanged": true,
+  "laya_admission": {
+    "max_sequences": null,
+    "max_batched_tokens": null,
+    "source": "native batch request batch_size and token budget",
+    "http_admission_limit": 32,
+    "single_request_executor_workers": 1,
+    "cross_request_batching": false
+  },
+  "laya_warmup": [
+    {
+      "concurrency": 1,
+      "repeat": 1,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 1,
+      "responses_sha256": "5e6a357f700d503cff5767a767ec155e04e41e8303c918e3742e9df0f8cd59f2"
+    },
+    {
+      "concurrency": 1,
+      "repeat": 2,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 1,
+      "responses_sha256": "6fbb4dc1af02f58e964c4a0a4420f23357d9d08fde7ff3685c01425635acc276"
+    },
+    {
+      "concurrency": 5,
+      "repeat": 1,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 5,
+      "responses_sha256": "fd49b2f09b50cd8bd370e059b594c2fd14dc186b2f3100322e6bd7248c4baa92"
+    },
+    {
+      "concurrency": 5,
+      "repeat": 2,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 5,
+      "responses_sha256": "f18a1621c09fc75ea12b79dbaf6d6946b6dd73fe3b87a2d22914123ef4e6ab03"
+    },
+    {
+      "concurrency": 10,
+      "repeat": 1,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 10,
+      "responses_sha256": "e48d5421d60f7bed44330e2d4a60e4b57af6b877ddc69470e1fd12bd8e4f1ad9"
+    },
+    {
+      "concurrency": 10,
+      "repeat": 2,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 10,
+      "responses_sha256": "66a468b6f6b8cdc65dc07b8a0da3a6bceb56d9649b55798dd4a01d3fe668fdbb"
+    },
+    {
+      "concurrency": 20,
+      "repeat": 1,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 20,
+      "responses_sha256": "277fc20badd45430bb16187f3e875e6a9412a3a84fd9fb7c767c29fa2bc4ecf6"
+    },
+    {
+      "concurrency": 20,
+      "repeat": 2,
+      "requests": 20,
+      "valid": 20,
+      "failed": 0,
+      "peak_inflight": 20,
+      "responses_sha256": "6b654d82f0ba9f9a6dbd22c366522a2129ce63ada1479d427c4689569164a44b"
+    }
+  ],
+  "laya_measured_blocks": [
+    {
+      "file": "responses-n1-r1.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "4811997224d45e73fa721c2c8a52e1ec628874e3c6842bde18abf12461852ead"
+    },
+    {
+      "file": "responses-n1-r2.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "9265ddb51e82b015546214e1f804f78736bb4d6aaf4455e2e1a3ad7cdf4f8e17"
+    },
+    {
+      "file": "responses-n1-r3.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "8f06f7956e25c7a2ab9acca85e9e5db4da0153842539beab20180f7e44feb008"
+    },
+    {
+      "file": "responses-n10-r1.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "966ec0ec1e38f68604b21ab4854f1b5877083216dc600bd055bddfd37535f668"
+    },
+    {
+      "file": "responses-n10-r2.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "f65252fd2cc5360adf53104fb80806569a56e62e00521fa148011dab1613dd08"
+    },
+    {
+      "file": "responses-n10-r3.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "ae6a08212e3e36887755e95523e8c91b155b3f03adbb88b39abc4d566afc7185"
+    },
+    {
+      "file": "responses-n20-r1.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "db8b06bfe9a81647b2f0abc347bb4de9d217a929b66686d1348b327c1103aa43"
+    },
+    {
+      "file": "responses-n20-r2.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "9b5f7da8cacd4d916f46049fee3ebfb67735dad9c0939ee576a4ffa920357c25"
+    },
+    {
+      "file": "responses-n20-r3.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "26bbc96e2dd80730e722863d50d40f33c5e008d08eec6892e448e64720767ff3"
+    },
+    {
+      "file": "responses-n5-r1.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "3011c339633a6029471eae7e5b1744a9051913f3a0417b8cad1ebeec5e6765f8"
+    },
+    {
+      "file": "responses-n5-r2.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "e848055768679e33c2067f1a39c12f1115aaad863a79ac502a03fb1149a01511"
+    },
+    {
+      "file": "responses-n5-r3.jsonl",
+      "rows": 199,
+      "failed": 0,
+      "sha256": "f68c32c20992bf495b199c5c4241384f66402d72d21053460fc80bd5e2664ce0"
+    }
+  ],
+  "preserved_artifacts_unchanged": true,
+  "source_unchanged": true,
+  "original_runner_log_unchanged": true,
+  "predecessor": {
+    "directory": "/data/sdb/decision-model-eval/capacity-20261016/run-001",
+    "protocol_sha256": "332612834de9c06608f83230fd41da1ebdb3fa5c17b3f5508091b0e31f0f5c08",
+    "completed": [
+      "d3-edge",
+      "vela-2.0-0.3b",
+      "vela-2.0-0.8b"
+    ],
+    "unstarted_recovery": {
+      "model": "laya-multilingual",
+      "measured_requests": 0
+    },
+    "measurement_functions_ast_unchanged": true
+  },
+  "not_final_audit": true
+}

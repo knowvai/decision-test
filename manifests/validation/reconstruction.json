@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "files": [
+    {
+      "experiment": "capacity-20261016",
+      "path": "dataset/engineering-pools.private.jsonl",
+      "records": 12,
+      "sha256": "40cf9e1ac7fb0f5961f41d21f2b322d3bc33e326c22360804109fadf18342e97"
+    },
+    {
+      "experiment": "capacity-20261016",
+      "path": "dataset/inputs.private.jsonl",
+      "records": 199,
+      "sha256": "32339178425e539a8ce38a51757c0aeefc9b3338922d7bd0bcd558bc33df1b0b"
+    },
+    {
+      "experiment": "capacity-20261016",
+      "path": "dataset/validation-pools.private.jsonl",
+      "records": 20,
+      "sha256": "c826cb6047c52f87f833b78dd2ff0b8a9496400eb20f141dd804d216a5013e95"
+    },
+    {
+      "experiment": "capacity-20261016",
+      "path": "dataset-final/engineering-pools.private.jsonl",
+      "records": 12,
+      "sha256": "40cf9e1ac7fb0f5961f41d21f2b322d3bc33e326c22360804109fadf18342e97"
+    },
+    {
+      "experiment": "capacity-20261016",
+      "path": "dataset-final/inputs.private.jsonl",
+      "records": 199,
+      "sha256": "32339178425e539a8ce38a51757c0aeefc9b3338922d7bd0bcd558bc33df1b0b"
+    },
+    {
+      "experiment": "capacity-20261016",
+      "path": "dataset-final/validation-pools.private.jsonl",
+      "records": 20,
+      "sha256": "c826cb6047c52f87f833b78dd2ff0b8a9496400eb20f141dd804d216a5013e95"
+    },
+    {
+      "experiment": "classification-20261015",
+      "path": "dataset/inputs.private.jsonl",
+      "records": 3174,
+      "sha256": "43db68e7446002da0a97edce9595d5df3482223179918b962f23bda4e66a6ce3"
+    },
+    {
+      "experiment": "d3-tuning-20261019",
+      "path": "dataset/classification-dev.private.jsonl",
+      "records": 360,
+      "sha256": "8cf92fb5e3d2b22b7e9d969006b19571003064b257e67d3f3e89595e3d1019f5"
+    },
+    {
+      "experiment": "d3-tuning-20261019",
+      "path": "dataset/classification-holdout.private.jsonl",
+      "records": 713,
+      "sha256": "6d2c8cebb4fc4b6b0212c63219b1982d1a02d07d03ae7836eff1d623c4df8f15"
+    },
+    {
+      "experiment": "d3-tuning-20261019",
+      "path": "dataset/evidence-dev.pools.private.jsonl",
+      "records": 16,
+      "sha256": "432b7403cf2afaac4cbbb897c368024d74583eaa9e7426e97cc5d4e16f36c130"
+    },
+    {
+      "experiment": "d3-tuning-20261019",
+      "path": "dataset/evidence-dev.private.jsonl",
+      "records": 300,
+      "sha256": "5529f4f645a0d343f0cc9affa477f0024f5443c67158a09d7f59fa5127425a54"
+    },
+    {
+      "experiment": "d3-tuning-20261019",
+      "path": "dataset/evidence-holdout.pools.private.jsonl",
+      "records": 40,
+      "sha256": "c5a5d68f961cb579afcbac3e517e3b0d5edfe9a62f48dd2b5d0ce880593df65d"
+    },
+    {
+      "experiment": "d3-tuning-20261019",
+      "path": "dataset/evidence-holdout.private.jsonl",
+      "records": 643,
+      "sha256": "ca1bf79ff64ca8d396392a048e1a76928df9cac331fe1ec9073b48b21dd5604b"
+    },
+    {
+      "experiment": "evidence-20261018",
+      "path": "dataset-v1/engineering.inputs.private.jsonl",
+      "records": 12,
+      "sha256": "bbdc5644feb7b3292fcbd8796a2a91560847c831c7f76de35bf78faac775e37a"
+    },
+    {
+      "experiment": "evidence-20261018",
+      "path": "dataset-v1/formal.inputs.private.jsonl",
+      "records": 200,
+      "sha256": "99c6a8a41a32d48aaea57215a1666aff2982eb1ee9b627f80bc18441f4f898a2"
+    },
+    {
+      "experiment": "evidence-20261018",
+      "path": "dataset-v1/no_evidence.inputs.private.jsonl",
+      "records": 40,
+      "sha256": "9426198953125df14cb6ad967b35eb4bdc5b91673fc1d3bea69c5b20e34f6540"
+    },
+    {
+      "experiment": "evidence-20261018",
+      "path": "dataset-v1/validation.inputs.private.jsonl",
+      "records": 20,
+      "sha256": "5762feea7707c25e652a7e6c30a222d94e72d5735622fa3b4c1405a28c5981fc"
+    },
+    {
+      "experiment": "passage-20261017",
+      "path": "dataset-six-mask-v1/engineering.inputs.private.jsonl",
+      "records": 12,
+      "sha256": "40cf9e1ac7fb0f5961f41d21f2b322d3bc33e326c22360804109fadf18342e97"
+    },
+    {
+      "experiment": "passage-20261017",
+      "path": "dataset-six-mask-v1/formal.inputs.private.jsonl",
+      "records": 200,
+      "sha256": "92544f39499a8ee6279f57e0c299aacb1dd56f99bcf032be22539b9170b1c22b"
+    },
+    {
+      "experiment": "passage-20261017",
+      "path": "dataset-six-mask-v1/validation.inputs.private.jsonl",
+      "records": 20,
+      "sha256": "c826cb6047c52f87f833b78dd2ff0b8a9496400eb20f141dd804d216a5013e95"
+    }
+  ],
+  "sources_verified": [
+    "massive-test",
+    "massive-train",
+    "massive-validation",
+    "t2reranking",
+    "t2-queries",
+    "t2-qrels",
+    "t2-collection"
+  ],
+  "unique_texts": 13371,
+  "inference_calls": 0
+}

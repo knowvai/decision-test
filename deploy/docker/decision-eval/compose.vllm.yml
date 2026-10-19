@@ -1,0 +1,39 @@
+# Optional Qwen-only official serving engine. Other services keep their native runtimes.
+services:
+  qwen:
+    image: ${QWEN_VLLM_IMAGE:-vllm/vllm-openai@sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b}
+    build: !reset null
+    environment:
+      VLLM_API_KEY: ${DECISION_EVAL_API_KEY:?Evaluation API key required}
+      VLLM_ENABLE_CUDA_COMPATIBILITY: "1"
+      VLLM_CACHE_ROOT: /runtime/vllm
+      TORCHINDUCTOR_CACHE_DIR: /runtime/inductor
+      FLASHINFER_WORKSPACE_BASE: /runtime
+      VLLM_NO_USAGE_STATS: "1"
+    command:
+      - /models/qwen3-reranker-8b
+      - --served-model-name
+      - Qwen3-Reranker-8B
+      - --runner
+      - pooling
+      - --hf-overrides
+      - '{"architectures":["Qwen3ForSequenceClassification"],"classifier_from_token":["no","yes"],"is_original_qwen3_reranker":true}'
+      - --chat-template
+      - /etc/decision-eval/qwen3_reranker.jinja
+      - --dtype
+      - bfloat16
+      - --max-model-len
+      - "8192"
+      - --max-num-seqs
+      - "8"
+      - --max-num-batched-tokens
+      - "8192"
+      - --gpu-memory-utilization
+      - "0.75"
+      - --no-enable-prefix-caching
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+    volumes:
+      - ./qwen3_reranker.jinja:/etc/decision-eval/qwen3_reranker.jinja:ro

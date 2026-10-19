@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.DS_Store
+.env
+*.env
+*.pem
+*.key
+downloads/
+work/
+models/
+weights/
+*.safetensors
+*.whl
+.nginx.conf

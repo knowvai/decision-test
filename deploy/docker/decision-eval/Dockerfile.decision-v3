@@ -1,0 +1,10 @@
+ARG EVAL_BASE_IMAGE=decision-eval-runtime:torch2.9.1-transformers5.17.0-laya0.4.1
+FROM ${EVAL_BASE_IMAGE}
+USER root
+COPY laya-0.4.3-py3-none-any.whl /tmp/
+RUN printf '%s  %s\n' '1cd9c33ab0b2b12f0122e6bf643fb4ead70309983ffb68f8db854d7a8f412d50' '/tmp/laya-0.4.3-py3-none-any.whl' | sha256sum --check --strict \
+    && python -m pip install --no-deps --no-index --force-reinstall /tmp/laya-0.4.3-py3-none-any.whl \
+    && python -m pip check \
+    && rm /tmp/laya-0.4.3-py3-none-any.whl
+COPY server.py decision_reranker.py /app/
+USER 10001:10001

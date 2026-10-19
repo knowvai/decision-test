@@ -1,0 +1,9 @@
+ARG EVAL_BASE_IMAGE=decision-eval-runtime:torch2.9.1-transformers5.17.0
+FROM ${EVAL_BASE_IMAGE}
+USER root
+RUN python -m pip install --no-deps \
+    'laya @ https://files.pythonhosted.org/packages/b8/f6/9e3f039d08319e153721210667548e2cac1679b56461c8b5e81acc93b4db/laya-0.4.1-py3-none-any.whl#sha256=5252730d8be604aecdc6c52adeb591e75d2b97ef3f52278cba9b37e403c784c7' \
+    && python -m pip check
+COPY server.py /app/server.py
+COPY decision_reranker.py /app/decision_reranker.py
+USER 10001:10001

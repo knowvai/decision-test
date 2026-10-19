@@ -1,0 +1,15 @@
+*
+!Dockerfile
+!Dockerfile.reranker
+!server.py
+!qwen_reranker.py
+!decision_reranker.py
+!Dockerfile.acceptance
+!jeva_backend.py
+!neohorse_backend.py
+!laya_http.py
+!Dockerfile.decision-v3
+!Dockerfile.vllm-lora
+!patch_vllm_lora.py
+!laya-0.4.3-py3-none-any.whl
+!.dockerignore

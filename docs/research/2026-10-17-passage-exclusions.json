@@ -1,0 +1,19 @@
+{
+  "version": "passage-owner-six-fragments-v1",
+  "reason": "Owner explicitly excluded these six long fragments before formal inference. Preserve all pools and original files; apply the same mask to all four arms and revise the scoring labels accordingly.",
+  "source_length_audit_sha256": "ffefc66c66216b1da533bce3342f6e5e46a1dd93f907e2caf08c483aacbb24b2",
+  "original_inputs_sha256": "43db68e7446002da0a97edce9595d5df3482223179918b962f23bda4e66a6ce3",
+  "expected_original_pools": 200,
+  "expected_original_candidates": 3194,
+  "expected_retained_candidates": 3188,
+  "expected_removed_positives": 1,
+  "expected_retained_positives": 1437,
+  "pairs": [
+    {"case_id": "t2:4134", "fragment_id": "11bdc26b45b516adcf933ddf6ea8fd1fa3becf2ad6784e408852a248fdd170f6", "reranker_tokens": 10439},
+    {"case_id": "t2:4534", "fragment_id": "7276a3e02cdd6d92d0bca969a248a9f33caac1f23c9c8a76bbf1034a4386b1dc", "reranker_tokens": 9788},
+    {"case_id": "t2:2650", "fragment_id": "80f3117836e54232a4896bba5faab7220d6f0017204d5036586ead0d358b62ab", "reranker_tokens": 9312},
+    {"case_id": "t2:518", "fragment_id": "bfa5837ee00d00ba06d23e56dfa81ae6be476201a754a0e30513d0d8738a822a", "reranker_tokens": 54332},
+    {"case_id": "t2:679", "fragment_id": "bcf53617d87207bb58f9861fd3580c7b79112db82ec7dda98404647105ce6f02", "reranker_tokens": 11529},
+    {"case_id": "t2:2962", "fragment_id": "47311ed39693d9901a618bf069fa2a6cadad31bb57c22ca7c6b50fa23c12a216", "reranker_tokens": 8355}
+  ]
+}

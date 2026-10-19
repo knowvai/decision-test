@@ -1,0 +1,36 @@
+name: decision-preflight
+services:
+  jeva:
+    extends:
+      file: compose.yml
+      service: clef
+    image: decision-eval-runtime:jeva-vela-preflight-20261015
+    build: !reset null
+    command: [python, -m, uvicorn, server:app, --host, 0.0.0.0, --port, "8000", --workers, "1", --no-access-log, --limit-concurrency, "512"]
+    gpus: !override
+      - driver: nvidia
+        device_ids: ["${JEVA_GPU:-0}"]
+        capabilities: [gpu]
+    environment:
+      MODEL_NAME: Jeva-4B
+      MODEL_BACKEND: jeva
+      MODEL_PATH: /models/jeva-4b
+      GPU_MEMORY_FRACTION: "0.75"
+      SYSTEMONE_BATCH_SIZE: "1"
+      SYSTEMONE_QUEUE_SINGLE_REQUESTS: "1"
+      SYSTEMONE_QUEUE_SIZE: "256"
+    volumes: !override
+      - ${EVAL_ROOT}/staging/jeva-4b:/models/jeva-4b:ro
+      - ${EVAL_ROOT}/preflight-20261015/runtime/jeva:/runtime
+
+  proxy:
+    extends:
+      file: compose.yml
+      service: proxy
+    ports: !override
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${JEVA_PORT:-30881}:30881
+
+networks:
+  inference:
+    internal: true
+  edge: {}

@@ -1,0 +1,258 @@
+{
+  "audit_at_utc": "2026-10-16T02:36:59.717035+00:00",
+  "audit_passed": true,
+  "scope": "Offline thinking/non-thinking configuration comparison; no model requests; prior audits preserved",
+  "model": {
+    "model": "qwen3.8-27b-thinking",
+    "run": "run-008",
+    "gpu_count": 2,
+    "cpu_budget": 8,
+    "records": 2974,
+    "correct": 2606,
+    "failed": 0,
+    "accuracy": 0.8762609280430397,
+    "macro_f1": 0.8687926371535287,
+    "valid_output_rate": 1.0,
+    "successful_mean_ms": 3124.017923953953,
+    "successful_p99_ms": 12069.452773997036
+  },
+  "reference": {
+    "model": "qwen3.8-27b",
+    "run": "run-007",
+    "gpu_count": 2,
+    "cpu_budget": 8,
+    "records": 2974,
+    "correct": 2618,
+    "failed": 0,
+    "accuracy": 0.8802958977807667,
+    "macro_f1": 0.8704476389544424,
+    "valid_output_rate": 1.0,
+    "successful_mean_ms": 355.4885682760043,
+    "successful_p99_ms": 380.56205416010926
+  },
+  "model_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "image_id": "sha256:c76d0e2225a4b1cb1e2109ace39639f55e714abd1a7a427acc8b0bbd7f6a83b3",
+  "profile": {
+    "base_model": "qwen3.8-27b",
+    "enable_thinking": true,
+    "reasoning_effort": "xhigh",
+    "reasoning_parser": "qwen3",
+    "max_tokens": 4096
+  },
+  "prior_audits": {
+    "audit-20261015/summary.json": {
+      "sha256": "4accc5327368197a99b9aa04b9c48751026b3ecfa8ad1be9b20c4b21e7e60729",
+      "artifacts_unchanged": 98
+    },
+    "qwen38-supplement-20261016/classification-audit.json": {
+      "sha256": "5156b7ffe6d406d5a8a34f8dcbdfbadd5e716ad8f4485274f444edf89a14dbc7",
+      "artifacts_unchanged": 45
+    }
+  },
+  "prior_artifact_sets_may_overlap": true,
+  "total_unique_models": 15,
+  "total_configurations": 16,
+  "total_records_including_prior": 47584,
+  "records_per_configuration": 2974,
+  "distinct_inputs": 2921,
+  "warmup_records": 9,
+  "preflight_synthetic_records": 9,
+  "preflight_formal_records": 0,
+  "all_input_ids_hashes_order_checked": true,
+  "all_record_call_mappings_checked": true,
+  "all_valid_request_json_hashes_reconstructed_offline": true,
+  "warmup_inputs_and_calls_checked": true,
+  "protocol_and_deployment_source_hashes_match": true,
+  "core_ast_equal_functions": [
+    "classification_from_confusion",
+    "classification_interval",
+    "classification_metrics",
+    "classification_schema",
+    "domain_messages",
+    "llm_classify",
+    "local_classification_summary",
+    "percentile",
+    "timing"
+  ],
+  "metrics_recomputed": true,
+  "predecessor_chain": [
+    "run-001",
+    "run-002",
+    "run-003",
+    "run-006",
+    "run-007",
+    "run-008"
+  ],
+  "unscored_failed_attempts": [
+    "run-004",
+    "run-005"
+  ],
+  "completed_at_utc": "2026-10-16T02:30:18.873614+00:00",
+  "formal_elapsed_sum_seconds": 9290.829305839045,
+  "failure_and_reasoning_counts": {
+    "failed": 0,
+    "length_finish": 0,
+    "timeout": 0,
+    "empty_reasoning": 0,
+    "missing_transport": 0,
+    "output_budget_reached": 0,
+    "finish_reasons": {
+      "stop": 2974
+    },
+    "failure_types": {}
+  },
+  "output_tokens": {
+    "thinking_total_output": {
+      "count": 2974,
+      "total": 343342,
+      "min": 34,
+      "mean": 115.44788164088769,
+      "p50": 96.0,
+      "p99": 466.27,
+      "max": 1518
+    },
+    "thinking_reasoning": {
+      "count": 2974,
+      "total": 319351,
+      "min": 26,
+      "mean": 107.38096839273706,
+      "p50": 88.0,
+      "p99": 458.27,
+      "max": 1510
+    },
+    "thinking_nonreasoning_output": {
+      "count": 2974,
+      "total": 23991,
+      "min": 7,
+      "mean": 8.06691324815064,
+      "p50": 8.0,
+      "p99": 9.0,
+      "max": 9
+    },
+    "nonthinking_total_output": {
+      "count": 2974,
+      "total": 21072,
+      "min": 7,
+      "mean": 7.085406859448554,
+      "p50": 7.0,
+      "p99": 8.0,
+      "max": 8
+    }
+  },
+  "mean_latency_ratio_thinking_over_nonthinking": 8.78795607719357,
+  "mean_output_token_ratio_thinking_over_nonthinking": 16.293754745634015,
+  "paired_transitions": {
+    "both_correct": 2555,
+    "both_wrong": 305,
+    "thinking_correct_nonthinking_wrong": 51,
+    "nonthinking_correct_thinking_wrong": 63
+  },
+  "paired_95_intervals_thinking_minus_nonthinking": {
+    "independent_cases": 2921,
+    "source_cases": 2974,
+    "confidence": 0.95,
+    "samples": 2000,
+    "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+    "metrics": {
+      "accuracy": {
+        "point": -0.00403496973772699,
+        "low": -0.011127036727476078,
+        "high": 0.0023727224796799076
+      },
+      "macro_f1": {
+        "point": -0.0016550018009137135,
+        "low": -0.009807635660578013,
+        "high": 0.00609547520233347
+      }
+    }
+  },
+  "retained_model_service": "qwen3.8-27b-thinking",
+  "retained_container_started_at": "2026-10-15T23:53:06.436912188Z",
+  "gpu_identity": [
+    "NVIDIA A100-PCIE-40GB, 40960 MiB",
+    "NVIDIA A100-PCIE-40GB, 40960 MiB"
+  ],
+  "systemd_completion": {
+    "MainPID": "0",
+    "ExecMainStatus": "0",
+    "ActiveState": "inactive"
+  },
+  "artifact_sha256": {
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/evaluation/runner/tests/test_public_decision_benchmark.py": "109f0b3276486d58db54585b6b0ffd30ec49d25c0bae79a3a2fd4ecaecb6cb97",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/evaluation/runner/scripts/public_decision_benchmark.py": "10fa3bf4fc175b8154c0799f9a4d2d224cbe6c3e9353dcc0206a1f5bb6e53fbe",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/evaluation/runner/scripts/replay_decision_rag.py": "781e0cdbfb789094d9ea3017b77b3a0580051a56988e86fc21abc8de4f6c2209",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/evaluation/runner/scripts/decision_rag_worker.py": "91315a31fa2e50db1917bcf94faabbdfc05fc4e89f408fd71f5382e9fe17bfd9",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/evaluation/runner/scripts/compare_decision_model_flow.py": "cd56445ff3bf3ef66ecadf02b4bfac088e81f7a0a26b2e4e958b6ceda633cefa",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/evaluation/runner/src/evaluation/retrieval_eval.py": "5fb5ee07fb9b5cd33ce54f853c4728248ae0db4eb3fb31b63f5789fba1dc7d7a",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/tests/test_reviewed_launcher.py": "b7f5bdba841739504ffd62ba160baf4f6741b4c342042fd5ff6790804334a42c",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/tests/test_deployment_probe.py": "24105bb3e24c303d39ab09d0ccb2b48bc709f810e8b5b5de3bcc7d2434c96bc3",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/tests/test_neohorse_backend.py": "bdc3ba3fc7fadd4f118af1712001b34aa667bddb04d0383f2f4c084eb44a8ae4",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/tests/test_decision_eval_service.py": "5c6c8c527facc43db2fdd4d4802a5cba5bcdc28fcdb1a672aa3123aef0daafcd",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/decision_reranker.py": "22c23d09812c2056a6d6ebe9ce9bcf05ae4b231b635c6ef1e806efcda2c8c8ae",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.preflight": "90dfebf93850d6e73b5954f30dd2dafc43fedb160b30b42aa72bdef381195d87",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/model-lock.json": "a4e36c464345b87483fae3cdd1d1ad271c5ba8da4c25f32aec70d9d13aba4aac",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/neohorse_backend.py": "728043d43ffaa83789f690c60159a9e3714ba887d59d798647ab2ccc737d2fe4",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.reranker": "1a61fe4197c45968eb45fbcd8e2a09d222c63e1033286bd9224ae446cfcfa92a",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.extend": "4ad70299a8f79b9ff8f7c3076f810beb862d299dee45bb99fbe1b650d92e80c0",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/compose.sglang.yml": "11e34248e43839977a3d71e3e957609fe07fd25757b1d03d9fd6216f3e7eec41",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/patch_sglang_length.py": "8f2a9699c065ec2c23261444b85f1985c0429c363fc6cb856ab5c5ea10cea43d",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.acceptance": "7fb9312a452058d61b92e1a78c060d3eeb4328b45bdb81c75c5b0b4aab6159fb",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/launch_reviewed.py": "eef4a37705e9c0521632237737557046d30990c03be1131b3cd5906927846a59",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/compose.preflight.yml": "09e377ed2c9d5b6dba0bd11d355cceb4d70df56a6ccccd17842755b03d2c2a34",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/nginx.conf": "2c2e5cf26f8d5951d8734127b98788b38c0a5fbe28f8fc51cfd3220435da1778",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/.dockerignore": "4b4f26dc4ec1340bf434d41f4ffc50b5204ea2ec0424ab767a8762d73fb36cc7",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/qwen_reranker.py": "6a980a129bbe5176aea7f8e6b238e973c0916460d94dc7709a798db54d7c79e6",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/patch_vllm_lora.py": "ce999b5b8c3404b6d7c08e7a6f253afa832a2d012ffe7ef9fd9e6b9619c2e517",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.sglang": "75737269e9463a4c708812e285691b6f0547629f34b2d3bee95c18229f27119b",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/compose.yml": "a7daa9d14ea1351bb4c4dd89473018fe29b7f01af0383a384ab0e069c64358fb",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile": "7784e624eea91ff23f5c953b23f3ad7ab1996df7eee342bcea587ba8f3cae1d6",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/compose.vllm.yml": "6e5de8720275a94a3cb5591739fba086f2117cff6118019a4591e549f1dc0ca4",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/laya_http.py": "61a064899571f059d5813a692083ea867f2c9ff3c9d3f5e121a88838b6bb2c68",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/download_models.py": "c71caa965832843c65544864490d7a31fde07d12cbdeb0e412457b86649355e0",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/initialize_runtime.py": "36ca44cfb063fb6c5e491837877080474b01da9fbb8f7cfad01c2be19959403f",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/jeva_backend.py": "b7a8c54a8610084bc3dfe101e5e14ea67b8533932c5c6e3e1938063145a39919",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/qwen3_reranker.jinja": "e1ee98e69aab7b2da366edf1c50efcef37e34b4a0c50fb816336213e68d9047a",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/d3-model-lock.json": "9fcbf8e936e5a036bba13eae5d3035f80dd72ee2c1cd02351f36eeb4a735ab71",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/smoke_test.py": "f5feda4c6c09c3ca45648c7738e55c382f535c2ac402901040bf6a295af31275",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.decision-v3": "f034d8bd3551f5e165c6c2195141506c3daf1c6b58d95483432eda8aa8612b6c",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/qwen-reranker-lock.json": "2d1e02bbdeb585c69b099adf7d6e8c3ddcbe56bb4b29314706a3f99d1df77bed",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/README.md": "b75dda5bb3d4f03fd9fed07ccaa2b8c1a6db6656d9681bf2f002a0b4c7db62f9",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/nginx.native.conf.template": "d6ecdaa92bd5c845dc9fa00b9fc32b995a6850ee17ced5f0af6a346a360afb55",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/deployment_probe.py": "24f3257175e6de407c396a9d350ee0b50c89eaad50aa6f62f099b1743101fc32",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/server.py": "65602ae02880de99fff33b8cbe444b93fcb30d2063da5829e84e18f101b2eb07",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r8/deploy/docker/decision-eval/Dockerfile.vllm-lora": "58f70cb2c7628c139e9997e1238644b4ee87b15264cee5ba126922fbd3760ac9",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-driver.py": "3b6c57d8e90de667e8ef7aa35aa7d0ced6bf8627d9abad1cac717147c54bf3d8",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/inputs.private.jsonl": "43db68e7446002da0a97edce9595d5df3482223179918b962f23bda4e66a6ce3",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/labels.private.jsonl": "6bae7f76594cc2a48b584f5e21694781a859904e0e5fd6ded266b48b2a8b47a5",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/preflight.inputs.private.jsonl": "be83a81988cfa9d8f65ddfe5ed751159cee24367468dcf685c44f8863eaf80ca",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/dataset-protocol.private.json": "a2baf5fa531b7cce4b411b0789e2e31cd6b451d760abde47bca1297753d6857e",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/protocol.private.json": "34831e62fb90dc3195e1b57790790189f94d68c463b898874ca6ad750c1a7009",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/status.json": "b651ddf599376dce693a2f4e1534e7f13a5e0b6ac0bb4fe695fca5233ed27fa4",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/client-packages.json": "c1a98e77fffbe6b5425c4536c93cfd0b81b261354e0aac9a09f8f39c6879e11a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/qwen3.8-27b-thinking/deployment.json": "4eda504ef69c43aa1b0a79f79a7bff8785c13ad9cae94e3e6c8d7272b9f6fdc2",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/qwen3.8-27b-thinking/summary.json": "f0210c910792a3b826aa9d5b8d08b81ff174da537d56dd9c594e03894a87df2e",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/qwen3.8-27b-thinking/responses.private.jsonl": "c2ec77b6dfb32f9e7238cd9b3195bb21de46e627b463c817003e19c000bfa5f4",
+    "/data/sdb/decision-model-eval/classification-20261015/run-008/qwen3.8-27b-thinking/warmup.private.json": "6d74c545610603bd22a0ca6c9197b631615d6eab3f1738e5dbb23f1cb5a44d09",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-supplement-20261016/model-manifest.json": "cc6beac782c3acfcb7b9eddd82cfb0ecd6afe41182cd4378c5ee783aea1b0cba",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/preparation.json": "0739736d4c2400bffc3a4fcabdae46f877d74c4834b0c1fa9efda83a1dbddb31",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/token-length-preflight.json": "913a93104b8f8c2b963f01423e4ccabeaee41306f22bf49ab5a6f02989e7b3a9",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/preflight-started.json": "172e43a6ca76285f25c1dafc0b6070e6343c20c44e4915cba86f1f1d07fe448f",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/preflight-deployment.json": "1b017fd58514774223f1d1194182e7e7be183d05017f0d12167de61ea60f2a45",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/preflight/warmup.private.json": "b7884cd2af1ba8065e345880c0e7d1c59f9401b118ba6873c79b2673c8f7bc31",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/preflight/responses.private.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/runtime-acceptance.json": "d664fe4aae86cd6d11e0cc30c9ecec4211dfe6cc65005b3f2f26e3b1f02cb456",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/formal-start-intent.json": "bee64dfa144ae90f2816f2574b5ebe130195d925ab4167e9f080d64e11f106ee",
+    "/data/sdb/decision-model-eval/classification-20261015/runner-r8.log": "4388ced8f4c009f5226afabdd919779da1f72b512704cc1466dd1a9505555f4b",
+    "/data/sdb/decision-model-eval/classification-20261015/qwen38-thinking-20261016/classification-audit.py": "013e6ff71221c1d5f7255781340b29178b2fb3f24a19809c6427ec5aa11c6606"
+  },
+  "limitations": [
+    "One fixed public corpus pass; possible training exposure; not a universal capability ranking.",
+    "Same model with two configurations, not sixteen independent models.",
+    "Thinking uses xhigh/4096 total output versus non-thinking/64; temperature zero in both, not vendor sampling defaults.",
+    "Two-GPU single-in-flight full-request latency; no concurrency throughput or continuous resource telemetry.",
+    "Thinking latency includes metadata observation; raw reasoning and response text are not retained, so their hashes cannot be recomputed independently.",
+    "Reasoning token breakdown is provider-reported; nonreasoning tokens can include protocol delimiters.",
+    "No additional full-weight SHA256; pinned manifest sizes and official small-file hashes verified.",
+    "Paired cluster bootstrap measures this fixed dataset protocol only; repeated-run or deployment variance is not measured."
+  ]
+}

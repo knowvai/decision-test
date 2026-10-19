@@ -1,0 +1,711 @@
+{
+  "models": [
+    {
+      "model": "clef-flash",
+      "upstream": "https://huggingface.co/Cloudflare/clef-flash",
+      "revision": "fde727a287004204b7518dcc983fe64379776712",
+      "files_sha256": {
+        "LICENSE": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+        "README.md": "9036da69502d2888f54cdee8bff832e534f74e164e7a02124c4bc511b18dc821",
+        "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "config.json": "66f87f6fb2616b46604daf2a9c67ddc87938296d07156efa34d59b5be49e3238",
+        "generation_config.json": "45707f8467bf4e54e112c6095a1b2d1f2d63651cf86816344cfff21f02dda0d4",
+        "joint_head.safetensors": "19cdcec8c81dc9212be320fff47462ab342fbc1278be4368fb3da71241cf5ba0",
+        "joint_head_config.json": "77efe959a38b5b17b241543e129e695f3c77465ece55a25985279bd8176279a0",
+        "joint_schema_model.py": "0e304cf7c6500e8bb59bef7e2afd2c6373f82596dfb3b57d1aa93c175e2dc3a3",
+        "model-00001-of-00004.safetensors": "8b45a8e968141cdcc58fb71c9adfc258e2c77b5f062bc636c1fd5bc5d916b565",
+        "model-00002-of-00004.safetensors": "7590856c713eed844a2dcf48e6c43c4de165b788bc3f80e328311183cdbc7db8",
+        "model-00003-of-00004.safetensors": "e6eac2467952c33361ed7dcb3c7959d1086bbe57201cd3749c3d769fdc17fe63",
+        "model-00004-of-00004.safetensors": "9fcecc6556b39171238373a465f409794b7f821fb4cd1e6459e3a9c0fe317af7",
+        "model.safetensors.index.json": "941305ff9f77551e145a6cea976ef456cd5cb208cbece99f168376c752fcf96c",
+        "processor_config.json": "d89ef49ce9cd37fbf510158e13c1ef063d9286411c1ec9049932dbe0487143b1",
+        "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523",
+        "tokenizer_config.json": "91a08f825d370d085d692e04cf117cdd7faad7bf18e996f1e6031b6dab03db72"
+      },
+      "pin_source": "deploy/docker/decision-eval/model-lock.json",
+      "evidence_deployment": {
+        "family": "sglang",
+        "image_id": "sha256:a682ef469e9900ec254bb6d98e9c6052d0e0c727dcb005b4ea1a229b77424fae",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "d3-edge",
+      "upstream": "https://huggingface.co/vllm-sr/d3-edge",
+      "revision": "18d61df78684675463af9ae732872478845c5a79",
+      "files_sha256": {
+        ".gitattributes": "690c76d1fc25384e5e24b807be13bec4064574d8a6ff53c7f25827a2649e363a",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "MODEL_MANIFEST.json": "2eb3066c44c11555eef253c7f4f3c749e4e6f88863b2dcd1268b276c7b89611c",
+        "NOTICE": "0e7694dee1927d83b3637be7a8f989b941ebd884dd40767b995c7adee484789b",
+        "README.md": "ec1ef3df472b36b1392b9dd7fdc77119e85e86743e15b7818c29c18e1995b336",
+        "assets/banner.png": "352353b5ac097e31e6447ac0db8185439894e9e6c66376565e30f33c39d27913",
+        "assets/example-receipt.png": "b9dbb8b103bacd45f1de824d844a3c07b81d57cb1a7466712ef060ad7dcb3926",
+        "assets/example-video.mp4": "f4968ef89d07e97f20df4fd8047510a7a8e9df5c2d07c35e363a97927f164ab9",
+        "assets/index-areas.png": "06be306799c515e90bea74994788239a53c01c893183879b18192cebe0158531",
+        "assets/index-pareto.png": "13ee761164b7fe0e99a8a48a942d783a759196a4a1eb466b82ada6bc8ce36daa",
+        "chat_template.jinja": "273d8e0e683b885071fb17e08d71e5f2a5ddfb5309756181681de4f5a1822d80",
+        "config.json": "5e529d9aea2f8d387750acf5b02cc32a47d7e87dc65d6d008fba98e5d15acc4d",
+        "d3_engine.py": "086238942762df45047a32cd9a8e2bedd9b63167eb40be260c776de567979f53",
+        "d3_fast.py": "68a1fb9a2c3bde9ac2763bf504decae592ca12722698fbde1b39a31262955535",
+        "d3_format.py": "187a0f359f6f89a844e723377769556f78133b118851e702e4b0fe5123ccb0f1",
+        "d3_kernels.py": "8f7534ca1e1846ebf7c4c73058002f3be4dbf0d5d426f0815150ae0cbe7677bd",
+        "d3_runtime.py": "6c049aa7d3da8da3738602a2812572879d0a47b03c28c3e33f36d7300257de89",
+        "d3_server.py": "f9b8f2481461a074f469b4f58da3b0d7004824096528366d5b1f23187dd6e692",
+        "decision_config.json": "30b6095b945d5a93697868afdf9be9123ea892085fbaff3078112c48da20dc6b",
+        "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "model-00001-of-00001.safetensors": "91bb8618450a7f628f1432bbced76bc19ee7346c93d191a228fdd33c25a57a9d",
+        "model.safetensors.index.json": "7d3951baba643a2c4fe2263d8602ef37b1c1f804b58949a5469449da6a588b03",
+        "modeling_d3.py": "f8f8db23ff58f1a990ffa24977d744a50e1b4446d02a64c22070967705b6dbef",
+        "pipeline_d3.py": "4f9297c7c74e596e9b67df91a1e6823cfada48bf781336f141974ff6a2f1038e",
+        "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+        "readout.safetensors": "de33d5dc795bbd77168e40bfadc340cca9b9f163b88744c10e1a788f4e166d3d",
+        "requirements.txt": "57a1938448bc240bdf4fee5d1b9cbc8450109fa1f6cee11e94dc04f274be8a32",
+        "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "tokenizer_config.json": "49e2b6e395f959f077f1e992b338919c0d4a9732fc6e613995e06557f843500c",
+        "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+        "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      },
+      "pin_source": "deploy/docker/decision-eval/d3-model-lock.json",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "d3-flash",
+      "upstream": "https://huggingface.co/vllm-sr/d3-flash",
+      "revision": "521525effa79469d899a570726547dd7f00da3af",
+      "files_sha256": {
+        ".gitattributes": "690c76d1fc25384e5e24b807be13bec4064574d8a6ff53c7f25827a2649e363a",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "MODEL_MANIFEST.json": "41f1572c1753f15b7e2857ff8f56804a49b14e4a90910fcd172b47ffdd22a9b3",
+        "NOTICE": "ae7ffb4d788c076d655394f0f116ad4b7de54e3bca9b655df5c669ea5bae74f6",
+        "README.md": "4b35f38aebbd3025cfeb385020e1fe0c8f667144c2c71a00a0ce9ea18ece0aad",
+        "assets/banner.png": "d621431eb5d1b20650a35a2e27c30f372631592cabff260679f12be9813eebc5",
+        "assets/example-receipt.png": "b9dbb8b103bacd45f1de824d844a3c07b81d57cb1a7466712ef060ad7dcb3926",
+        "assets/example-video.mp4": "f4968ef89d07e97f20df4fd8047510a7a8e9df5c2d07c35e363a97927f164ab9",
+        "assets/index-areas.png": "cea16dca531b6b9bb039e3199061e22aefc619ec7a3e5d5455f00bd20ae25e6d",
+        "assets/index-pareto.png": "bfe654676f3203a2fde3b123cb6b0561f8076ac34f54f2d78944a1033173a8dd",
+        "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "config.json": "9c3e6eea217964096c7b032285bab6757720a847fbb9d0a04e551d2b1606c0eb",
+        "d3_engine.py": "086238942762df45047a32cd9a8e2bedd9b63167eb40be260c776de567979f53",
+        "d3_fast.py": "68a1fb9a2c3bde9ac2763bf504decae592ca12722698fbde1b39a31262955535",
+        "d3_format.py": "187a0f359f6f89a844e723377769556f78133b118851e702e4b0fe5123ccb0f1",
+        "d3_kernels.py": "8f7534ca1e1846ebf7c4c73058002f3be4dbf0d5d426f0815150ae0cbe7677bd",
+        "d3_runtime.py": "6c049aa7d3da8da3738602a2812572879d0a47b03c28c3e33f36d7300257de89",
+        "d3_server.py": "f9b8f2481461a074f469b4f58da3b0d7004824096528366d5b1f23187dd6e692",
+        "decision_config.json": "0269c72ac055d8149a7a778c477780af361f4c1cde3fd0e5ba9af791453ece18",
+        "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "model-00001-of-00004.safetensors": "2c322016b91b1232c0d7628560164560d06d477a3edc3362714635f0e2f5949c",
+        "model-00002-of-00004.safetensors": "f769650fb747d85132fb321335af7c71fcf3ba95fd1b1e806447e891cb4b0546",
+        "model-00003-of-00004.safetensors": "c85a0f2f8df221b7864c74e778d802dc22fe1237fe2fa6ea8b81d7b612800a33",
+        "model-00004-of-00004.safetensors": "d686ef3f6cdeeaad5eedde9d516c29ed1c90a1a322dd002765732869c11fa269",
+        "model.safetensors.index.json": "9ddd9f9ce431ff771d9b37b354ba11aa1b74c18d87c5a48c964da794bd1029ee",
+        "modeling_d3.py": "f8f8db23ff58f1a990ffa24977d744a50e1b4446d02a64c22070967705b6dbef",
+        "pipeline_d3.py": "4f9297c7c74e596e9b67df91a1e6823cfada48bf781336f141974ff6a2f1038e",
+        "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+        "readout.safetensors": "8bbc9a9df4e1b7df85a80a1091977092b938d8d2d2869dfaeb8fd36063cf322f",
+        "requirements.txt": "57a1938448bc240bdf4fee5d1b9cbc8450109fa1f6cee11e94dc04f274be8a32",
+        "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+        "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+        "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      },
+      "pin_source": "deploy/docker/decision-eval/d3-model-lock.json",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "d3-mini",
+      "upstream": "https://huggingface.co/vllm-sr/d3-mini",
+      "revision": "a475367de0d8133a3c1a2a0dc12303d89cfa2ab4",
+      "files_sha256": {
+        ".gitattributes": "690c76d1fc25384e5e24b807be13bec4064574d8a6ff53c7f25827a2649e363a",
+        "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+        "MODEL_MANIFEST.json": "05b33ccfce265f3794d60a35b58ea831841f63cd9d4bb296aca6811a8522efc7",
+        "NOTICE": "1b1c0d9508ca9703a5f7eabfc70800676e167ad1de1e72ac69f4b9cab1b9272b",
+        "README.md": "5ddcf9a9a4b9eab3e482372b496352cd922dc9496cc9a4b4c7237623915947d0",
+        "assets/banner.png": "6cd59713317ce9a2311131b88d4e66a096fb0844507cc2a4eb2c7a00e79663e3",
+        "assets/example-receipt.png": "b9dbb8b103bacd45f1de824d844a3c07b81d57cb1a7466712ef060ad7dcb3926",
+        "assets/example-video.mp4": "f4968ef89d07e97f20df4fd8047510a7a8e9df5c2d07c35e363a97927f164ab9",
+        "assets/index-areas.png": "40abd3918ee3925edda16c7eca48ade9124f0b0ab646fb4b8f9c5bb125ebe848",
+        "assets/index-pareto.png": "dc09d7d4b579db9b7bfa70977a85e1527a4e96af6f7572c1ffac412b74bcc407",
+        "chat_template.jinja": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715",
+        "config.json": "8f5f404a71ecc53c4ff26fc42cb4c778ffacfb4c9623f5e2d51245166d6b5057",
+        "d3_engine.py": "086238942762df45047a32cd9a8e2bedd9b63167eb40be260c776de567979f53",
+        "d3_fast.py": "68a1fb9a2c3bde9ac2763bf504decae592ca12722698fbde1b39a31262955535",
+        "d3_format.py": "187a0f359f6f89a844e723377769556f78133b118851e702e4b0fe5123ccb0f1",
+        "d3_kernels.py": "8f7534ca1e1846ebf7c4c73058002f3be4dbf0d5d426f0815150ae0cbe7677bd",
+        "d3_runtime.py": "6c049aa7d3da8da3738602a2812572879d0a47b03c28c3e33f36d7300257de89",
+        "d3_server.py": "f9b8f2481461a074f469b4f58da3b0d7004824096528366d5b1f23187dd6e692",
+        "decision_config.json": "588bc0ac7644479b9adde0498d80b6fb7c576388992564ac67599c05d29add07",
+        "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+        "model-00001-of-00002.safetensors": "60621cb8c3f90e634b98f0ffaf609159ee2c450630386f09dd5f7fd7938d7598",
+        "model-00002-of-00002.safetensors": "6189569fbe9245030d7ffb0b60a52268b7386e7a85a57aee1274a5178c1cc53d",
+        "model.safetensors.index.json": "613cc71f6441a964b0a87470536f8fb0c639bdd86b0362027c1c2b1a6e0a4a8c",
+        "modeling_d3.py": "f8f8db23ff58f1a990ffa24977d744a50e1b4446d02a64c22070967705b6dbef",
+        "pipeline_d3.py": "4f9297c7c74e596e9b67df91a1e6823cfada48bf781336f141974ff6a2f1038e",
+        "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+        "readout.safetensors": "d570665c1da72cb9fca7ad7b23a25720eb691362694dd69d4c80c17d7656ed55",
+        "requirements.txt": "57a1938448bc240bdf4fee5d1b9cbc8450109fa1f6cee11e94dc04f274be8a32",
+        "tokenizer.json": "5f9e4d4901a92b997e463c1f46055088b6cca5ca61a6522d1b9f64c4bb81cb42",
+        "tokenizer_config.json": "316230d6a809701f4db5ea8f8fc862bc3a6f3229c937c174e674ff3ca0a64ac8",
+        "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+        "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+      },
+      "pin_source": "deploy/docker/decision-eval/d3-model-lock.json",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "jev-27b",
+      "upstream": "https://huggingface.co/autotrust/JEV-27B",
+      "revision": null,
+      "pin_source": null,
+      "note": "No immutable upstream revision found in the collected acquisition records; do not substitute latest and claim exact reproduction.",
+      "evidence_deployment": {
+        "family": "jev",
+        "image_id": "sha256:cb363e7cc02ef8115e3afd5d068e1fbaab57711860e0ec8f555792bef567ab30",
+        "tp": 2,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "jeva-4b",
+      "upstream": "https://huggingface.co/LIQIIIII/Jeva-4B",
+      "revision": null,
+      "pin_source": null,
+      "note": "No immutable upstream revision found in the collected acquisition records; do not substitute latest and claim exact reproduction.",
+      "evidence_deployment": {
+        "family": "sdk",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 1,
+          "max_batched_tokens": null,
+          "cross_request_batching": false,
+          "queue_size": 256
+        }
+      }
+    },
+    {
+      "model": "laya-multilingual",
+      "upstream": "https://huggingface.co/convaiinnovations/laya-multilingual",
+      "revision": "1720e3e3357cfe1e281542e223f8273b0890ca34",
+      "files_sha256": {
+        ".gitattributes": "caf3ca02d5e883f643e939cbed54f94237f94c171797f0dfea5e25c7e33315b3",
+        "README.md": "e85d16c3fe35fe7094ef51a7cfa81144a5cc07558e5faddcff753a8153e38a0b",
+        "config.json": "7add7c041b53f7091e65908553af79ab3f077946e5f2312d510ae13b17c7c134",
+        "encoder/config.json": "83f6916d13ef0f556ac461f28308dc2bffa7ebeadee8ec9e2db5812020ea5bb4",
+        "model.safetensors": "9d628fd971b700382ac6f65920a86f149777b2e748e0c955fb3b19695aa8f204",
+        "rl_agent_config.json": "25061739243b617ad88d1219ba6f8a9c86c5881ca28df024fa2d9b3b2fcc30c6",
+        "tokenizer/tokenizer.json": "609d8f4c067cd3950f88594c5a802616cea245823836ef5848ee4fc40aab5b6f",
+        "tokenizer/tokenizer_config.json": "424b69444bf7b5809dc2cd2e36d0bd71b8055124dd24274d6db3c655d38205e7"
+      },
+      "pin_source": "deploy/docker/decision-eval/model-lock.json",
+      "evidence_deployment": {
+        "family": "laya",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": null,
+          "max_batched_tokens": null,
+          "source": "native batch request batch_size and token budget",
+          "http_admission_limit": 32,
+          "single_request_executor_workers": 1,
+          "cross_request_batching": false
+        }
+      }
+    },
+    {
+      "model": "neohorse-jev-4b",
+      "upstream": "https://huggingface.co/TokenRhythm/NeoHorse-Jev-4B",
+      "revision": null,
+      "pin_source": null,
+      "note": "No immutable upstream revision found in the collected acquisition records; do not substitute latest and claim exact reproduction.",
+      "evidence_deployment": {
+        "family": "neohorse",
+        "image_id": "sha256:c76d0e2225a4b1cb1e2109ace39639f55e714abd1a7a427acc8b0bbd7f6a83b3",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 128,
+          "max_batched_tokens": 32768,
+          "source": "author launch.py",
+          "adapter_max_records": 8
+        }
+      }
+    },
+    {
+      "model": "pplx-decider-v1.1-27b",
+      "upstream": "https://huggingface.co/perplexity-ai/pplx-decider-v1.1-27b",
+      "revision": null,
+      "pin_source": null,
+      "note": "No immutable upstream revision found in the collected acquisition records; do not substitute latest and claim exact reproduction.",
+      "evidence_deployment": {
+        "family": "sglang",
+        "image_id": "sha256:a682ef469e9900ec254bb6d98e9c6052d0e0c727dcb005b4ea1a229b77424fae",
+        "tp": 2,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "upstream": "https://huggingface.co/Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "revision": null,
+      "pin_source": null,
+      "note": "No immutable upstream revision found in the collected acquisition records; do not substitute latest and claim exact reproduction.",
+      "evidence_deployment": {
+        "family": "llm",
+        "image_id": "sha256:c76d0e2225a4b1cb1e2109ace39639f55e714abd1a7a427acc8b0bbd7f6a83b3",
+        "tp": 2,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "qwen3-reranker-8b",
+      "upstream": "https://huggingface.co/Qwen/Qwen3-Reranker-8B",
+      "revision": "77d193c791ed757ca307ee72715aa132723da912",
+      "files_sha256": {
+        ".gitattributes": "34448b82c17d60fec9b65b1f093c115ddbaadc04beb1b0140b6bfed2e012a930",
+        "1_LogitScore/config.json": "73e3156450564d8a98b7e47bcf5aace0f29600828b51937da545571e84db3ff3",
+        "README.md": "5f33734e77bb56c191dfd66bd8c4c04fdba6c023cddd6052871082c411f9b608",
+        "chat_template.jinja": "6f682162495ec5b39fd9005c01b6aa2a74669379fe967039f1e2cbbe8752369d",
+        "config.json": "e87a4f50c475c7276fc642eabfc986a7c8da1c8a30a4ee34b4979048b330f2be",
+        "config_sentence_transformers.json": "231aa494dcabada22d73f151120560b2a72b49e5b93e1b0a8329664f2348cf2e",
+        "generation_config.json": "81051cd3f6e77013827148d0b8a6ead93f8ac390d5ab805f849199f0af6a08db",
+        "merges.txt": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
+        "model-00001-of-00005.safetensors": "22cdfea4a13b7b3e866573800eeeb638fc38962940adf631d06dc03befed047a",
+        "model-00002-of-00005.safetensors": "d2163b74137e35b4614bd2aa5bf27bcb07de4ca61c6962495feb968385eb0df8",
+        "model-00003-of-00005.safetensors": "a5038caa78c817e8acce6806104869675938a33fd4e60ed038e9931d390d6989",
+        "model-00004-of-00005.safetensors": "247f85538c5996d4c296291b0e4004f618c9b17ca8cdc25d1fc726567eb15803",
+        "model-00005-of-00005.safetensors": "8ba41b93c2e4ec8339ad16b000bc977fde196aeac054956cbfc8c0186ee6d4cf",
+        "model.safetensors.index.json": "8a22e7ffd6001796256c0be7c73594835b6f907eec442fde691301ebf35087d9",
+        "modules.json": "6f13b6b4a89e577b591b2077bca40c67c26541a6740a8809267cb474f90806a9",
+        "sentence_bert_config.json": "3234ebd224d492cbe8d55d5ec80a3f408451c4db3005bafb64fe1c51c763e01e",
+        "tokenizer.json": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+        "tokenizer_config.json": "253153d0738ceb4c668d2eff957714dd2bea0b56de772a9fdccd96cbf517e6a0",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      },
+      "pin_source": "deploy/docker/decision-eval/qwen-reranker-lock.json",
+      "evidence_deployment": null
+    },
+    {
+      "model": "qwen3.8-27b",
+      "upstream": "https://huggingface.co/Qwen/Qwen3.8-27B",
+      "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+      "file_manifest": {
+        ".gitattributes": {
+          "size": 1570,
+          "blob_id": "52373fe24473b1aa44333d318f578ae6bf04b49b",
+          "lfs": null
+        },
+        "LICENSE": {
+          "size": 11544,
+          "blob_id": "f938136e3adacfd92be087f6e113b5d6d97f678f",
+          "lfs": null
+        },
+        "README.md": {
+          "size": 65012,
+          "blob_id": "bc8aa0e396cd029c21cd773cca21830d0ded28ec",
+          "lfs": null
+        },
+        "chat_template.jinja": {
+          "size": 8952,
+          "blob_id": "c0c686f9c38d70d179fb7b5f5aa7530bc913dda3",
+          "lfs": null
+        },
+        "config.json": {
+          "size": 4312,
+          "blob_id": "706cebd746c4b6f2b1d1f892630867acfdfd3df8",
+          "lfs": null
+        },
+        "crc32.txt": {
+          "size": 238,
+          "blob_id": "6de5ee6a0c6596744baee911af0a5cdcb8d99a1e",
+          "lfs": null
+        },
+        "generation_config.json": {
+          "size": 202,
+          "blob_id": "023756cfadf88e5bf69eefeee3e172f38c448d64",
+          "lfs": null
+        },
+        "merges.txt": {
+          "size": 3353259,
+          "blob_id": "a494e019ca1502219fd0128658b979e5f05ae8e8",
+          "lfs": null
+        },
+        "model-00001-of-00018.safetensors": {
+          "size": 3966730552,
+          "blob_id": "79b73cdd69afeca931d181f5d1e21ad2d73bb7b7",
+          "lfs": {
+            "sha256": "ba0ce20aae489ad196733da5064bcdf159a1fe84f53336648196e1ebb7751b1c",
+            "size": 3966730552,
+            "pointerSize": 135
+          }
+        },
+        "model-00002-of-00018.safetensors": {
+          "size": 3043080328,
+          "blob_id": "81cf43545884a227a01351942dfbc72577812316",
+          "lfs": {
+            "sha256": "06a148c01bfbe3faa14a5f184a7ff29a706f7ae1c8b2705d2058e26d17a001fb",
+            "size": 3043080328,
+            "pointerSize": 135
+          }
+        },
+        "model-00003-of-00018.safetensors": {
+          "size": 2542796952,
+          "blob_id": "a2da5e6cd6307a6cae13d04820ab0d31b47b48bd",
+          "lfs": {
+            "sha256": "2e1bf62cbcd406eaa64b60d10353e1f0ef4039d0976e56f05cabe953454f9968",
+            "size": 2542796952,
+            "pointerSize": 135
+          }
+        },
+        "model-00004-of-00018.safetensors": {
+          "size": 3988973152,
+          "blob_id": "175ddab3f2488ad181f73d789d2d778cf6d4fca6",
+          "lfs": {
+            "sha256": "511e34063187882659753c4d93f3859f93c019fd438d8813071921c81d9a3f1a",
+            "size": 3988973152,
+            "pointerSize": 135
+          }
+        },
+        "model-00005-of-00018.safetensors": {
+          "size": 2099339864,
+          "blob_id": "64890208fdd563c3aac0c2f55f69948bcaa1a492",
+          "lfs": {
+            "sha256": "635cb53446dc74f219740fc59e18b774f877b803b9722e289ca62575a6efa701",
+            "size": 2099339864,
+            "pointerSize": 135
+          }
+        },
+        "model-00006-of-00018.safetensors": {
+          "size": 3979553696,
+          "blob_id": "3ae29b86e4c773babfe17124dbd10d54d37819ec",
+          "lfs": {
+            "sha256": "0bc5214fac607f0e6cc92eec3789d4b8559410ef9fce66621ba8158e8410dae0",
+            "size": 3979553696,
+            "pointerSize": 135
+          }
+        },
+        "model-00007-of-00018.safetensors": {
+          "size": 2108759344,
+          "blob_id": "b7e9c0f038884839f3dad38fef7e75ee3362c24f",
+          "lfs": {
+            "sha256": "80b0c49033e9a0d5762562aa12f4acdb7f54da586f3d0110f28c48d91cf07892",
+            "size": 2108759344,
+            "pointerSize": 135
+          }
+        },
+        "model-00008-of-00018.safetensors": {
+          "size": 3979553696,
+          "blob_id": "0b58cbc52714e1c683711be87e7c2e33fb10e7a0",
+          "lfs": {
+            "sha256": "7192c5b66185d3592927daabee1cc19e6f6e0ce75988ee20e824b624765fda79",
+            "size": 3979553696,
+            "pointerSize": 135
+          }
+        },
+        "model-00009-of-00018.safetensors": {
+          "size": 2108759344,
+          "blob_id": "4fc0c6b28004d809225d0e115f30e9e11c2345dc",
+          "lfs": {
+            "sha256": "af3c48cc37af44f3db6ae0579baf019180d48d9c527caa0a1f03ff85813a56d8",
+            "size": 2108759344,
+            "pointerSize": 135
+          }
+        },
+        "model-00010-of-00018.safetensors": {
+          "size": 3979553696,
+          "blob_id": "9ec693a17c788084116c51b4f34632670df77612",
+          "lfs": {
+            "sha256": "163490a76f3bea3a40855b7efc04ce6d27afaf1a34f0bbde495b9491f76457c9",
+            "size": 3979553696,
+            "pointerSize": 135
+          }
+        },
+        "model-00011-of-00018.safetensors": {
+          "size": 2108759344,
+          "blob_id": "3c63baaed16d833432a919647af53ac76bb6b007",
+          "lfs": {
+            "sha256": "5f3ae1b948aeee39da77aec558e8236cd65fe4d7cb7686a76bb007acc563c6d8",
+            "size": 2108759344,
+            "pointerSize": 135
+          }
+        },
+        "model-00012-of-00018.safetensors": {
+          "size": 3979553696,
+          "blob_id": "8568b440a4666ed1b4cda0b5d21496378304f326",
+          "lfs": {
+            "sha256": "a3de1c7114677a8f5ac5c4892c90e8238ea5c1e2038c80e757dfc87c3902ca55",
+            "size": 3979553696,
+            "pointerSize": 135
+          }
+        },
+        "model-00013-of-00018.safetensors": {
+          "size": 2108759344,
+          "blob_id": "724083995a2257194321a3d00b36fd7d4bb7348d",
+          "lfs": {
+            "sha256": "06ab79a41f74c9c5cb734816feb0c7fc364104b227165ee7391231e1155aa02a",
+            "size": 2108759344,
+            "pointerSize": 135
+          }
+        },
+        "model-00014-of-00018.safetensors": {
+          "size": 3979553696,
+          "blob_id": "a60b80b6510d7938d951fbddc76aaadd121c6268",
+          "lfs": {
+            "sha256": "4138ed94603065ba884bbcadedb04d7718bb40117e85e6f5c6fc5b9c05b7a85b",
+            "size": 3979553696,
+            "pointerSize": 135
+          }
+        },
+        "model-00015-of-00018.safetensors": {
+          "size": 2108759344,
+          "blob_id": "7d4c34f3d716e1a47acff2f576b65b41a3ec4f3f",
+          "lfs": {
+            "sha256": "69224e27b9de4e7dbf6fc936c6eaae08447bda3b80a6c31a871ab451173afd22",
+            "size": 2108759344,
+            "pointerSize": 135
+          }
+        },
+        "model-00016-of-00018.safetensors": {
+          "size": 3979564040,
+          "blob_id": "c67e3e42c9715298fa7f68c6b378bfb1d74290d0",
+          "lfs": {
+            "sha256": "73cb9a1089fb6155cb648609478d6633be8a5c7d9ca5a05bc8925ce8a553cefe",
+            "size": 3979564040,
+            "pointerSize": 135
+          }
+        },
+        "model-00017-of-00018.safetensors": {
+          "size": 2108759344,
+          "blob_id": "23dd899179729a4370c655e2c2241cfdbe4ef4ba",
+          "lfs": {
+            "sha256": "beb51f01056142ac4984bd800507b0dd0fd18de57f8e9ef6ea41d1a3598983a8",
+            "size": 2108759344,
+            "pointerSize": 135
+          }
+        },
+        "model-00018-of-00018.safetensors": {
+          "size": 3392197344,
+          "blob_id": "a92b4073fc6a58ffc9334ac63360fc8d9cc50d33",
+          "lfs": {
+            "sha256": "1d3479509e21494658f9b64d317f5ea8e55c4025d28c702d6c4d0b356ce8ea06",
+            "size": 3392197344,
+            "pointerSize": 135
+          }
+        },
+        "model.safetensors.index.json": {
+          "size": 112216,
+          "blob_id": "da35e3c564457dface7d138f0b6cac284ff8958c",
+          "lfs": null
+        },
+        "preprocessor_config.json": {
+          "size": 390,
+          "blob_id": "2ea84a437d448ff71b08df68fdd949d5cc4ebb64",
+          "lfs": null
+        },
+        "tokenizer.json": {
+          "size": 12809320,
+          "blob_id": "9328ce9c41e80f6dd7bc2c66d8ae1fc93bf87440",
+          "lfs": {
+            "sha256": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+            "size": 12809320,
+            "pointerSize": 133
+          }
+        },
+        "tokenizer_config.json": {
+          "size": 17928,
+          "blob_id": "5de744b3fca2129d7186979ae47c06be33903243",
+          "lfs": null
+        },
+        "video_preprocessor_config.json": {
+          "size": 385,
+          "blob_id": "3ba673a5ad7d4d13f54155ecd38b2a94a6dac8fe",
+          "lfs": null
+        },
+        "vocab.json": {
+          "size": 6722759,
+          "blob_id": "0aa0ce0658d60ac4a5d609f4eadb0e8e43514176",
+          "lfs": null
+        }
+      },
+      "pin_source": "classification-20261015/qwen38-supplement-20261016/model-manifest.json",
+      "evidence_deployment": {
+        "family": "llm",
+        "image_id": "sha256:c76d0e2225a4b1cb1e2109ace39639f55e714abd1a7a427acc8b0bbd7f6a83b3",
+        "tp": 2,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "upstream": "https://huggingface.co/vllm-sr/Vela-2.0-0.3B",
+      "revision": "a3209a50dc3ebd7e3b7520440d8fba666000f4c4",
+      "files_sha256": {
+        "calibration.json": "f8557b3922e9bef33e688ece12da20436b5ae868ed7ff1375b346bd26403506a",
+        "config.json": "81e08c8f8f2a4a6205f05b67d5682e42fc5249cc11e5231c456929ae0534d675",
+        "model.safetensors": "bd37dd0db177d766bc554eded78ae8493bc248172d0480f6a543b30932a0cc8e",
+        "tokenizer.json": "e4b670c5ab72158f35de150792133e8c92adb4ba677d26b99d22c77f34c63faf"
+      },
+      "pin_source": "preflight-20261015/vela-source/vllm_srun/registry/tables/vela2.py",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "vela-2.0-0.8b",
+      "upstream": "https://huggingface.co/vllm-sr/Vela-2.0-0.8B",
+      "revision": "a778eb2ae2304cfa72fca7e53a19136dea5be012",
+      "files_sha256": {
+        "MODEL_MANIFEST.json": "a8fb5b188593463209475a7b51ceb97531b58bb1d7445b8b6a2e1a6333fd1ae2",
+        "broad_head.safetensors": "687d7a435d6de846796274e417b6333f83df3085a6e7c3bca4c01cb4d75a30f0",
+        "calibration.json": "d96e447962d0dc1d58fa8422dddbae8b99960e21fd75a10ef9b096f700a211f5",
+        "config.json": "0637ca193b9159b6ece25837913956477164d3392d9b5dd1e6b74b95a484004a",
+        "model-00001-of-00001.safetensors": "c70237ecd579c60289c177fa9806e71c24840c2fc557b5c76af1395dc3081fa6",
+        "model.safetensors.index.json": "b53d1c79219677289bdb1541a1373dfe53119884f248b23c94a27aef7338919d",
+        "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+      },
+      "pin_source": "preflight-20261015/vela-source/vllm_srun/registry/tables/vela2.py",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "vela-2.0-4b",
+      "upstream": "https://huggingface.co/vllm-sr/Vela-2.0-4B",
+      "revision": "c1e64d4f872cb38bc58502e6888340100bab9d55",
+      "files_sha256": {
+        "MODEL_MANIFEST.json": "3e5a26db6dd50cc3939502ec861cdc0e5f6a5de8947815d598d3aea6f4624a0c",
+        "broad_head.safetensors": "45dd5eafa620a5b4d3e060eaf8baadbfeaab4d3086dc3a63a6734068e441e20c",
+        "calibration.json": "2a3f3cfa2d1cf6fa133d887960261b71c09420899f817f4156677962ac02460f",
+        "config.json": "c0318849c586fe42f98db289c9d959642a8e2020726f2b3cb4685ccfc9912c40",
+        "model-00001-of-00003.safetensors": "32a4c236433eb321eed9c8f1b3c538b1e92c9d10434f881f19297ec31df8a3f2",
+        "model-00002-of-00003.safetensors": "f632598bf50da7f07fca7b6a0588c2b528c05158d03877205450d36dc3ce9662",
+        "model-00003-of-00003.safetensors": "6f59ab795dc73e0fdb5f25cb0522808537097db2b9b0e147fc4c33f12ff90a80",
+        "model.safetensors.index.json": "24e5eea6b54282cdf32a7f8d746f9c7b3f8c2ef66bcd57b333fd0022b7c74ca0",
+        "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+      },
+      "pin_source": "preflight-20261015/vela-source/vllm_srun/registry/tables/vela2.py",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    },
+    {
+      "model": "vela-2.0-9b",
+      "upstream": "https://huggingface.co/vllm-sr/Vela-2.0-9B",
+      "revision": "bc8761637d8788619dfbaf6d8890128efe85fd40",
+      "files_sha256": {
+        "MODEL_MANIFEST.json": "8ccd2ccb2f91f7b4ee99df2e3bf885cb901f2567cfb0a6b6093778ba14dfc05f",
+        "broad_head.safetensors": "c376f1668247ff902947d1ffd69c92195c7b74116dedd958aebd31ff5f1b580c",
+        "calibration.json": "9fa0f31ce1c7b784220fd73320ee64da9b3b789c403755af91bcbefb5740d766",
+        "config.json": "4770113c223c399500382f07746cfe384465409e16f07b2cea49ced9f2547aa3",
+        "model-00001-of-00005.safetensors": "444ef8c7f74c5e52639ae39cb692b5f93f9df419f58c1d1ca048046496e702b2",
+        "model-00002-of-00005.safetensors": "6f11c43ba2f04be71a8102eaa1fce2b73ef9c9afe7cb5c6e6690bdf941427cc7",
+        "model-00003-of-00005.safetensors": "dc81308a51d4357a7483701a061ebbeee9a90f7fd3a0716a99ff0d58a6330b9d",
+        "model-00004-of-00005.safetensors": "d08cb842d293fedb05308c299624cd3459c2007ec2b7ad75267f67cb225ace70",
+        "model-00005-of-00005.safetensors": "1aec88bbd34d725ac0a9c152bc1d10d2db25bca1f9186f5449d7429a4b034a81",
+        "model.safetensors.index.json": "b8c6ef31bad3b3f55952261553827df322e666e2393f85856e435af70e393c4e",
+        "tokenizer.json": "06b9509352d2af50381ab2247e083b80d32d5c0aba91c272ca9ff729b6a0e523"
+      },
+      "pin_source": "preflight-20261015/vela-source/vllm_srun/registry/tables/vela2.py",
+      "evidence_deployment": {
+        "family": "worker",
+        "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+        "tp": 1,
+        "cpu_budget": 8,
+        "scheduling": {
+          "max_sequences": 32,
+          "max_batched_tokens": 32768
+        }
+      }
+    }
+  ],
+  "base_images": [
+    {
+      "reference": "docker.io/lmsysorg/sglang@sha256:b2d574138e22e7b54d9ae26c84670c6e5a13a5b55da7c31bf4a5503866f9aa9b",
+      "alias": "docker.io/decision-eval-sglang-base:clef-pinned",
+      "archive_sha256": "d188518c4386682e0e2bd41fd587d9a7625eb970d42b7aab53ef924ad9750cd0"
+    },
+    {
+      "reference": "docker.io/vllm/vllm-openai@sha256:a4a4c0437bf7240089da5f08aa370c4aee17ae5290f7a3b468825ee26c4c3a6b",
+      "alias": "docker.io/decision-eval-vllm:v0.31.0-pinned",
+      "archive_sha256": "6a106ca4e7f94286eb97ad92e1d2a8391788663a93a3f786656e50ebf23c2df6"
+    }
+  ],
+  "worker_version": "0.2.0",
+  "notes": [
+    "Pins are copied from the recorded acquisition locks or the installed runtime registry, not queried from current upstream main.",
+    "Weight files were not redistributed or rehashed during publication; original per-file manifests are archived where available.",
+    "Reranker resource settings and container identity are in the separate proxy deployment archive."
+  ]
+}

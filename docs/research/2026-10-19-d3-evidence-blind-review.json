@@ -1,0 +1,33 @@
+{
+  "reviewer": "Codex single model-assisted reviewer, not human adjudication",
+  "blinding": "Individual original grades, model predictions and sample strata were hidden until this file was saved.",
+  "blind_sha256": "ab927d214471a7720671bbd7da70b5ac8f98bbfecd63dfa9055c370fc8fb0b34",
+  "rubric": "Use only the complete supplied query and passage. Concrete partial answers and applicable conditions count; topic overlap alone does not. Do not certify factual truth. Mark genuinely underspecified boundaries ambiguous.",
+  "labels": {"yes": "Contains usable partial/full answer evidence", "no": "Does not contain usable answer evidence", "ambiguous": "Needs human intent or policy adjudication"},
+  "reviews": [
+    {"review_id":"R01","judgment":"yes","reason":"Specific brand, per-area prices and scope support a partial price answer, although no total project cost is given."},
+    {"review_id":"R02","judgment":"no","reason":"The venue address is not tied to the requested city or landmark; category overlap alone cannot establish the requested location."},
+    {"review_id":"R03","judgment":"no","reason":"Material and jewelry taxonomy does not identify the requested riddle answer."},
+    {"review_id":"R04","judgment":"yes","reason":"Names and descriptions of local dishes provide partial list content, without establishing an authoritative top-ten ordering."},
+    {"review_id":"R05","judgment":"no","reason":"An author biography does not connect the quoted line to a poem title."},
+    {"review_id":"R06","judgment":"no","reason":"A title and consultation teaser promise an answer but contain no custody rule or applicable condition."},
+    {"review_id":"R07","judgment":"no","reason":"General symptom discussion does not establish suitability of the particular condiment asked about."},
+    {"review_id":"R08","judgment":"yes","reason":"Concrete interviewer techniques answer a plausible interpretation of a broad interview-improvement query; candidate/interviewer intent is underspecified."},
+    {"review_id":"R09","judgment":"ambiguous","reason":"A terse metaphor-like query and corrupted language wording leave the intended information need uncertain."},
+    {"review_id":"R10","judgment":"yes","reason":"Explicit examination and observation suggestions address the requested assessment. Medical accuracy is not verified by this evidence judgment."},
+    {"review_id":"R11","judgment":"yes","reason":"Concrete equipment attribute recommendations for the named game class provide partial selection evidence."},
+    {"review_id":"R12","judgment":"ambiguous","reason":"The passage explicitly labels the proposed changes as speculation. It may support a caution, but not factual evaluation of a completed update."},
+    {"review_id":"R13","judgment":"yes","reason":"Numbered local food entries directly supply part of the requested list."},
+    {"review_id":"R14","judgment":"yes","reason":"An explicit explanation and source attribution answer the phrase query; the correctness of the translation is not certified."},
+    {"review_id":"R15","judgment":"no","reason":"A user problem report about an unspecified app and flashed router supplies no resolution and does not identify the requested router-management app."},
+    {"review_id":"R16","judgment":"yes","reason":"A matching literary title and synopsis satisfy a plausible navigational interpretation of the terse query."},
+    {"review_id":"R17","judgment":"no","reason":"Description of much earlier institutions contains no explicit connection to the requested dynasty; a historical bridge would require outside knowledge."},
+    {"review_id":"R18","judgment":"yes","reason":"The passage explicitly pairs the requested quotation with the work title."},
+    {"review_id":"R19","judgment":"yes","reason":"Specific conditional assessment and care-seeking information partially addresses what to do. Medical accuracy is not established."},
+    {"review_id":"R20","judgment":"yes","reason":"Concrete interview communication techniques address improving interview performance."},
+    {"review_id":"R21","judgment":"no","reason":"Pet naming advice does not identify the species behind a vernacular name."},
+    {"review_id":"R22","judgment":"yes","reason":"Concrete cache lookup order, disk-directory choices and version differences provide partial caching evidence."},
+    {"review_id":"R23","judgment":"ambiguous","reason":"A restaurant ranking may or may not satisfy a dish-ranking query; the intended meaning of the broad food-list request is underspecified."},
+    {"review_id":"R24","judgment":"yes","reason":"The later installation constraints provide partial evidence. Unmarked true/false exam statements elsewhere must not be treated as verified safety advice."}
+  ]
+}

@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="audit-sha256" content="ad5840e5c8458d86ebbddaa3165b504616a3b49b28ad2d3dae6602820c7461ed">
+  <title>B 场景：片段精筛测试结果汇总</title>
+  <style>
+
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: #202529; font: 14px/1.5 system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; letter-spacing: 0; }
+    main { max-width: 1160px; margin: 32px auto; padding: 0 24px; }
+    h1 { margin: 0 0 8px; font-size: 24px; font-weight: 650; }
+    p { margin: 8px 0 18px; color: #596267; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; min-width: 820px; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+    th, td { padding: 10px 14px; border: 1px solid #d5dbde; }
+    thead th { text-align: right; background: #edf0f2; white-space: nowrap; font-weight: 650; }
+    thead th:first-child, thead th:nth-child(2) { text-align: left; }
+    tbody th { width: 100px; background: #f0f6f4; vertical-align: middle; text-align: center; white-space: nowrap; }
+    tbody td { text-align: right; }
+    tbody td:first-of-type { text-align: left; overflow-wrap: anywhere; }
+    tbody + tbody tr:first-child > * { border-top: 2px solid #a8b5b4; }
+    .results { margin-top: 24px; }
+    .results h2 { margin: 0 0 12px; font-size: 18px; font-weight: 650; }
+    .results ol { margin: 0; padding-left: 24px; }
+    .results li { margin-bottom: 14px; line-height: 1.75; }
+    @media (max-width: 600px) { main { margin: 20px auto; padding: 0 12px; } h1 { font-size: 20px; } }
+    @media print { @page { size: A4 landscape; margin: 12mm; } main { max-width: none; margin: 0; padding: 0; } th, td { padding: 7px 10px; } .table-wrap { overflow: visible; } tbody { break-inside: avoid; } }
+  
+    main { max-width: 1320px; }
+    h1, h2, h3 { overflow-wrap: anywhere; }
+    h2 { margin: 28px 0 10px; font-size: 18px; font-weight: 650; }
+    h3 { font-size: 16px; }
+    p { line-height: 1.8; }
+    strong { color: #202529; }
+    a { color: #235a83; text-underline-offset: 3px; }
+    a:hover { color: #143e60; }
+    :focus-visible { outline: 2px solid #235a83; outline-offset: 3px; }
+    nav { display: flex; flex-wrap: wrap; gap: 0 24px; border-block: 1px solid #d5dbde; margin: 20px 0; }
+    nav a { display: inline-flex; min-height: 44px; align-items: center; }
+    table { min-width: 1020px; font-size: 14px; }
+    th, td { padding: 9px 11px; }
+    tbody td { white-space: nowrap; }
+    tbody td:first-of-type { min-width: 190px; max-width: 260px; white-space: normal; }
+    tbody th { width: 82px; }
+    tbody tr:hover td { background: #f7f9fa; }
+    small, .ci, .mode { color: #586367; font-size: 12px; font-weight: 400; }
+    .ci, .mode { display: block; line-height: 1.6; }
+    .mode { font-size: 13px; }
+    .positive { color: #206b56; }
+    .negative { color: #9d3341; }
+    .note { border-left: 3px solid #849794; padding-left: 14px; }
+    .results li { margin-bottom: 14px; }
+    figure { margin: 24px 0; }
+    .chart-wrap { overflow-x: auto; }
+    figure img { display: block; width: 100%; min-width: 860px; height: auto; }
+    figcaption { color: #596267; margin-top: 8px; line-height: 1.7; }
+    details { border-block: 1px solid #d5dbde; margin-top: 28px; padding-bottom: 4px; }
+    summary { padding: 14px 0; font-size: 16px; font-weight: 650; cursor: pointer; }
+    footer { margin: 32px 0 18px; padding-top: 16px; border-top: 1px solid #d5dbde; color: #596267; }
+    footer p { overflow-wrap: anywhere; font-size: 13px; }
+    @media (max-width: 600px) { nav { column-gap: 20px; } th, td { padding: 8px 10px; } }
+    @media print { nav, details, .chart-wrap { display: none; } table { min-width: 0; font-size: 10px; }
+      .ci, .mode, small { font-size: 9px; } tbody td:first-of-type { min-width: 130px; }
+      .table-wrap { overflow: visible; } h2 { break-after: avoid; } a { color: inherit; } }
+  </style>
+</head>
+<body>
+<main>
+  <h1>B 场景：片段精筛测试结果汇总</h1>
+  <p>2026-10-19 · 15 款模型 / 28 个直接精筛模式 · 每模式 3,054 条正式数据</p>
+  <p>本次使用 <strong>T2Ranking 数据集中的197个问题、3,054个候选片段</strong>。
+  每次输入一个问题和一个完整片段，判断片段是否提供了能够部分或完整回答问题的信息。
+  按原始标签，L2/L3为有证据（924条），L0/L1为无证据（2,130条）。
+  13款Decision模型分别测试choice、noul两种模式，两款LLM只测试非思考的choice模式；所有请求依次执行，不重试、不截断、不调整判定阈值。</p>
+  <p><strong>choice（选项选择）</strong>：明确给出“有答案证据”和“无答案证据”两个选项，由模型选择。
+  <strong>noul（是/否判断）</strong>：不给这两个自定义选项，而是使用模型原生的true/false判断，
+  true对应有答案证据，false对应无答案证据；部分模型返回的是true的概率。</p>
+  <p><strong>为什么比较两种模式？</strong>同一款模型使用相同的问题、完整片段和判断说明，
+  换一种判定方式，结果和耗时也可能不同。本次同时测试两种模式，是为了比较各模型用哪种方式筛得更准、耗时更少。
+  choice和noul不是两款模型，也不是思考与非思考的区别。</p>
+  <p><strong>Precision（精确率）</strong>是保留片段中标注为有证据的比例；
+  <strong>Recall（召回率）</strong>是所有标注证据中被保留的比例；<strong>F1</strong>是精确率与召回率的调和平均。
+  三项指标先按每个问题计算，再对183个有标注证据的问题取平均。另14个问题没有标注证据，单独统计。
+  方括号内为F1的95%置信区间。</p>
+  <p>耗时单位为毫秒（ms）。<strong>平均延迟、P99</strong>对应一次片段判断，P99表示约99%的请求耗时不超过该值；
+  <strong>每个问题平均耗时</strong>指筛完该问题全部候选片段的总用时再取平均。
+  耗时包含通信、推理和结果检查，不含模型加载。
+  27B模型及两款LLM使用两张A100-PCIE-40GB（TP=2），其余模型使用单卡。</p>
+  
+  <section id="direct" aria-label="直接片段筛选结果">
+    
+    <div class="table-wrap" role="region" aria-label="片段筛选结果，28 个模式" tabindex="0">
+<table id="direct-table"><thead><tr>
+<th scope="col">分组</th>
+<th scope="col">模型 / 模式</th>
+<th scope="col">Precision<br>(%)</th>
+<th scope="col">Recall<br>(%)</th>
+<th scope="col">F1 (%)<br><small>[95% 置信区间]</small></th>
+<th scope="col">平均延迟<br>(ms)</th>
+<th scope="col">P99<br>(ms)</th>
+<th scope="col">每个问题<br>平均耗时 (ms)</th>
+</tr></thead>
+<tbody>
+<tr data-key="d3-edge/choice">
+<th scope="rowgroup" rowspan="8">小于 1B</th>
+<td>D3-edge<span class="mode">choice</span></td>
+<td>40.12</td>
+<td>50.78</td>
+<td>39.81<span class="ci">[35.63, 43.99]</span></td>
+<td>29.88</td>
+<td>54.46</td>
+<td>584.97</td>
+</tr>
+<tr data-key="d3-edge/noul">
+<td>D3-edge<span class="mode">noul</span></td>
+<td>39.75</td>
+<td>47.78</td>
+<td>38.32<span class="ci">[34.25, 42.72]</span></td>
+<td>29.91</td>
+<td>57.44</td>
+<td>578.32</td>
+</tr>
+<tr data-key="vela-2.0-0.3b/choice">
+<td>Vela 2.0-0.3B<span class="mode">choice</span></td>
+<td>35.79</td>
+<td>86.03</td>
+<td>46.43<span class="ci">[43.00, 49.89]</span></td>
+<td>22.68</td>
+<td>100.69</td>
+<td>454.74</td>
+</tr>
+<tr data-key="vela-2.0-0.3b/noul">
+<td>Vela 2.0-0.3B<span class="mode">noul</span></td>
+<td>23.61</td>
+<td>13.26</td>
+<td>14.71<span class="ci">[11.39, 18.05]</span></td>
+<td>22.90</td>
+<td>101.99</td>
+<td>464.47</td>
+</tr>
+<tr data-key="vela-2.0-0.8b/choice">
+<td>Vela 2.0-0.8B<span class="mode">choice</span></td>
+<td>36.62</td>
+<td>89.85</td>
+<td>48.40<span class="ci">[45.01, 51.76]</span></td>
+<td>85.45</td>
+<td>95.40</td>
+<td>1448.31</td>
+</tr>
+<tr data-key="vela-2.0-0.8b/noul">
+<td>Vela 2.0-0.8B<span class="mode">noul</span></td>
+<td>37.86</td>
+<td>78.19</td>
+<td>47.39<span class="ci">[43.68, 51.01]</span></td>
+<td>85.50</td>
+<td>95.76</td>
+<td>1459.89</td>
+</tr>
+<tr data-key="laya-multilingual/choice">
+<td>Laya Multilingual<span class="mode">choice</span></td>
+<td>42.99</td>
+<td>43.55</td>
+<td>38.72<span class="ci">[34.61, 42.70]</span></td>
+<td>28.02</td>
+<td>56.10</td>
+<td>557.98</td>
+</tr>
+<tr data-key="laya-multilingual/noul">
+<td>Laya Multilingual<span class="mode">noul</span></td>
+<td>40.72</td>
+<td>59.08</td>
+<td>42.93<span class="ci">[39.10, 46.47]</span></td>
+<td>28.05</td>
+<td>57.01</td>
+<td>556.07</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="d3-mini/choice">
+<th scope="rowgroup" rowspan="8">4B</th>
+<td>D3-mini<span class="mode">choice</span></td>
+<td>44.53</td>
+<td>70.58</td>
+<td>50.04<span class="ci">[45.95, 53.86]</span></td>
+<td>77.82</td>
+<td>243.82</td>
+<td>1339.72</td>
+</tr>
+<tr data-key="d3-mini/noul">
+<td>D3-mini<span class="mode">noul</span></td>
+<td>43.99</td>
+<td>69.50</td>
+<td>49.51<span class="ci">[45.36, 53.50]</span></td>
+<td>77.83</td>
+<td>243.84</td>
+<td>1332.78</td>
+</tr>
+<tr data-key="vela-2.0-4b/choice">
+<td>Vela 2.0-4B<span class="mode">choice</span></td>
+<td>41.21</td>
+<td>76.81</td>
+<td>49.74<span class="ci">[46.11, 53.48]</span></td>
+<td>117.37</td>
+<td>248.23</td>
+<td>1955.82</td>
+</tr>
+<tr data-key="vela-2.0-4b/noul">
+<td>Vela 2.0-4B<span class="mode">noul</span></td>
+<td>41.50</td>
+<td>69.61</td>
+<td>48.44<span class="ci">[44.46, 52.26]</span></td>
+<td>117.48</td>
+<td>249.40</td>
+<td>1957.61</td>
+</tr>
+<tr data-key="neohorse-jev-4b/choice">
+<td>NeoHorse-Jev-4B<span class="mode">choice</span></td>
+<td>41.27</td>
+<td>77.19</td>
+<td>49.76<span class="ci">[46.10, 53.37]</span></td>
+<td>1066.52</td>
+<td>6624.51</td>
+<td>16683.04</td>
+</tr>
+<tr data-key="neohorse-jev-4b/noul">
+<td>NeoHorse-Jev-4B<span class="mode">noul</span></td>
+<td>40.73</td>
+<td>76.15</td>
+<td>49.07<span class="ci">[45.51, 52.58]</span></td>
+<td>1046.17</td>
+<td>6645.67</td>
+<td>16370.33</td>
+</tr>
+<tr data-key="jeva-4b/choice">
+<td>Jeva-4B<span class="mode">choice</span></td>
+<td>35.85</td>
+<td>24.38</td>
+<td>26.21<span class="ci">[21.82, 30.83]</span></td>
+<td>145.54</td>
+<td>294.01</td>
+<td>2403.99</td>
+</tr>
+<tr data-key="jeva-4b/noul">
+<td>Jeva-4B<span class="mode">noul</span></td>
+<td>36.24</td>
+<td>27.90</td>
+<td>28.15<span class="ci">[23.39, 33.00]</span></td>
+<td>145.84</td>
+<td>294.90</td>
+<td>2409.99</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="d3-flash/choice">
+<th scope="rowgroup" rowspan="6">9B</th>
+<td>D3-flash<span class="mode">choice</span></td>
+<td>43.86</td>
+<td>67.93</td>
+<td>49.17<span class="ci">[45.11, 52.99]</span></td>
+<td>89.43</td>
+<td>377.26</td>
+<td>1536.60</td>
+</tr>
+<tr data-key="d3-flash/noul">
+<td>D3-flash<span class="mode">noul</span></td>
+<td>44.39</td>
+<td>66.73</td>
+<td>49.08<span class="ci">[44.94, 53.10]</span></td>
+<td>89.21</td>
+<td>373.72</td>
+<td>1523.43</td>
+</tr>
+<tr data-key="clef-flash/choice">
+<td>Clef-Flash<span class="mode">choice</span></td>
+<td>41.01</td>
+<td>61.60</td>
+<td>45.95<span class="ci">[41.64, 50.27]</span></td>
+<td>83.50</td>
+<td>304.81</td>
+<td>1423.45</td>
+</tr>
+<tr data-key="clef-flash/noul">
+<td>Clef-Flash<span class="mode">noul</span></td>
+<td>40.61</td>
+<td>54.87</td>
+<td>42.52<span class="ci">[37.71, 47.12]</span></td>
+<td>83.74</td>
+<td>303.77</td>
+<td>1431.40</td>
+</tr>
+<tr data-key="vela-2.0-9b/choice">
+<td>Vela 2.0-9B<span class="mode">choice</span></td>
+<td>41.65</td>
+<td>75.45</td>
+<td>49.69<span class="ci">[45.91, 53.26]</span></td>
+<td>124.76</td>
+<td>382.91</td>
+<td>2065.92</td>
+</tr>
+<tr data-key="vela-2.0-9b/noul">
+<td>Vela 2.0-9B<span class="mode">noul</span></td>
+<td>43.52</td>
+<td>69.88</td>
+<td>49.35<span class="ci">[45.36, 53.18]</span></td>
+<td>124.98</td>
+<td>384.46</td>
+<td>2085.35</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="jev-27b/choice">
+<th scope="rowgroup" rowspan="4">27B</th>
+<td>JEV-27B<span class="mode">choice</span></td>
+<td>41.60</td>
+<td>77.05</td>
+<td>49.81<span class="ci">[45.89, 53.63]</span></td>
+<td>395.69</td>
+<td>1801.48</td>
+<td>6283.99</td>
+</tr>
+<tr data-key="jev-27b/noul">
+<td>JEV-27B<span class="mode">noul</span></td>
+<td>42.07</td>
+<td>75.51</td>
+<td>50.14<span class="ci">[46.22, 53.93]</span></td>
+<td>394.04</td>
+<td>1799.46</td>
+<td>6262.86</td>
+</tr>
+<tr data-key="pplx-decider-v1.1-27b/choice">
+<td>PPLX-Decider-v1.1-27B<span class="mode">choice</span></td>
+<td>44.41</td>
+<td>75.42</td>
+<td>51.39<span class="ci">[47.66, 54.85]</span></td>
+<td>329.76</td>
+<td>1684.17</td>
+<td>5269.62</td>
+</tr>
+<tr data-key="pplx-decider-v1.1-27b/noul">
+<td>PPLX-Decider-v1.1-27B<span class="mode">noul</span></td>
+<td>45.78</td>
+<td>73.80</td>
+<td>51.77<span class="ci">[47.95, 55.35]</span></td>
+<td>327.10</td>
+<td>1659.26</td>
+<td>5223.53</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="qwen3-30b-a3b-instruct-2507/choice">
+<th scope="rowgroup" rowspan="2">LLM 基线</th>
+<td>Qwen3-30B-A3B-Instruct-2507<span class="mode">非思考 / choice</span></td>
+<td>33.39</td>
+<td>95.42</td>
+<td>45.70<span class="ci">[42.28, 49.08]</span></td>
+<td>209.58</td>
+<td>594.72</td>
+<td>3388.97</td>
+</tr>
+<tr data-key="qwen3.8-27b/choice">
+<td>Qwen3.8-27B<span class="mode">非思考 / choice</span></td>
+<td>41.92</td>
+<td>52.67</td>
+<td>42.99<span class="ci">[38.42, 47.39]</span></td>
+<td>646.47</td>
+<td>1962.09</td>
+<td>10311.25</td>
+</tr>
+</tbody>
+</table></div>
+  </section>
+  
+  <section id="conclusions" class="results" aria-labelledby="conclusions-title">
+    <h2 id="conclusions-title">测试结果总结</h2>
+    <ol>
+      <li><strong>PPLX 的 F1 最高，D3-mini 耗时更短。</strong>
+      PPLX 的noul模式F1为51.77%，D3-mini的choice模式为50.04%。
+      完成一个问题全部片段的筛选，平均分别需要5223.53 ms和1339.72 ms。
+      D3-mini使用单卡，PPLX使用双卡。两者F1接近，目前不能认定差异显著。</li>
+      <li>
+    <strong>误收比漏选更多。</strong>D3-mini 的 choice 模式保留了700个标注正例，
+    同时误收775个负例，漏选224个正例。
+    保留的片段中有一半以上是标注负例，这是精确率较低的直接原因。
+    其片段判断准确率为67.29%，与按问题平均的F1不是同一指标。</li>
+      <li><strong>Qwen3-30B 召回率高，但没有滤掉足够多的负例。</strong>Recall为95.42%，
+      Precision为33.39%，F1为45.70%。
+      不做筛选、全部保留的F1为45.74%，与它的结果接近。</li>
+      <li><strong>noul并不总比choice好。</strong>Laya改用noul后，F1从38.72%升至42.93%；
+      Vela 0.3B则从46.43%降至14.71%。模式选择需要分别看各模型的结果。</li>
+      <li><strong>没有可用证据时，模型仍容易保留片段。</strong>在14个全部标为无证据的问题中，
+      D3-mini、D3-flash、Clef-Flash的choice模式分别只有2、1、1个问题做到了全部拒绝。
+      这部分只有14个问题，结果单独列在补充表中。</li>
+    </ol>
+    
+  </section>
+  <details id="supplement">
+    <summary>补充数据与测试说明</summary>
+    <p>Accuracy是3,054个片段中判断正确的比例。
+    “全拒绝率”统计14个无证据问题中，有多少没有保留任何片段；“全部漏选率”统计183个有证据问题中，有多少没有保留任何正例。
+    FP是误收的负例数，FN是漏选的正例数。</p>
+    <p>原定测试200个问题，其中3个问题因部分片段过长、无法被所有模型完整处理而统一排除，共51条片段（含11个正例）。
+    “计入未覆盖问题F1”将未覆盖的有证据问题按0分计入平均值；主表只比较完整测试的197个问题。
+    所有得分均按T2Ranking原始标签计算，没有重新人工标注。</p>
+    <p>noul优先采用模型原生的是/否结果；仅返回概率时，选择true、false中概率较大的一项，相等时判为无证据。
+    这一规则事先固定，没有根据测试结果调整阈值。</p>
+    <div class="table-wrap" role="region" aria-label="误收、漏选与未覆盖问题统计" tabindex="0">
+<table id="extra-table"><thead><tr>
+<th scope="col">分组</th>
+<th scope="col">模型 / 模式</th>
+<th scope="col">Accuracy<br>(%)</th>
+<th scope="col">无证据问题<br>全拒绝率 (%)</th>
+<th scope="col">有证据问题<br>全部漏选率 (%)</th>
+<th scope="col">计入未覆盖问题<br>F1 (%)</th>
+<th scope="col">误收 FP</th>
+<th scope="col">漏收 FN</th>
+</tr></thead>
+<tbody>
+<tr data-key="d3-edge/choice">
+<th scope="rowgroup" rowspan="8">小于 1B</th>
+<td>D3-edge<span class="mode">choice</span></td>
+<td>67.65</td>
+<td>21.43</td>
+<td>24.59</td>
+<td>39.16</td>
+<td>566</td>
+<td>422</td>
+</tr>
+<tr data-key="d3-edge/noul">
+<td>D3-edge<span class="mode">noul</span></td>
+<td>68.04</td>
+<td>14.29</td>
+<td>25.68</td>
+<td>37.70</td>
+<td>532</td>
+<td>444</td>
+</tr>
+<tr data-key="vela-2.0-0.3b/choice">
+<td>Vela 2.0-0.3B<span class="mode">choice</span></td>
+<td>43.52</td>
+<td>0.00</td>
+<td>4.37</td>
+<td>45.68</td>
+<td>1631</td>
+<td>94</td>
+</tr>
+<tr data-key="vela-2.0-0.3b/noul">
+<td>Vela 2.0-0.3B<span class="mode">noul</span></td>
+<td>68.96</td>
+<td>78.57</td>
+<td>63.93</td>
+<td>14.47</td>
+<td>171</td>
+<td>777</td>
+</tr>
+<tr data-key="vela-2.0-0.8b/choice">
+<td>Vela 2.0-0.8B<span class="mode">choice</span></td>
+<td>46.20</td>
+<td>0.00</td>
+<td>3.83</td>
+<td>47.62</td>
+<td>1575</td>
+<td>68</td>
+</tr>
+<tr data-key="vela-2.0-0.8b/noul">
+<td>Vela 2.0-0.8B<span class="mode">noul</span></td>
+<td>54.49</td>
+<td>7.14</td>
+<td>9.29</td>
+<td>46.63</td>
+<td>1233</td>
+<td>157</td>
+</tr>
+<tr data-key="laya-multilingual/choice">
+<td>Laya Multilingual<span class="mode">choice</span></td>
+<td>68.24</td>
+<td>28.57</td>
+<td>22.95</td>
+<td>38.09</td>
+<td>466</td>
+<td>504</td>
+</tr>
+<tr data-key="laya-multilingual/noul">
+<td>Laya Multilingual<span class="mode">noul</span></td>
+<td>61.39</td>
+<td>7.14</td>
+<td>11.48</td>
+<td>42.24</td>
+<td>792</td>
+<td>387</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="d3-mini/choice">
+<th scope="rowgroup" rowspan="8">4B</th>
+<td>D3-mini<span class="mode">choice</span></td>
+<td>67.29</td>
+<td>14.29</td>
+<td>13.66</td>
+<td>49.24</td>
+<td>775</td>
+<td>224</td>
+</tr>
+<tr data-key="d3-mini/noul">
+<td>D3-mini<span class="mode">noul</span></td>
+<td>67.13</td>
+<td>14.29</td>
+<td>14.75</td>
+<td>48.71</td>
+<td>776</td>
+<td>228</td>
+</tr>
+<tr data-key="vela-2.0-4b/choice">
+<td>Vela 2.0-4B<span class="mode">choice</span></td>
+<td>61.69</td>
+<td>0.00</td>
+<td>9.84</td>
+<td>48.94</td>
+<td>993</td>
+<td>177</td>
+</tr>
+<tr data-key="vela-2.0-4b/noul">
+<td>Vela 2.0-4B<span class="mode">noul</span></td>
+<td>65.39</td>
+<td>0.00</td>
+<td>13.11</td>
+<td>47.66</td>
+<td>821</td>
+<td>236</td>
+</tr>
+<tr data-key="neohorse-jev-4b/choice">
+<td>NeoHorse-Jev-4B<span class="mode">choice</span></td>
+<td>61.13</td>
+<td>0.00</td>
+<td>9.84</td>
+<td>48.96</td>
+<td>1018</td>
+<td>169</td>
+</tr>
+<tr data-key="neohorse-jev-4b/noul">
+<td>NeoHorse-Jev-4B<span class="mode">noul</span></td>
+<td>60.58</td>
+<td>0.00</td>
+<td>9.29</td>
+<td>48.28</td>
+<td>1022</td>
+<td>182</td>
+</tr>
+<tr data-key="jeva-4b/choice">
+<td>Jeva-4B<span class="mode">choice</span></td>
+<td>74.23</td>
+<td>64.29</td>
+<td>52.46</td>
+<td>25.79</td>
+<td>172</td>
+<td>615</td>
+</tr>
+<tr data-key="jeva-4b/noul">
+<td>Jeva-4B<span class="mode">noul</span></td>
+<td>73.58</td>
+<td>42.86</td>
+<td>49.73</td>
+<td>27.70</td>
+<td>201</td>
+<td>606</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="d3-flash/choice">
+<th scope="rowgroup" rowspan="6">9B</th>
+<td>D3-flash<span class="mode">choice</span></td>
+<td>67.88</td>
+<td>7.14</td>
+<td>14.75</td>
+<td>48.38</td>
+<td>736</td>
+<td>245</td>
+</tr>
+<tr data-key="d3-flash/noul">
+<td>D3-flash<span class="mode">noul</span></td>
+<td>68.17</td>
+<td>7.14</td>
+<td>15.30</td>
+<td>48.29</td>
+<td>716</td>
+<td>256</td>
+</tr>
+<tr data-key="clef-flash/choice">
+<td>Clef-Flash<span class="mode">choice</span></td>
+<td>68.37</td>
+<td>7.14</td>
+<td>22.95</td>
+<td>45.21</td>
+<td>685</td>
+<td>281</td>
+</tr>
+<tr data-key="clef-flash/noul">
+<td>Clef-Flash<span class="mode">noul</span></td>
+<td>68.86</td>
+<td>7.14</td>
+<td>26.78</td>
+<td>41.83</td>
+<td>605</td>
+<td>346</td>
+</tr>
+<tr data-key="vela-2.0-9b/choice">
+<td>Vela 2.0-9B<span class="mode">choice</span></td>
+<td>63.06</td>
+<td>7.14</td>
+<td>10.93</td>
+<td>48.89</td>
+<td>935</td>
+<td>193</td>
+</tr>
+<tr data-key="vela-2.0-9b/noul">
+<td>Vela 2.0-9B<span class="mode">noul</span></td>
+<td>65.95</td>
+<td>7.14</td>
+<td>13.11</td>
+<td>48.56</td>
+<td>796</td>
+<td>244</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="jev-27b/choice">
+<th scope="rowgroup" rowspan="4">27B</th>
+<td>JEV-27B<span class="mode">choice</span></td>
+<td>63.06</td>
+<td>0.00</td>
+<td>12.02</td>
+<td>49.01</td>
+<td>969</td>
+<td>159</td>
+</tr>
+<tr data-key="jev-27b/noul">
+<td>JEV-27B<span class="mode">noul</span></td>
+<td>64.73</td>
+<td>0.00</td>
+<td>12.57</td>
+<td>49.33</td>
+<td>906</td>
+<td>171</td>
+</tr>
+<tr data-key="pplx-decider-v1.1-27b/choice">
+<td>PPLX-Decider-v1.1-27B<span class="mode">choice</span></td>
+<td>66.70</td>
+<td>21.43</td>
+<td>12.02</td>
+<td>50.56</td>
+<td>841</td>
+<td>176</td>
+</tr>
+<tr data-key="pplx-decider-v1.1-27b/noul">
+<td>PPLX-Decider-v1.1-27B<span class="mode">noul</span></td>
+<td>68.30</td>
+<td>21.43</td>
+<td>12.02</td>
+<td>50.93</td>
+<td>780</td>
+<td>188</td>
+</tr>
+</tbody>
+<tbody>
+<tr data-key="qwen3-30b-a3b-instruct-2507/choice">
+<th scope="rowgroup" rowspan="2">LLM 基线</th>
+<td>Qwen3-30B-A3B-Instruct-2507<span class="mode">非思考 / choice</span></td>
+<td>33.99</td>
+<td>0.00</td>
+<td>0.55</td>
+<td>44.96</td>
+<td>1984</td>
+<td>32</td>
+</tr>
+<tr data-key="qwen3.8-27b/choice">
+<td>Qwen3.8-27B<span class="mode">非思考 / choice</span></td>
+<td>71.12</td>
+<td>28.57</td>
+<td>26.23</td>
+<td>42.30</td>
+<td>536</td>
+<td>346</td>
+</tr>
+</tbody>
+</table></div>
+  <section id="audit" aria-labelledby="audit-title">
+    <h2 id="audit-title">测试记录</h2>
+    <p>直接筛选共114,100次有效调用，其中正式测试85,512次，其余为工程检查、验证和额外38个无证据问题的测试。
+    已纳入测试的数据均完成调用，失败和超时为0。逐请求检查及修订后的独立审计已通过，原审计退出和修订记录仍保留。</p>
+    
+    <p>单次请求计时不含调用前后写入记录的时间；每个问题的总耗时包含全部精筛请求及其记录写入，
+    不含模型加载、问题之间的服务检查和问题汇总记录写入。
+    置信区间按问题重复抽样计算，未作多重比较校正。</p>
+  </section>
+  </details>
+  <footer>
+    <p>来源：<a href="2026-10-19-answer-evidence-results.md">完整结果表与各阶段统计</a> ·
+    <a href="2026-10-19-answer-evidence-results.json.gz">独立审计 JSON</a> ·
+    <a href="2026-10-18-answer-evidence-execution.md">执行记录与审计修订</a> ·
+    <a href="2026-10-19-answer-evidence-reranker-appendix.html">Reranker 测试附录</a> ·
+    <a href="2026-10-16-decision-classification-summary.html">分类场景汇总</a></p>
+  </footer>
+</main>
+</body>
+</html>

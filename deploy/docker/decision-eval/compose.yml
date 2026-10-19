@@ -1,0 +1,187 @@
+name: decision-eval
+
+x-model: &model
+  image: ${DECISION_RUNTIME_IMAGE:-decision-eval-runtime:torch2.9.1-transformers5.17.0-laya0.4.1}
+  build: .
+  command: [python, -m, uvicorn, server:app, --host, 0.0.0.0, --port, "8000", --workers, "1", --no-access-log, --limit-concurrency, "${UVICORN_LIMIT_CONCURRENCY:-8}"]
+  restart: unless-stopped
+  gpus: all
+  read_only: true
+  cap_drop: [ALL]
+  security_opt: [no-new-privileges:true]
+  pids_limit: 256
+  cpus: 3
+  mem_limit: ${EVAL_MODEL_MEMORY_LIMIT:-28g}
+  shm_size: 1g
+  tmpfs: ["/tmp:size=1g,mode=1777"]
+  networks: [inference]
+  healthcheck:
+    test: [CMD, python3, -c, "import os,urllib.request; r=urllib.request.Request('http://127.0.0.1:8000/health',headers={'Authorization':'Bearer '+os.environ['DECISION_EVAL_API_KEY']}); urllib.request.urlopen(r,timeout=5)"]
+    interval: 30s
+    timeout: 10s
+    start_period: 10m
+    retries: 3
+  logging:
+    driver: json-file
+    options: {max-size: 10m, max-file: "3"}
+
+x-env: &env
+  DECISION_EVAL_API_KEY: ${DECISION_EVAL_API_KEY:?Evaluation API key required}
+  HF_HUB_OFFLINE: "1"
+  TRANSFORMERS_OFFLINE: "1"
+  HF_HOME: /runtime/huggingface
+  XDG_CACHE_HOME: /runtime/cache
+  TRITON_CACHE_DIR: /runtime/triton
+  OMP_NUM_THREADS: "2"
+  MAX_INPUT_TOKENS: ${MAX_INPUT_TOKENS:-2048}
+  MAX_INFLIGHT_REQUESTS: ${MAX_INFLIGHT_REQUESTS:-1}
+  # SystemOne requests are coalesced only for runtimes with a native batch
+  # adapter (D3, Clef and Laya). A value of 1 disables coalescing.
+  SYSTEMONE_BATCH_SIZE: ${SYSTEMONE_BATCH_SIZE:-4}
+  SYSTEMONE_BATCH_WAIT_MS: ${SYSTEMONE_BATCH_WAIT_MS:-2}
+  SYSTEMONE_QUEUE_SIZE: ${SYSTEMONE_QUEUE_SIZE:-64}
+  SYSTEMONE_QUEUE_SINGLE_REQUESTS: ${SYSTEMONE_QUEUE_SINGLE_REQUESTS:-0}
+  SYSTEMONE_TIMEOUT_SECONDS: ${SYSTEMONE_TIMEOUT_SECONDS:-300}
+
+services:
+  clef:
+    <<: *model
+    environment:
+      <<: *env
+      MODEL_NAME: clef-flash
+      MODEL_BACKEND: clef
+      MODEL_PATH: /models/clef-flash
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT:?Evaluation data directory required}/models/clef-flash:/models/clef-flash:ro
+      - ${EVAL_ROOT}/runtime/clef:/runtime
+
+  nox:
+    <<: *model
+    profiles: [historical]
+    mem_limit: 26g
+    environment:
+      <<: *env
+      MODEL_NAME: Decision-2.0-Nox-4B
+      MODEL_BACKEND: nox
+      MODEL_PATH: /models/nox-4b
+      GPU_MEMORY_FRACTION: ${NOX_GPU_FRACTION:-0.30}
+    volumes:
+      - ${EVAL_ROOT}/models/nox-4b:/models/nox-4b:ro
+      - ${EVAL_ROOT}/runtime/nox:/runtime
+
+  intern:
+    <<: *model
+    profiles: [additional]
+    environment:
+      <<: *env
+      MODEL_NAME: Intern-Decision-4B
+      MODEL_BACKEND: intern
+      MODEL_PATH: /models/intern-4b
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT}/models/intern-4b:/models/intern-4b:ro
+      - ${EVAL_ROOT}/runtime/intern:/runtime
+
+  laya:
+    <<: *model
+    profiles: [additional]
+    environment:
+      <<: *env
+      MODEL_NAME: laya-multilingual
+      MODEL_BACKEND: laya
+      MODEL_PATH: /models/laya-multilingual
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT}/models/laya-multilingual:/models/laya-multilingual:ro
+      - ${EVAL_ROOT}/runtime/laya:/runtime
+
+  qwen:
+    <<: *model
+    profiles: [reranker]
+    image: decision-eval-reranker:qwen3-bf16-v2
+    build:
+      context: .
+      dockerfile: Dockerfile.reranker
+    environment:
+      <<: *env
+      MODEL_NAME: Qwen3-Reranker-8B
+      MODEL_BACKEND: qwen_reranker
+      MODEL_PATH: /models/qwen3-reranker-8b
+      MAX_INPUT_TOKENS: "8192"
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT}/models/qwen3-reranker-8b:/models/qwen3-reranker-8b:ro
+      - ${EVAL_ROOT}/runtime/qwen:/runtime
+
+  d3-mini:
+    <<: *model
+    profiles: [current]
+    environment:
+      <<: *env
+      MODEL_NAME: d3-mini
+      MODEL_BACKEND: d3
+      MODEL_PATH: /models/d3-mini
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT}/models/d3-mini:/models/d3-mini:ro
+      - ${EVAL_ROOT}/runtime/d3-mini:/runtime
+
+  d3-flash:
+    <<: *model
+    profiles: [current]
+    environment:
+      <<: *env
+      MODEL_NAME: d3-flash
+      MODEL_BACKEND: d3
+      MODEL_PATH: /models/d3-flash
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT}/models/d3-flash:/models/d3-flash:ro
+      - ${EVAL_ROOT}/runtime/d3-flash:/runtime
+
+  d3-edge:
+    <<: *model
+    profiles: [current]
+    environment:
+      <<: *env
+      MODEL_NAME: d3-edge
+      MODEL_BACKEND: d3
+      MODEL_PATH: /models/d3-edge
+      GPU_MEMORY_FRACTION: ${EVAL_GPU_FRACTION:-0.75}
+    volumes:
+      - ${EVAL_ROOT}/models/d3-edge:/models/d3-edge:ro
+      - ${EVAL_ROOT}/runtime/d3-edge:/runtime
+
+  proxy:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    user: 101:101
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    pids_limit: 64
+    mem_limit: 128m
+    cpus: 0.5
+    tmpfs: ["/tmp:size=64m,mode=1777"]
+    command: [nginx, -g, "daemon off;"]
+    ports:
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${CLEF_PORT:-8082}:8082
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${NOX_PORT:-8083}:8083
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${INTERN_PORT:-8084}:8084
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${LAYA_PORT:-8085}:8085
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${QWEN_PORT:-8086}:8086
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${D3_MINI_PORT:-8087}:8087
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${D3_FLASH_PORT:-8088}:8088
+      - ${LISTEN_ADDRESS:-127.0.0.1}:${D3_EDGE_PORT:-8089}:8089
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks: [inference, edge]
+    logging:
+      driver: json-file
+      options: {max-size: 10m, max-file: "3"}
+
+networks:
+  inference:
+    internal: true
+  edge: {}

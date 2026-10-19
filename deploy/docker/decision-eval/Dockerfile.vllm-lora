@@ -1,0 +1,4 @@
+ARG VLLM_BASE=decision-eval-vllm:v0.31.0-pinned
+FROM ${VLLM_BASE}
+COPY patch_vllm_lora.py /opt/decision-eval/patch_vllm_lora.py
+RUN python3 /opt/decision-eval/patch_vllm_lora.py

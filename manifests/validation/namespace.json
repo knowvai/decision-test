@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "scan_scope": "Case-insensitive paths and file contents, including decompressed archives and JSON; excludes local Git internals and virtual environment.",
+  "files_scanned": 209,
+  "archive_members_scanned": 4775,
+  "forbidden_namespace_hits": 0,
+  "python_syntax_errors": 0,
+  "entry_document_links": 108,
+  "missing_links": 0,
+  "model_inference_calls": 0,
+  "fixed_seed_comparison": {
+    "hash_order_cases": 309,
+    "random_streams": 2,
+    "draws_per_stream": 100,
+    "passed": true,
+    "model_inference_calls": 0
+  },
+  "primary_record_files_unchanged": 47,
+  "main_report_changed_fields": [
+    "dataset.kind"
+  ]
+}

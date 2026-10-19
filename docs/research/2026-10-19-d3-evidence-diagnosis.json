@@ -1,0 +1,120 @@
+{
+  "kind": "offline_diagnosis_not_new_benchmark",
+  "inference_calls": 0,
+  "source_statistics_sha256": "1cf6fbe3fff6b316ba6fb1aefd610687b8fcad04db73bb7698f2ecf7b0745778",
+  "source_sha256": {
+    "evidence-dev.pools.private.jsonl": "432b7403cf2afaac4cbbb897c368024d74583eaa9e7426e97cc5d4e16f36c130",
+    "evidence-dev.labels.private.jsonl": "a3ae1e67f0c04b0011470a84cfae2309d1cd30e4741e66931bdd9a06a0d4384c",
+    "evidence-holdout.pools.private.jsonl": "c5a5d68f961cb579afcbac3e517e3b0d5edfe9a62f48dd2b5d0ce880593df65d",
+    "evidence-holdout.labels.private.jsonl": "8d9844333c61ddb0c14c5eed5e3f7181503b5340d5c70e2cf4d97acf4960a649",
+    "classification-holdout.private.jsonl": "6d2c8cebb4fc4b6b0212c63219b1982d1a02d07d03ae7836eff1d623c4df8f15",
+    "evidence-dev.private.jsonl": "5529f4f645a0d343f0cc9affa477f0024f5443c67158a09d7f59fa5127425a54",
+    "classification-dev.private.jsonl": "8cf92fb5e3d2b22b7e9d969006b19571003064b257e67d3f3e89595e3d1019f5",
+    "evidence-holdout.private.jsonl": "ca1bf79ff64ca8d396392a048e1a76928df9cac331fe1ec9073b48b21dd5604b",
+    "2026-10-19-d3-tuning-results.json": "c1196f702efddd8480fe04e4801397c5a99ef19f81cf97c35b361fd4f4c762f3",
+    "queries.dev.tsv": "1df544dd04bf9b6d0de0dd77e0f3a84a0d74fc4bb9a1ff67b7306de8169135ba",
+    "qrels.dev.tsv": "a0356bd3c6d72c532ca17a4d88d7765554857f321346cf0f9cb4ad480738b25a",
+    "collection.verified.tsv": "07b84e543e9ba696124a727c00629d5bce586631648c436c98dd6e9b146da212",
+    "quality/d3-mini/evidence-holdout-baseline.jsonl": "7c87f9be34c45468ae20cb91ef883530ae3245fa62fb2c67b4e59d37db3f6514",
+    "quality/d3-flash/evidence-holdout-baseline.jsonl": "94c4dc8b4556416de7ca7fbd553bf8fc800a341d56a9f22a9c32fec0e406be7c"
+  },
+  "script_sha256": "732229d5af5a88a66041335e77e8c6bb46e114ef0e07a75c178c26279498f8c8",
+  "verified_pairs": 643,
+  "verified_pools": 40,
+  "original_grade_query_fulltext_matches": 643,
+  "grades": {
+    "0": 331,
+    "1": 102,
+    "2": 170,
+    "3": 40
+  },
+  "all_reject_accuracy": 0.6734059097978227,
+  "positive_prevalence": 0.3265940902021773,
+  "models": {
+    "d3-mini": {
+      "counts": {
+        "tn": 257,
+        "fp": 176,
+        "fn": 53,
+        "tp": 157
+      },
+      "accuracy": 0.6438569206842923,
+      "roc_auc": 0.7460464093258551,
+      "average_precision": 0.5774522409191675,
+      "grades": {
+        "0": {
+          "n": 331,
+          "kept": 121
+        },
+        "1": {
+          "n": 102,
+          "kept": 55
+        },
+        "2": {
+          "n": 170,
+          "kept": 120
+        },
+        "3": {
+          "n": 40,
+          "kept": 37
+        }
+      },
+      "high_confidence_fp_ge_0_9": 70,
+      "high_confidence_fn_le_0_1": 14
+    },
+    "d3-flash": {
+      "counts": {
+        "tn": 277,
+        "fp": 156,
+        "fn": 58,
+        "tp": 152
+      },
+      "accuracy": 0.6671850699844479,
+      "roc_auc": 0.7457384801495656,
+      "average_precision": 0.5720652060582229,
+      "grades": {
+        "0": {
+          "n": 331,
+          "kept": 106
+        },
+        "1": {
+          "n": 102,
+          "kept": 50
+        },
+        "2": {
+          "n": 170,
+          "kept": 116
+        },
+        "3": {
+          "n": 40,
+          "kept": 36
+        }
+      },
+      "high_confidence_fp_ge_0_9": 52,
+      "high_confidence_fn_le_0_1": 16
+    }
+  },
+  "joint_outcomes": {
+    "tn": 250,
+    "fp": 149,
+    "fn": 50,
+    "tp": 149,
+    "disagree": 45
+  },
+  "sample_seed": "evidence-diagnosis-v1",
+  "sample_counts": {
+    "tp": 2,
+    "fn": 8,
+    "tn": 2,
+    "fp": 8,
+    "disagree": 4
+  },
+  "blind_sha256": "ab927d214471a7720671bbd7da70b5ac8f98bbfecd63dfa9055c370fc8fb0b34",
+  "key_sha256": "f8a25cda57a0899f07ff9567ad660bccf289d0619f9a0d2e30549cfc90d86b9c",
+  "limits": [
+    "Error-enriched sample; cannot estimate population label-error rate.",
+    "Agent review is not independent human adjudication.",
+    "No GPU or official-reference numeric parity test in this diagnosis.",
+    "No threshold selection or old score replacement."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-20",
+  "dataset_download": {
+    "source": "massive-test",
+    "bytes": 201108,
+    "sha256": "7eca92a47e6bffeec3fc7de751948b82904680353a42eef7e8c6fdbe89adb2db",
+    "verified": true
+  },
+  "materialization": {
+    "archives": 173,
+    "fresh_directory": true,
+    "executed_archive_code": false
+  },
+  "report_regeneration": {
+    "view": "direct",
+    "conditions": 28,
+    "matches_published_html_after_json_download_suffix_normalization": true,
+    "audit_sha256": "ad5840e5c8458d86ebbddaa3165b504616a3b49b28ad2d3dae6602820c7461ed",
+    "views": [
+      "direct",
+      "reranker"
+    ]
+  },
+  "publication_scan": {
+    "high_confidence_secret_hits": 0,
+    "nonempty_sensitive_json_field_candidates": 0,
+    "private_host_or_home_path_hits": 0
+  },
+  "model_inference_calls": 0,
+  "entry_document_links": {
+    "files": 10,
+    "local_links": 109,
+    "missing": 0
+  },
+  "git_whitespace_check": {
+    "new_files_passed": true,
+    "preserved_imported_warnings": 8,
+    "files": [
+      "deploy/docker/decision-eval/qwen3_reranker.jinja",
+      "docs/research/2026-10-19-answer-evidence-summary.html",
+      "docs/research/2026-10-19-answer-evidence-reranker-appendix.html"
+    ],
+    "reason": "Preserve historical template and report bytes; no benchmark logic changes."
+  }
+}

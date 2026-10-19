@@ -1,0 +1,26 @@
+{
+  "purpose": "Fixed UTF-8 seed bytes used by the historical hash/random calculations; aliases are presentation identifiers only.",
+  "seeds": {
+    "public-cn-v1": {
+      "utf8_hex": "6b6e6f77762d7075626c69632d636e2d7631"
+    },
+    "public-v3-ci": {
+      "utf8_hex": "6b6e6f77762d7075626c69632d76332d6369"
+    },
+    "public-v3-class-ci": {
+      "utf8_hex": "6b6e6f77762d7075626c69632d76332d636c6173732d6369"
+    },
+    "answer-evidence-v1": {
+      "utf8_hex": "6b6e6f77762d616e737765722d65766964656e63652d7631"
+    },
+    "d3-tuning-pilot-v1": {
+      "utf8_hex": "6b6e6f77762d64332d74756e696e672d70696c6f742d7631"
+    },
+    "evidence-reference-order-v1": {
+      "utf8_hex": "6b6e6f77762d65766964656e63652d7265666572656e63652d6f726465722d7631"
+    },
+    "evidence-diagnosis-v1": {
+      "utf8_hex": "6b6e6f77762d65766964656e63652d646961676e6f7369732d7631"
+    }
+  }
+}

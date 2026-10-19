@@ -1,0 +1,610 @@
+{
+  "audit_at_utc": "2026-10-15T14:56:02.172525+00:00",
+  "scope": "offline records/protocol/source/deployment/metric audit",
+  "models": [
+    {
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "run": "run-001",
+      "gpu_count": 2,
+      "family": "llm",
+      "serial_reference": false,
+      "image_id": "sha256:c76d0e2225a4b1cb1e2109ace39639f55e714abd1a7a427acc8b0bbd7f6a83b3",
+      "records": 2974,
+      "correct": 2489,
+      "failed": 0,
+      "accuracy": 0.8369199731002017,
+      "macro_f1": 0.8292350284982503,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 145.3720914751512,
+      "successful_p99_ms": 155.54844691883773
+    },
+    {
+      "model": "laya-multilingual",
+      "run": "run-002",
+      "gpu_count": 1,
+      "family": "laya",
+      "serial_reference": false,
+      "image_id": "sha256:34427a5062234b04a3702dabad9a7fa08598295c074db880d3429ea99b856523",
+      "records": 2974,
+      "correct": 1821,
+      "failed": 0,
+      "accuracy": 0.6123066577000672,
+      "macro_f1": 0.608512971548143,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 29.306848319439563,
+      "successful_p99_ms": 31.186832607054384
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "run": "run-002",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:34427a5062234b04a3702dabad9a7fa08598295c074db880d3429ea99b856523",
+      "records": 2974,
+      "correct": 2317,
+      "failed": 0,
+      "accuracy": 0.7790854068594486,
+      "macro_f1": 0.778133442173892,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 15.36983796433723,
+      "successful_p99_ms": 16.450017661991296
+    },
+    {
+      "model": "d3-edge",
+      "run": "run-002",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:34427a5062234b04a3702dabad9a7fa08598295c074db880d3429ea99b856523",
+      "records": 2974,
+      "correct": 2460,
+      "failed": 0,
+      "accuracy": 0.8271687962340283,
+      "macro_f1": 0.8278276714754572,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 26.64492628027263,
+      "successful_p99_ms": 27.83261215983657
+    },
+    {
+      "model": "vela-2.0-0.8b",
+      "run": "run-002",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:34427a5062234b04a3702dabad9a7fa08598295c074db880d3429ea99b856523",
+      "records": 2974,
+      "correct": 2429,
+      "failed": 0,
+      "accuracy": 0.8167451244115669,
+      "macro_f1": 0.8163524755039705,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 84.02932456521683,
+      "successful_p99_ms": 87.28219165379414
+    },
+    {
+      "model": "d3-mini",
+      "run": "run-002",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:34427a5062234b04a3702dabad9a7fa08598295c074db880d3429ea99b856523",
+      "records": 2974,
+      "correct": 2640,
+      "failed": 0,
+      "accuracy": 0.8876933422999328,
+      "macro_f1": 0.8804211154381064,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 69.92018716741649,
+      "successful_p99_ms": 72.82775938132545
+    },
+    {
+      "model": "vela-2.0-4b",
+      "run": "run-002",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:34427a5062234b04a3702dabad9a7fa08598295c074db880d3429ea99b856523",
+      "records": 2974,
+      "correct": 2587,
+      "failed": 0,
+      "accuracy": 0.8698722259583053,
+      "macro_f1": 0.8698155928807622,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 111.93922508902875,
+      "successful_p99_ms": 115.07843233455787
+    },
+    {
+      "model": "neohorse-jev-4b",
+      "run": "run-003",
+      "gpu_count": 1,
+      "family": "neohorse",
+      "serial_reference": false,
+      "image_id": "sha256:c76d0e2225a4b1cb1e2109ace39639f55e714abd1a7a427acc8b0bbd7f6a83b3",
+      "records": 2974,
+      "correct": 2532,
+      "failed": 0,
+      "accuracy": 0.85137861466039,
+      "macro_f1": 0.8498020763624685,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 596.6686229041117,
+      "successful_p99_ms": 626.2594751160941
+    },
+    {
+      "model": "jeva-4b",
+      "run": "run-003",
+      "gpu_count": 1,
+      "family": "sdk",
+      "serial_reference": true,
+      "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+      "records": 2974,
+      "correct": 2397,
+      "failed": 0,
+      "accuracy": 0.8059852051109617,
+      "macro_f1": 0.7973991528842894,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 205.6197341257485,
+      "successful_p99_ms": 212.61933299319935
+    },
+    {
+      "model": "d3-flash",
+      "run": "run-003",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+      "records": 2974,
+      "correct": 2666,
+      "failed": 0,
+      "accuracy": 0.8964357767316745,
+      "macro_f1": 0.8934524964092889,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 71.19855880748364,
+      "successful_p99_ms": 73.73565969683114
+    },
+    {
+      "model": "clef-flash",
+      "run": "run-003",
+      "gpu_count": 1,
+      "family": "sglang",
+      "serial_reference": false,
+      "image_id": "sha256:a682ef469e9900ec254bb6d98e9c6052d0e0c727dcb005b4ea1a229b77424fae",
+      "records": 2974,
+      "correct": 2727,
+      "failed": 0,
+      "accuracy": 0.9169468728984532,
+      "macro_f1": 0.9136389331208369,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 71.84353870578747,
+      "successful_p99_ms": 76.0514153537224
+    },
+    {
+      "model": "vela-2.0-9b",
+      "run": "run-003",
+      "gpu_count": 1,
+      "family": "worker",
+      "serial_reference": false,
+      "image_id": "sha256:f3ccfb750e184c66e3aee485d64b7ed19cfc0ce83d73650b8b92b3463a3a66b4",
+      "records": 2974,
+      "correct": 2581,
+      "failed": 0,
+      "accuracy": 0.8678547410894418,
+      "macro_f1": 0.8722437742903779,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 112.72692864650037,
+      "successful_p99_ms": 116.87306482795975
+    },
+    {
+      "model": "jev-27b",
+      "run": "run-006",
+      "gpu_count": 2,
+      "family": "jev",
+      "serial_reference": false,
+      "image_id": "sha256:cb363e7cc02ef8115e3afd5d068e1fbaab57711860e0ec8f555792bef567ab30",
+      "records": 2974,
+      "correct": 2550,
+      "failed": 0,
+      "accuracy": 0.8574310692669805,
+      "macro_f1": 0.8521451175368685,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 277.24069337327563,
+      "successful_p99_ms": 288.27666821336607
+    },
+    {
+      "model": "pplx-decider-v1.1-27b",
+      "run": "run-006",
+      "gpu_count": 2,
+      "family": "sglang",
+      "serial_reference": false,
+      "image_id": "sha256:a682ef469e9900ec254bb6d98e9c6052d0e0c727dcb005b4ea1a229b77424fae",
+      "records": 2974,
+      "correct": 2733,
+      "failed": 0,
+      "accuracy": 0.9189643577673168,
+      "macro_f1": 0.9143264207801838,
+      "valid_output_rate": 1.0,
+      "successful_mean_ms": 204.08318641867166,
+      "successful_p99_ms": 230.25147784414003
+    }
+  ],
+  "total_models": 14,
+  "total_records": 41636,
+  "distinct_inputs": 2921,
+  "records_per_model": 2974,
+  "predecessor_chain": [
+    "run-001",
+    "run-002",
+    "run-003",
+    "run-006"
+  ],
+  "unscored_failed_attempts": [
+    "run-004",
+    "run-005"
+  ],
+  "prior_artifacts_unchanged": 41,
+  "inference_timing_scoring_ast_equal": true,
+  "all_input_ids_hashes_order_checked": true,
+  "all_warmups_native_output_and_request_mapping_checked": true,
+  "protocol_and_deployment_source_hashes_match": true,
+  "metrics_recomputed": true,
+  "final_service_retained": "pplx-decider-v1.1-27b",
+  "reference": "qwen3-30b-a3b-instruct-2507",
+  "paired_95_intervals": {
+    "laya-multilingual": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": -0.22461331540013452,
+          "low": -0.24142683637230583,
+          "high": -0.20765606219341845
+        },
+        "macro_f1": {
+          "point": -0.22072205695010727,
+          "low": -0.23923810903195783,
+          "high": -0.2030514659101424
+        }
+      }
+    },
+    "vela-2.0-0.3b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": -0.057834566240753116,
+          "low": -0.07203482188642771,
+          "high": -0.043522258735221094
+        },
+        "macro_f1": {
+          "point": -0.05110158632435824,
+          "low": -0.06795560359409107,
+          "high": -0.03498706504367511
+        }
+      }
+    },
+    "d3-edge": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": -0.009751176866173439,
+          "low": -0.022309858855937722,
+          "high": 0.002699771301411592
+        },
+        "macro_f1": {
+          "point": -0.0014073570227930432,
+          "low": -0.015910691938116162,
+          "high": 0.012241546836988748
+        }
+      }
+    },
+    "vela-2.0-0.8b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": -0.02017484868863484,
+          "low": -0.03269323141201912,
+          "high": -0.008050854652940502
+        },
+        "macro_f1": {
+          "point": -0.012882552994279761,
+          "low": -0.026846855891022273,
+          "high": 0.00015227021741510334
+        }
+      }
+    },
+    "d3-mini": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.05077336919973108,
+          "low": 0.04047013201816544,
+          "high": 0.06048819510507646
+        },
+        "macro_f1": {
+          "point": 0.05118608693985616,
+          "low": 0.039621268740303646,
+          "high": 0.06209526391337988
+        }
+      }
+    },
+    "vela-2.0-4b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.03295225285810355,
+          "low": 0.0216061119762811,
+          "high": 0.045118985609379936
+        },
+        "macro_f1": {
+          "point": 0.0405805643825119,
+          "low": 0.028298765335712885,
+          "high": 0.05285160566467145
+        }
+      }
+    },
+    "neohorse-jev-4b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.014458641560188279,
+          "low": 0.003699966363942206,
+          "high": 0.024823884602482416
+        },
+        "macro_f1": {
+          "point": 0.020567047864218257,
+          "low": 0.009817253951974563,
+          "high": 0.031155522247041746
+        }
+      }
+    },
+    "jeva-4b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": -0.030934767989239997,
+          "low": -0.04333257765178197,
+          "high": -0.018835086246012815
+        },
+        "macro_f1": {
+          "point": -0.03183587561396084,
+          "low": -0.045860541752269834,
+          "high": -0.01730382825680599
+        }
+      }
+    },
+    "d3-flash": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.0595158036314728,
+          "low": 0.04888675854237362,
+          "high": 0.07006412347417032
+        },
+        "macro_f1": {
+          "point": 0.06421746791103866,
+          "low": 0.05249021724494807,
+          "high": 0.07570837726878724
+        }
+      }
+    },
+    "clef-flash": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.0800268997982515,
+          "low": 0.0679900036376766,
+          "high": 0.09149295063627852
+        },
+        "macro_f1": {
+          "point": 0.08440390462258662,
+          "low": 0.07148573445228092,
+          "high": 0.09692111687458074
+        }
+      }
+    },
+    "vela-2.0-9b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.03093476798924011,
+          "low": 0.01990974367773386,
+          "high": 0.04126166785615383
+        },
+        "macro_f1": {
+          "point": 0.043008745792127656,
+          "low": 0.03164361759722416,
+          "high": 0.05392516169608025
+        }
+      }
+    },
+    "jev-27b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.02051109616677882,
+          "low": 0.011726213819008527,
+          "high": 0.030026990553306265
+        },
+        "macro_f1": {
+          "point": 0.022910089038618242,
+          "low": 0.012164227773080492,
+          "high": 0.03347142622882256
+        }
+      }
+    },
+    "pplx-decider-v1.1-27b": {
+      "independent_cases": 2921,
+      "source_cases": 2974,
+      "confidence": 0.95,
+      "samples": 2000,
+      "sampling": "gold-label-set-stratified identical-input clusters; original cases and repeats stay together",
+      "metrics": {
+        "accuracy": {
+          "point": 0.08204438466711506,
+          "low": 0.07068030273829812,
+          "high": 0.09359668525662529
+        },
+        "macro_f1": {
+          "point": 0.08509139228193352,
+          "low": 0.07305891560670193,
+          "high": 0.09674704425953952
+        }
+      }
+    }
+  },
+  "paired_multiple_comparisons_adjusted": false,
+  "artifact_sha256": {
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/inputs.private.jsonl": "43db68e7446002da0a97edce9595d5df3482223179918b962f23bda4e66a6ce3",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/labels.private.jsonl": "6bae7f76594cc2a48b584f5e21694781a859904e0e5fd6ded266b48b2a8b47a5",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/preflight.inputs.private.jsonl": "be83a81988cfa9d8f65ddfe5ed751159cee24367468dcf685c44f8863eaf80ca",
+    "/data/sdb/decision-model-eval/classification-20261015/dataset/dataset-protocol.private.json": "a2baf5fa531b7cce4b411b0789e2e31cd6b451d760abde47bca1297753d6857e",
+    "/data/sdb/decision-model-eval/classification-20261015/source/evaluation/runner/scripts/public_decision_benchmark.py": "0b05bf3324afd744ebad0174f2fa7cbeb406536d91153de2ff672e0b7c2a17fc",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/deployment_probe.py": "24f3257175e6de407c396a9d350ee0b50c89eaad50aa6f62f099b1743101fc32",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/launch_reviewed.py": "88ca1a63b502b4d6987060fca0bef914501c2b6ed5612b40ebb0a50ef5a538a7",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/protocol.private.json": "d6c570564908b2921d944c575f52240b6f2a5a39844ec15ab3c4361cc6c80401",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/status.json": "611455b2b674a3e7fff20202a8d806dcf4475602695a694a82f80bcdaffe4455",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/client-packages.json": "c1a98e77fffbe6b5425c4536c93cfd0b81b261354e0aac9a09f8f39c6879e11a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/qwen3-30b-a3b-instruct-2507/deployment.json": "b58e46dee202cf0ae81e67675f5b719ce4083fb3260bc981561afe7f06d1f501",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/qwen3-30b-a3b-instruct-2507/summary.json": "4e502721c439e6459eeb607e67d0d1d2e8a10380b2a1c649d4e9600efa3a3864",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/qwen3-30b-a3b-instruct-2507/responses.private.jsonl": "c61d850c46207eb2394916d8b533e6a74d86a58a6bc3b9ed47272f06fc135881",
+    "/data/sdb/decision-model-eval/classification-20261015/run-001/qwen3-30b-a3b-instruct-2507/warmup.private.json": "f9a7030c0c36dd860565d75a69435b28834b2c16c4a414ae3685fb903106a857",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/server.py": "49a0c2cffa55870c297dc80eeeef76d783b32d475b7928f2e29cea8f8d862641",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/neohorse_backend.py": "4afc93c7b0c43b4466f0e58695c2db605ac21bd36904cd81c25e8b5bd1da6aea",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/jeva_backend.py": "b7a8c54a8610084bc3dfe101e5e14ea67b8533932c5c6e3e1938063145a39919",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/laya_http.py": "61a064899571f059d5813a692083ea867f2c9ff3c9d3f5e121a88838b6bb2c68",
+    "/data/sdb/decision-model-eval/acceptance-20261015/service/nginx.native.conf.template": "d6ecdaa92bd5c845dc9fa00b9fc32b995a6850ee17ced5f0af6a346a360afb55",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r2/evaluation/runner/scripts/public_decision_benchmark.py": "574fe1879af757f240c7afdf41cc90879d2fd8ca58e35f3784be5af46a356f74",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/protocol.private.json": "4ae374c80160f3542f571bd523e4b4a8e126bf20ef1a002be20216c9b4a849c2",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/status.json": "daa1a37df93c898d35ad6a6f5dccb485508447b1bf6965320d0a6234bb1e0b18",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/client-packages.json": "c1a98e77fffbe6b5425c4536c93cfd0b81b261354e0aac9a09f8f39c6879e11a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/laya-multilingual/deployment.json": "7e62de4df87ec81ce59cc4f3ac0e6d45bc5bbc0f31b157c2e6f5bfc9b28f650f",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/laya-multilingual/summary.json": "a551d87efa224c3f4cb4dc6f33c2bf816d57ae8da3857557a1fda1857d13163c",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/laya-multilingual/responses.private.jsonl": "2324ec65c35d1995f550e759a95ad661594d1e6cbdfa1a691b17ff4b193f6b92",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/laya-multilingual/warmup.private.json": "8816831b54a3c6fb4531fa2fb806bccab2efb7801bd5a78a2acb06e0b56b245c",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.3b/deployment.json": "b28863c2614c6b9de22571ca06f600c968227a531356f00a7ec07996270ed693",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.3b/summary.json": "0ad8390dbc4904c85c39da9dac17ed9803c4b71f7f359d264099767a5f581f8d",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.3b/responses.private.jsonl": "348fd39f87d778477a8e1871855694474193fb281dd886794e492f575d3e1995",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.3b/warmup.private.json": "7e5678a79ad8b01232c2eb3ce9d7f645c3d2802d4fe0ea10bb0a55db42a57dfe",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-edge/deployment.json": "4905333b5871fe5f744f5a9d33063d462629162991a5d19f4d29418a106b3781",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-edge/summary.json": "e3b7a8714dec317e7bbf95e2c5b9adb7484fa13d2c6864e2fa1dd1cf3eef1dfe",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-edge/responses.private.jsonl": "84bafcf85d5c1ab68a430d53b83e79858441a89814ea3beba491beb5a4d4b081",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-edge/warmup.private.json": "6f4cbb4fa740800f6afd29c98cc57d9b98cc2cd09f165f62ff25441b085c9717",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.8b/deployment.json": "b62cb9ea3e01d08cc14ccd3c54a725f5abe6a12053e068082a4213de247e524f",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.8b/summary.json": "ac9952db88b6b7dd441bb1ea0915dc36f45c5e3d736ff9d2b15fb264423b170c",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.8b/responses.private.jsonl": "97039f82c8ea4ffa17f57c13a15b208063c2703f91d552500e36fda47a94219f",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-0.8b/warmup.private.json": "20c426a81f185345f1183aee456b99ce0770c1159ff93b265b9c061a028c223c",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-mini/deployment.json": "0ce0ddb7d21d77c426d0cb2ae0198294b34efe4f59df4989850fcf3c97984079",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-mini/summary.json": "607dc9dfc322e587d13ee3ac985f641e55b7239295c7738f0209ae6626ff0bd8",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-mini/responses.private.jsonl": "5f755ebbd87032ea9c43a4334e641c70dcadfa37ced253f2cbdd23edcdeb3930",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/d3-mini/warmup.private.json": "531b6c4e4b16041d6fe3f281660f76b1bf248918ae17c1b4fb50e76ce56d94d0",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-4b/deployment.json": "af871e0235233a7925746a68c21221d4829f64980fdea6f62af63dfb2596e95a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-4b/summary.json": "6128ad121e7c0dddce35d7052235c80268620c9fc61ab1752a13cae2b677b658",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-4b/responses.private.jsonl": "1c8ef4b34fa398a06796e4b092107ea510b5731bb11c3b98c2c18feb14699eaf",
+    "/data/sdb/decision-model-eval/classification-20261015/run-002/vela-2.0-4b/warmup.private.json": "19d08baacd596f3eaf306c408d025b7f13136638174cc2a1633ef02a57459f28",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/evaluation/runner/scripts/public_decision_benchmark.py": "2df0bda535252dd7351d0d39f0e47f19b9be6cec8f0275ba80d1f4faac9dfd95",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/deployment_probe.py": "24f3257175e6de407c396a9d350ee0b50c89eaad50aa6f62f099b1743101fc32",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/launch_reviewed.py": "ef3503b9d6de71c2f3e2fa9e25c292b3089fbb616599db4a3d0431810e846551",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/protocol.private.json": "d2ad59ce080a006c8dac39c4ae7f066ee7bf49fc52389f3efcead145b9f2ef72",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/status.json": "ffb9eac2728e632bd5c615dbc7b1cee91864c8aaa3c6be1d75a1c6e6408e6db3",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/client-packages.json": "c1a98e77fffbe6b5425c4536c93cfd0b81b261354e0aac9a09f8f39c6879e11a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/neohorse-jev-4b/deployment.json": "a61d3672f8a39b7c0266bcfd9f5ab0a5d2255a96147d7da4f809f5dd2731d55a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/neohorse-jev-4b/summary.json": "0cf3f97c98b4ec244a229002f07e3f9797f3973763ffea5e28f11da95fde2da6",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/neohorse-jev-4b/responses.private.jsonl": "81edf244b9a9af9aecf225ea6eb623c69b5efcb1c2ec12f7b7bf772f21731740",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/neohorse-jev-4b/warmup.private.json": "e0369bc2e35d133f10c37177c86730f6ab980bfffe7d6c593b1b3abf1879aebf",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/server.py": "65602ae02880de99fff33b8cbe444b93fcb30d2063da5829e84e18f101b2eb07",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/neohorse_backend.py": "728043d43ffaa83789f690c60159a9e3714ba887d59d798647ab2ccc737d2fe4",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/jeva_backend.py": "b7a8c54a8610084bc3dfe101e5e14ea67b8533932c5c6e3e1938063145a39919",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/laya_http.py": "61a064899571f059d5813a692083ea867f2c9ff3c9d3f5e121a88838b6bb2c68",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r3/deploy/docker/decision-eval/nginx.native.conf.template": "d6ecdaa92bd5c845dc9fa00b9fc32b995a6850ee17ced5f0af6a346a360afb55",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/jeva-4b/deployment.json": "f745ce8b7b0f4c09ae93e7bdf3fe950fdad09250952519b44198a48391776d7b",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/jeva-4b/summary.json": "776dc656777fbb51dabae5010c914b7a7ae8ce5d68afa85e90969d1e0d6d8383",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/jeva-4b/responses.private.jsonl": "696065d32c094f1225831cb07175333faa61d81c086a08a119894068b911d837",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/jeva-4b/warmup.private.json": "a78d7135a39583b9f259f87705da88245852b1717c540df8070457b72e9786b2",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/d3-flash/deployment.json": "c1c1f1817c1d4c4254777c970366dcbf6c183998990df7abb0e49c7627fa44c8",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/d3-flash/summary.json": "246b314b76fe8a828deabdbdf0fcf0b59ea58e67dc1b3b6819f2619ef2a66da8",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/d3-flash/responses.private.jsonl": "8df4c9efd3908288d3917ab0a1e324e89c99a3e300df1daa292403a5dd1e8d03",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/d3-flash/warmup.private.json": "f78ee4f427ed3c402dbedfa9b4264ce954b30908567b40d4a96e9bfeae7ef19f",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/clef-flash/deployment.json": "9c72c9239c06dc60cefa0ebc2e42a675244d08d821c4162ea9f8e8e97707b41b",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/clef-flash/summary.json": "1a84de712210346c0c741d3a53aefb498640508f46ad2d371f5d535908b3c34b",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/clef-flash/responses.private.jsonl": "8d170c7a4b01c58305386a36f0651655df9c120b515b1f8b9a8d6346f110dc45",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/clef-flash/warmup.private.json": "bb1907dc27f662ae64e8f2f236c3016d52bc7a794755777d33fb2d24e1e40bc2",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/vela-2.0-9b/deployment.json": "3d7104907f9b67129cfcce872b6923ceca18162bb3c7df822f374fa4fd31ce4f",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/vela-2.0-9b/summary.json": "97a416904c94b43a397e2d1d10335d35ae8efc3c24416168354e082d75a00d3d",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/vela-2.0-9b/responses.private.jsonl": "fcb6abf7b74ae4c1c360e16bce142d8e99cab7a6c0f0794cc05924a1a9e532ff",
+    "/data/sdb/decision-model-eval/classification-20261015/run-003/vela-2.0-9b/warmup.private.json": "8d71a392f0f50983cd479ab18f814ec3d2682f8c5c0509746ea2af7b9ed736b3",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/evaluation/runner/scripts/public_decision_benchmark.py": "2df0bda535252dd7351d0d39f0e47f19b9be6cec8f0275ba80d1f4faac9dfd95",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/deployment_probe.py": "24f3257175e6de407c396a9d350ee0b50c89eaad50aa6f62f099b1743101fc32",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/launch_reviewed.py": "b3cde6ad095db7ecb449dec75250613e9e3a9067d145da91fe8702686d79e41a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/protocol.private.json": "33c9980f13914e84776103ffbb161abae27ce79f3eadf66f40b683817ead4bd6",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/status.json": "98e9f3876ddfda78baa715841abfab1070f528cfef9ff6cd2ebd54e6f313d628",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/client-packages.json": "c1a98e77fffbe6b5425c4536c93cfd0b81b261354e0aac9a09f8f39c6879e11a",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/jev-27b/deployment.json": "91476d756b65d957839134ff87f92295bc7dc85f4e1bef56645987b348e73447",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/jev-27b/summary.json": "2d28abbcba99b7a1933dfa04919714a2598f23559b46b582e33b7afe9260a332",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/jev-27b/responses.private.jsonl": "0ee612b0865c0fca5e19355db4e364a71f6dcbe29e37bb5df58050e29cdbb1cf",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/jev-27b/warmup.private.json": "f586e19c03ad471088a689d25c96fb262c433c880a752be7d7cb179ab4850d74",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/server.py": "65602ae02880de99fff33b8cbe444b93fcb30d2063da5829e84e18f101b2eb07",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/neohorse_backend.py": "728043d43ffaa83789f690c60159a9e3714ba887d59d798647ab2ccc737d2fe4",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/jeva_backend.py": "b7a8c54a8610084bc3dfe101e5e14ea67b8533932c5c6e3e1938063145a39919",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/laya_http.py": "61a064899571f059d5813a692083ea867f2c9ff3c9d3f5e121a88838b6bb2c68",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/nginx.native.conf.template": "d6ecdaa92bd5c845dc9fa00b9fc32b995a6850ee17ced5f0af6a346a360afb55",
+    "/data/sdb/decision-model-eval/classification-20261015/source-r6/deploy/docker/decision-eval/patch_vllm_lora.py": "ce999b5b8c3404b6d7c08e7a6f253afa832a2d012ffe7ef9fd9e6b9619c2e517",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/pplx-decider-v1.1-27b/deployment.json": "c2e65648cfcffb3493b8a73259fa49cb9e254b432b30e7ae33df47d6d05705a6",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/pplx-decider-v1.1-27b/summary.json": "42245670363726167c2cd13a3572ef98931ae1183f747047563adf5ba7c1741c",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/pplx-decider-v1.1-27b/responses.private.jsonl": "84042d6c3e708deaae4b0ebbe77b62b4060ce4aba995ec5c34c00a929b872950",
+    "/data/sdb/decision-model-eval/classification-20261015/run-006/pplx-decider-v1.1-27b/warmup.private.json": "41084677760219e89960d88f189821c5127c9fd3228ac4de9e5208dd78e33bf2"
+  },
+  "limitations": [
+    "One fixed public corpus pass; possible training exposure.",
+    "No concurrency/load test or long-term reliability claim.",
+    "Deployment GPU/CPU budgets verified, but no continuous resource telemetry or historical peak-memory reconstruction.",
+    "No fresh full-weight rehash; existing pinned acquisition identity retained.",
+    "JEV uses an appliance-specific loading workaround; underlying driver/allocator cause remains unproven.",
+    "Paired intervals are versus Qwen only, unadjusted for multiple comparisons; no universal model ranking."
+  ]
+}

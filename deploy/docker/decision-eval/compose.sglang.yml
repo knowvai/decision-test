@@ -1,0 +1,41 @@
+# The strict-length image differs from the pinned upstream only by overflow refusal.
+services:
+  clef:
+    image: ${CLEF_SGLANG_IMAGE:-decision-eval-sglang:clef-strict-length-v1}
+    build:
+      context: .
+      dockerfile: Dockerfile.sglang
+    pids_limit: 512
+    environment:
+      TORCHINDUCTOR_CACHE_DIR: /runtime/inductor
+      FLASHINFER_WORKSPACE_BASE: /runtime
+      XDG_CACHE_HOME: /runtime/.cache
+      SGLANG_CACHE_DIR: /runtime/sglang
+      SGLANG_JIT_CACHE_DIR: /runtime/sglang/jit
+      LD_LIBRARY_PATH: /usr/local/cuda/compat:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/local/cuda/lib64
+    command:
+      - python3
+      - -m
+      - sglang.launch_server
+      - --model-path
+      - /models/clef-flash
+      - --served-model-name
+      - clef-flash
+      - --api-key
+      - ${DECISION_EVAL_API_KEY:?Evaluation API key required}
+      - --dtype
+      - bfloat16
+      - --context-length
+      - "8192"
+      - --max-running-requests
+      - "4"
+      - --max-prefill-tokens
+      - "8192"
+      - --mem-fraction-static
+      - "0.75"
+      - --log-level
+      - warning
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"

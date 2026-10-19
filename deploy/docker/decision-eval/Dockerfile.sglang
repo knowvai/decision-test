@@ -1,0 +1,4 @@
+ARG SGLANG_BASE=lmsysorg/sglang@sha256:b2d574138e22e7b54d9ae26c84670c6e5a13a5b55da7c31bf4a5503866f9aa9b
+FROM ${SGLANG_BASE}
+COPY patch_sglang_length.py /opt/decision-eval/patch_sglang_length.py
+RUN python3 /opt/decision-eval/patch_sglang_length.py

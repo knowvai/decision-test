@@ -1,0 +1,53 @@
+{
+  "massive-test": {
+    "filename": "massive-zh-CN-test.parquet",
+    "aliases": ["massive-test.parquet"],
+    "url": "https://huggingface.co/datasets/AmazonScience/massive/resolve/ed58ac423a2f4121720918bf5301577edce4ffd3/zh-CN/test/0000.parquet",
+    "sha256": "7eca92a47e6bffeec3fc7de751948b82904680353a42eef7e8c6fdbe89adb2db",
+    "license": "CC-BY-4.0",
+    "format": "massive"
+  },
+  "massive-train": {
+    "filename": "massive-train.parquet",
+    "url": "https://huggingface.co/datasets/AmazonScience/massive/resolve/ed58ac423a2f4121720918bf5301577edce4ffd3/zh-CN/train/0000.parquet",
+    "sha256": "ff3f4ff65f2e7419ec8ee01f9e5e8f50b500fd1fdc4affcb29dc57e04aa7a6bf",
+    "license": "CC-BY-4.0",
+    "format": "massive"
+  },
+  "massive-validation": {
+    "filename": "massive-validation.parquet",
+    "url": "https://huggingface.co/datasets/AmazonScience/massive/resolve/ed58ac423a2f4121720918bf5301577edce4ffd3/zh-CN/validation/0000.parquet",
+    "sha256": "582f45a93e7a5b8f8094746b585f12e5f98ba13be3ee1a42ee4d866f190d7506",
+    "license": "CC-BY-4.0",
+    "format": "massive"
+  },
+  "t2reranking": {
+    "filename": "t2reranking-dev.parquet",
+    "url": "https://huggingface.co/datasets/C-MTEB/T2Reranking/resolve/76631901a18387f85eaa53e5450019b87ad58ef9/data/dev-00000-of-00001-65d96bde8023d9b9.parquet",
+    "sha256": "ceaf1ba1a4777dbb7aecad86fb8aa9cae7a678af6d711d5529c238e89bb6adff",
+    "license": "Derivative card unspecified. Download from upstream; no corpus redistribution in this repository.",
+    "format": "t2reranking"
+  },
+  "t2-queries": {
+    "filename": "queries.dev.tsv",
+    "url": "https://huggingface.co/datasets/THUIR/T2Ranking/resolve/2a369a430a70979223f1b9a41b1919774d46b432/data/queries.dev.tsv",
+    "sha256": "1df544dd04bf9b6d0de0dd77e0f3a84a0d74fc4bb9a1ff67b7306de8169135ba",
+    "license": "Apache-2.0 (upstream dataset card)",
+    "format": "tsv-text"
+  },
+  "t2-qrels": {
+    "filename": "qrels.dev.tsv",
+    "url": "https://huggingface.co/datasets/THUIR/T2Ranking/resolve/2a369a430a70979223f1b9a41b1919774d46b432/data/qrels.dev.tsv",
+    "sha256": "a0356bd3c6d72c532ca17a4d88d7765554857f321346cf0f9cb4ad480738b25a",
+    "license": "Apache-2.0 (upstream dataset card)",
+    "format": "tsv-labels"
+  },
+  "t2-collection": {
+    "filename": "collection.tsv",
+    "url": "https://huggingface.co/datasets/THUIR/T2Ranking/resolve/2a369a430a70979223f1b9a41b1919774d46b432/data/collection.tsv",
+    "sha256": "07b84e543e9ba696124a727c00629d5bce586631648c436c98dd6e9b146da212",
+    "bytes": 3659243528,
+    "license": "Apache-2.0 (upstream dataset card)",
+    "format": "tsv-text"
+  }
+}

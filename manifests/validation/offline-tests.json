@@ -1,0 +1,1423 @@
+{
+  "date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "network_disabled": true,
+  "model_inference_calls": 0,
+  "command": ".venv/bin/python tools/test_offline.py -q",
+  "tests": 282,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "cases": [
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_exact_concurrency_single_attempt_and_complete_records[1]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_exact_concurrency_single_attempt_and_complete_records[5]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_exact_concurrency_single_attempt_and_complete_records[10]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_exact_concurrency_single_attempt_and_complete_records[20]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_workers_refill_without_batch_barrier",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_failures_retained_no_retry_and_throughput_uses_valid_only",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_timeout_retained_without_resubmission",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_length_selection_never_truncates_or_uses_labels",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_llm_schema_modes_and_reasoning_metadata_only",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_llm_rejects_incomplete_or_wrong_mode[raw0-Qwen3.8-27B-None]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_llm_rejects_incomplete_or_wrong_mode[raw1-wrong-model-None]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_llm_rejects_incomplete_or_wrong_mode[raw2-Qwen3.8-27B-profile2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_llm_rejects_incomplete_or_wrong_mode[raw3-Qwen3.8-27B-None]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_summary_pairs_by_identity_not_completion_order",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_existing_evidence_cannot_be_overwritten",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_artifact_preservation_detects_changes",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_native_mapping_is_reused_without_changing_single_pair_semantics",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_http_path_reuses_connections_and_records_no_private_text",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_preserves_completed_and_failed_warmup",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_replay_skip_or_reordering[models0]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_replay_skip_or_reordering[models1]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_replay_skip_or_reordering[models2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_any_measured_file_even_empty[responses-n1-r1.jsonl]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_any_measured_file_even_empty[block-n1-r1.json]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_any_measured_file_even_empty[summary.json]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_changed_measurement_contract[dataset_protocol_sha256-changed]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_changed_measurement_contract[timeout-10]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_changed_measurement_contract[concurrency_orders-value2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_changed_measurement_contract[questions-value3]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_changed_prior_source",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_capacity_preflight",
+      "name": "test_continuation_rejects_incomplete_predecessor",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_all_keep_is_not_perfect_quality",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_audit_checks_decodes_hashes_and_real_pool_walls",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_common_coverage_is_full_pool_and_all_native_modes",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_complete_content_hash_and_no_unjudged_candidates",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_decode_preserves_native_choice_even_if_probability_disagrees",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_duplicate_or_extra_requests_rejected",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_empty_predictions_on_evidence_pool_are_misses",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_grades_are_not_old_binary_relevance",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_independent_deterministic_selection_includes_no_evidence",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_independent_original_source_join_and_corruption_checks",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_jev_choice_replay_preserves_one_model_call_and_no_thinking",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_missing_or_failed_requests_do_not_receive_negative_credit",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_modes_alternate_by_pool_without_phase_overlap",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_modes_use_identical_rubric_without_noul_criteria",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_negative_only_pool_is_valid_and_scored_separately",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_noul_fixed_readout_and_strict_llm",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_original_adapters_keep_default_contract",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.EvidenceTests",
+      "name": "test_timeout_chain_and_unattempted_ledger_no_retry",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.OnlineVariationAuditTests",
+      "name": "test_opt_in_classifies_against_first_not_previous_call",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.OnlineVariationAuditTests",
+      "name": "test_opt_in_never_allows_input_request_or_candidate_order_change",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.OnlineVariationAuditTests",
+      "name": "test_scores_can_vary_without_changing_order_or_pool_identity",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_evidence_benchmark.OnlineVariationAuditTests",
+      "name": "test_strict_default_still_rejects_order_or_membership_change",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_complete_input_mapping_and_jev_nonthinking",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_failed_and_missing_pairs_stay_in_denominator",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_jev_native_category_and_reject_other_modes",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_matched_audit_reconstructs_hashes_and_native_readout",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_native_boolean_preserved",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_only_mode_and_criteria_change",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_probability_binary_readout_and_tie",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_raw_distribution_and_coverage",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_noul_validation.NoulTests",
+      "name": "test_truncation_and_fallback_rejected",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.DatasetTests",
+      "name": "test_mask_only_explicit_fragments_without_mutating_sources",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.DatasetTests",
+      "name": "test_mask_updates_gold_and_rejects_duplicates_unknown_and_empty_gold",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.DatasetTests",
+      "name": "test_requires_content_hash_and_unique_coverage",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.SelectionTests",
+      "name": "test_hard_decisions_never_fabricate_scores",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.SelectionTests",
+      "name": "test_native_and_llm_wire_are_reused_without_other_candidates",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.SelectionTests",
+      "name": "test_small_pool_retains_all_and_scores_do_not_use_gold",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.SelectionTests",
+      "name": "test_threshold_tie_uses_highest_and_exact_inclusive_boundary",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.SelectionTests",
+      "name": "test_top29_stable_original_order_and_complete_pool",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.TransportTests",
+      "name": "test_400_records_failure_without_automatic_retry",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.TransportTests",
+      "name": "test_journals_single_call_and_refuses_replay",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.TransportTests",
+      "name": "test_output_refuses_existing_attempt_directory",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.TransportTests",
+      "name": "test_timeout_stops_after_preserving_failure",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.MetricsTests",
+      "name": "test_failed_pool_zero_denominator_and_paired_timing_same_intersection",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.OnlineFlowTests",
+      "name": "test_complete_serial_chain_uses_full_rerank_pool_then_top29",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_decision_passage_benchmark.OnlineFlowTests",
+      "name": "test_engineering_failure_blocks_calibration_and_formal",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_timing_retains_p99_and_empty_sample_count",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_classifier_rejects_unapproved_endpoints[https://127.0.0.1:8000]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_classifier_rejects_unapproved_endpoints[http://8.8.8.8:8000]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_classifier_rejects_unapproved_endpoints[http://localhost:8000]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_classifier_rejects_unapproved_endpoints[http://key@127.0.0.1:8000]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_llm_uses_strict_schema_without_confidence_or_explanation",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_langchain_wire_uses_json_schema_and_exactly_one_request[False]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_langchain_wire_uses_json_schema_and_exactly_one_request[True]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_thinking_length_stop_is_failed_with_metadata_and_no_retry",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_classification_is_serial_records_failure_and_times_wrong_answers",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_local_classification_timeout_is_explicit_without_retry",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_classification_continuation_excludes_only_pending_models",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_is_explicit_and_keeps_failed_predecessor",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_rejects_even_empty_formal_artifacts[responses.private.jsonl]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_rejects_even_empty_formal_artifacts[summary.json]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_does_not_skip_active_or_repeat_completed[models0]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_does_not_skip_active_or_repeat_completed[models1]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_does_not_skip_active_or_repeat_completed[models2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_preflight_recovery_requires_failed_deployment_evidence",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_requires_explicit_opt_in_and_retains_chain",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_cannot_repeat_any_ancestor[models0]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_cannot_repeat_any_ancestor[models1]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_cannot_repeat_any_ancestor[models2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[hash]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[completion]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[dataset]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[cycle]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[missing_evidence]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[incomplete]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_roster_extension_rejects_invalid_history[recovery]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_massive_selection_is_balanced_deterministic_and_label_free",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_t2_keeps_whole_pools_and_rejects_ambiguous_or_missing_class",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_full_massive_keeps_natural_distribution_and_excludes_no_case",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_t2_excludes_historical_pool_before_selection_and_keeps_full_text",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_full_pool_client_does_not_send_gold_and_rejects_partial_result",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_inference_jobs_reject_labels_and_exclude_warmup_from_formal",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_vllm_restores_input_order_and_rejects_missing_or_duplicate_scores[indexes0]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_vllm_restores_input_order_and_rejects_missing_or_duplicate_scores[indexes1]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_vllm_restores_input_order_and_rejects_missing_or_duplicate_scores[indexes2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_vllm_restores_input_order_and_rejects_missing_or_duplicate_scores[indexes3]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_repeat_agreement_is_unmeasured_for_single_pass_and_counts_failures",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_concurrent_pool_is_bounded_independent_and_drained_before_return[False]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_concurrent_pool_is_bounded_independent_and_drained_before_return[True]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_concurrent_pool_full_pool_matches_candidate_count",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_failed_classifications_count_wrong",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_existing_binary_retrieval_metrics_include_failed_pools_as_zero",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_rejects_illegal_output_without_retry[None]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_rejects_illegal_output_without_retry[parsed1]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_rejects_illegal_output_without_retry[parsed2]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_records_model_and_usage_without_inventing_server_latency",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_timeout_is_one_failed_attempt",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_uses_authoritative_request_method_and_model_factory[function_calling]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_llm_baseline_uses_authoritative_request_method_and_model_factory[json_schema]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_bootstrap_clusters_repeats_by_query_and_includes_failed_pool",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_paired_classification_bootstrap_is_zero_for_identical_models",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_classification_bootstrap_keeps_duplicate_inputs_in_one_cluster[False]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_classification_bootstrap_keeps_duplicate_inputs_in_one_cluster[True]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_native_worker_uses_low_confidence_and_fails_partial_pool",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_environment_stop_marker_prevents_new_native_requests[True]",
+      "status": "passed"
+    },
+    {
+      "class": "evaluation.runner.tests.test_public_decision_benchmark",
+      "name": "test_environment_stop_marker_prevents_new_native_requests[False]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_matrix",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_native_wire_and_decode[worker]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_native_wire_and_decode[sglang]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_settings_redaction",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_metrics_opt_in_preserves_defaults[False]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_metrics_opt_in_preserves_defaults[True]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_metrics_rejects_other_families_before_mutation[d3-mini-True]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_metrics_rejects_other_families_before_mutation[clef-flash-1]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime",
+      "name": "test_metrics_rejects_other_families_before_mutation[clef-flash-true]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_nested_settings",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_concurrency_recomputed",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_pairing_not_row_order",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_offline_guard[socket.connect]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_offline_guard[socket.__new__]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_offline_guard[subprocess.Popen]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_offline_guard[os.system]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_offline_guard[os.posix_spawn]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_quality_keeps_independent_input_count",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_metrics_counter_type_not_suffix",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_clef_runtime_audit",
+      "name": "test_changed_input_is_not_repeated_event_count",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_matrix_count_and_one_factor",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_fail_closed_no_new_http_after_failure",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_timeout_closes_admission",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_native_flags_and_defaults[False]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_native_flags_and_defaults[True]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_invalid_auto_no_service_side_effects[clef-flash-True]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_invalid_auto_no_service_side_effects[d3-mini-yes]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime",
+      "name": "test_invalid_auto_no_service_side_effects[d3-mini-1]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_compare_by_id_not_record_order",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_offline_denies_side_effects[socket.__new__]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_offline_denies_side_effects[socket.connect]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_offline_denies_side_effects[subprocess.Popen]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_offline_denies_side_effects[os.system]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_offline_denies_side_effects[os.posix_spawn]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_repeated_inputs_not_counted_as_new_quality_samples",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_runtime_audit",
+      "name": "test_cpu_delta_requires_same_quota_and_monotonic_counters",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning.PilotTests",
+      "name": "test_jsonl_preserves_unicode_line_separators",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning.PilotTests",
+      "name": "test_quality_selection_never_reads_holdout",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning.PilotTests",
+      "name": "test_threshold_only_changes_valid_predictions",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning.PilotTests",
+      "name": "test_wire_excludes_labels_and_requests_full_input",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning.PilotTests",
+      "name": "test_worker_explicit_flags_and_historical_default",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning.PilotTests",
+      "name": "test_worker_overrides_fail_before_side_effects",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning_audit.AuditTests",
+      "name": "test_cache_or_ambiguous_duplicate_flags_fail",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning_audit.AuditTests",
+      "name": "test_deployment_matches_frozen_budget",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning_audit.AuditTests",
+      "name": "test_resource_model_and_environment_drift_fail",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_d3_tuning_audit.AuditTests",
+      "name": "test_restoration_requires_identity_not_just_checked_flag",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_all_paths_require_credentials",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_busy_request_returns_429_and_gate_recovers",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_clef_rejects_truncation_before_inference",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_configured_inflight_limit_allows_bounded_parallel_requests",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_cpu_retry_is_forbidden_for_decisions_and_reranking",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_health_waits_for_backend_dependency_and_remains_authenticated",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_health_without_separate_dependency_keeps_existing_payload",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_laya_rejects_state_and_option_truncation_before_inference",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_native_batch_preserves_mapping_and_reports_actual_batch",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_preserves_native_answer_and_usage",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_queue_capacity_deadline_and_shutdown_are_bounded",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_rejects_model_switching_media_and_bad_questions",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_runtime_failure_is_redacted_and_gate_recovers",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_single_request_queue_accepts_full_pool_without_claiming_batch",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_eval_service.DecisionServiceTests",
+      "name": "test_startup_without_key_fails_closed",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_invalid_native_distribution_fails[probabilities0]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_invalid_native_distribution_fails[probabilities1]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_invalid_native_distribution_fails[probabilities2]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_invalid_native_distribution_fails[probabilities3]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_invalid_native_distribution_fails[probabilities4]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_expected_grade_mapping_not_confidence_gate",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_choice_mapping_uses_relevant_probability",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_entire_pool_is_validated_before_any_forward",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_real_forward_hook_counts_and_full_independent_scores",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_incomplete_batch_is_not_partial_success_and_hook_is_removed",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_decision_reranker",
+      "name": "test_unverified_intern_batch_is_explicitly_rejected",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_deployment_probe.ProbabilityValidationTests",
+      "name": "test_complete_finite_distribution",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_deployment_probe.ProbabilityValidationTests",
+      "name": "test_invalid_distributions",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_deployment_probe.ProbabilityValidationTests",
+      "name": "test_native_jev_mapping_preserves_selected_index_and_full_state",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_deployment_probe.ProbabilityValidationTests",
+      "name": "test_worker_requires_full_input_without_mutating_prompt",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_controls_balanced_unique",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_selection_independent_of_labels_and_input_order",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_reverse_preserves_names_and_changes_hash",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_partial_lines_rejected",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_output_never_overwritten",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_answer_and_full_input",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_optional_limit_preserves_full_input[None]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_optional_limit_preserves_full_input[3]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_optional_limit_preserves_full_input[4]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_rejects_invalid_or_exceeded_limit[0]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_rejects_invalid_or_exceeded_limit[-1]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_rejects_invalid_or_exceeded_limit[True]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_rejects_invalid_or_exceeded_limit[3]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_encoding_rejects_invalid_or_exceeded_limit[2]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_unset_limit_still_rejects_changed_or_truncated_input[changed-worker_ids0]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_unset_limit_still_rejects_changed_or_truncated_input[full text-worker_ids1]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_unset_limit_still_rejects_changed_or_truncated_input[full text-worker_ids2]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_empty_encoding_rejected",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_bad_answer_rejected[probabilities0]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_bad_answer_rejected[probabilities1]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_bad_answer_rejected[probabilities2]",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_evidence_reference",
+      "name": "test_pairing_and_counts",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_jeva_backend.JevaMappingTests",
+      "name": "test_missing_answers_and_truncation_fail",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_jeva_backend.JevaMappingTests",
+      "name": "test_preserves_inputs_and_maps_typed_outputs",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_laya_http.LayaHttpGuardTests",
+      "name": "test_guard_checks_each_state_with_actual_state_and_head_budgets",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_neohorse_backend.NeoHorseAdapterTests",
+      "name": "test_batch_maps_rows_back_to_each_original_request",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_neohorse_backend.NeoHorseAdapterTests",
+      "name": "test_duplicate_or_missing_native_indices_fail",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_neohorse_backend.NeoHorseAdapterTests",
+      "name": "test_readiness_handles_connection_and_timeout_errors",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_neohorse_backend.NeoHorseAdapterTests",
+      "name": "test_readiness_requires_native_health_without_inference",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenServiceTests",
+      "name": "test_busy_inference_is_bounded_and_gate_recovers",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenServiceTests",
+      "name": "test_decision_and_rerank_backends_do_not_substitute_for_each_other",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenServiceTests",
+      "name": "test_errors_are_redacted_and_oom_is_not_retried",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenServiceTests",
+      "name": "test_preserves_all_documents_and_indices_without_top_k",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenServiceTests",
+      "name": "test_rejects_invalid_shapes_options_and_model_switching",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenServiceTests",
+      "name": "test_requires_key_on_all_paths",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenEncodingTests",
+      "name": "test_incomplete_tokenizer_output_is_not_a_successful_pool",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenEncodingTests",
+      "name": "test_late_overlength_document_fails_entire_pool",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_qwen_reranker.QwenEncodingTests",
+      "name": "test_official_template_and_raw_inputs_are_preserved",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_cohost_guard_rejects_unknown_processes_stops_and_identity_changes",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_invalid_admission_is_rejected_before_container_mutation",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_key_match_is_case_sensitive_and_config_is_private",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_laya_admission_override_is_opt_in_and_not_gpu_batching",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_pageable_lora_profile_is_jev_only",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_rejects_regex_or_config_metacharacters_in_key",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_shared_reranker_records_limits_without_mutating_cohost",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_reviewed_launcher.ProxyConfigTests",
+      "name": "test_shared_resources_require_exact_identity_explicit_limits_and_reranker",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_sglang_length_guard",
+      "name": "test_unknown_upstream_revision_fails_closed",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_sglang_length_guard",
+      "name": "test_guard_preserves_full_valid_input_and_refuses_overflow",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_vllm_lora_loading.LoRALoadingPatchTests",
+      "name": "test_activation_patch_is_scoped_and_hash_checked",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_vllm_lora_loading.LoRALoadingPatchTests",
+      "name": "test_activation_uses_manager_device_for_layers_without_device_attribute",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_vllm_lora_loading.LoRALoadingPatchTests",
+      "name": "test_default_and_opt_in_across_devices",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_vllm_lora_loading.LoRALoadingPatchTests",
+      "name": "test_refuses_unknown_revision_and_reapplication",
+      "status": "passed"
+    },
+    {
+      "class": "deploy.docker.tests.test_vllm_lora_loading.LoRALoadingPatchTests",
+      "name": "test_verified_transfer_preserves_values_and_rejects_corruption",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_recipe_roundtrip_preserves_unicode_line_separator",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_jsonl_requires_complete_record",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_private_or_binary_material_is_withheld[.env]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_private_or_binary_material_is_withheld[key.pem]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_private_or_binary_material_is_withheld[.nginx.conf]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_private_or_binary_material_is_withheld[runtime.log]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_private_or_binary_material_is_withheld[weights.safetensors]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_added_license_has_explicit_provenance",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_materialize_rejects_unsafe_or_changed_archive[../../outside-False-False]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_materialize_rejects_unsafe_or_changed_archive[/absolute-False-False]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_materialize_rejects_unsafe_or_changed_archive[result.json-True-False]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_materialize_rejects_unsafe_or_changed_archive[result.json-False-True]",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_materialize_requires_new_output",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_downloader_verifies_existing_files_without_network",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_namespace_preserves_hash_and_random_material",
+      "status": "passed"
+    },
+    {
+      "class": "tests.test_archive_tools",
+      "name": "test_namespace_updates_paths_without_rewriting_other_values",
+      "status": "passed"
+    }
+  ]
+}

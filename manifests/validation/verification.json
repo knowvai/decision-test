@@ -1,0 +1,878 @@
+{
+  "passed": true,
+  "network_calls": 0,
+  "model_inference_calls": 0,
+  "publication_files": 5070,
+  "archives": 173,
+  "classification_records": 47584,
+  "classification": [
+    {
+      "run": "run-001",
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "records": 2974,
+      "correct": 2489,
+      "accuracy": 0.8369199731002017,
+      "macro_f1": 0.8292350284982503
+    },
+    {
+      "run": "run-002",
+      "model": "d3-edge",
+      "records": 2974,
+      "correct": 2460,
+      "accuracy": 0.8271687962340283,
+      "macro_f1": 0.8278276714754572
+    },
+    {
+      "run": "run-002",
+      "model": "d3-mini",
+      "records": 2974,
+      "correct": 2640,
+      "accuracy": 0.8876933422999328,
+      "macro_f1": 0.8804211154381064
+    },
+    {
+      "run": "run-002",
+      "model": "laya-multilingual",
+      "records": 2974,
+      "correct": 1821,
+      "accuracy": 0.6123066577000672,
+      "macro_f1": 0.608512971548143
+    },
+    {
+      "run": "run-002",
+      "model": "vela-2.0-0.3b",
+      "records": 2974,
+      "correct": 2317,
+      "accuracy": 0.7790854068594486,
+      "macro_f1": 0.778133442173892
+    },
+    {
+      "run": "run-002",
+      "model": "vela-2.0-0.8b",
+      "records": 2974,
+      "correct": 2429,
+      "accuracy": 0.8167451244115669,
+      "macro_f1": 0.8163524755039705
+    },
+    {
+      "run": "run-002",
+      "model": "vela-2.0-4b",
+      "records": 2974,
+      "correct": 2587,
+      "accuracy": 0.8698722259583053,
+      "macro_f1": 0.8698155928807622
+    },
+    {
+      "run": "run-003",
+      "model": "clef-flash",
+      "records": 2974,
+      "correct": 2727,
+      "accuracy": 0.9169468728984532,
+      "macro_f1": 0.9136389331208369
+    },
+    {
+      "run": "run-003",
+      "model": "d3-flash",
+      "records": 2974,
+      "correct": 2666,
+      "accuracy": 0.8964357767316745,
+      "macro_f1": 0.8934524964092889
+    },
+    {
+      "run": "run-003",
+      "model": "jeva-4b",
+      "records": 2974,
+      "correct": 2397,
+      "accuracy": 0.8059852051109617,
+      "macro_f1": 0.7973991528842894
+    },
+    {
+      "run": "run-003",
+      "model": "neohorse-jev-4b",
+      "records": 2974,
+      "correct": 2532,
+      "accuracy": 0.85137861466039,
+      "macro_f1": 0.8498020763624685
+    },
+    {
+      "run": "run-003",
+      "model": "vela-2.0-9b",
+      "records": 2974,
+      "correct": 2581,
+      "accuracy": 0.8678547410894418,
+      "macro_f1": 0.8722437742903779
+    },
+    {
+      "run": "run-006",
+      "model": "jev-27b",
+      "records": 2974,
+      "correct": 2550,
+      "accuracy": 0.8574310692669805,
+      "macro_f1": 0.8521451175368685
+    },
+    {
+      "run": "run-006",
+      "model": "pplx-decider-v1.1-27b",
+      "records": 2974,
+      "correct": 2733,
+      "accuracy": 0.9189643577673168,
+      "macro_f1": 0.9143264207801838
+    },
+    {
+      "run": "run-007",
+      "model": "qwen3.8-27b",
+      "records": 2974,
+      "correct": 2618,
+      "accuracy": 0.8802958977807667,
+      "macro_f1": 0.8704476389544424
+    },
+    {
+      "run": "run-008",
+      "model": "qwen3.8-27b-thinking",
+      "records": 2974,
+      "correct": 2606,
+      "accuracy": 0.8762609280430397,
+      "macro_f1": 0.8687926371535287
+    }
+  ],
+  "evidence_requests": 195580,
+  "evidence_chains": 14952,
+  "evidence_request_phases": {
+    "engineering": 8652,
+    "validation": 15148,
+    "formal": 145740,
+    "no_evidence": 26040
+  },
+  "evidence_conditions": [
+    {
+      "model": "clef-flash",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 643,
+        "fp": 685,
+        "fn": 281,
+        "tn": 1445
+      },
+      "f1": 0.4594745460042843
+    },
+    {
+      "model": "clef-flash",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 556,
+        "fp": 557,
+        "fn": 368,
+        "tn": 1573
+      },
+      "f1": 0.45094058242028234
+    },
+    {
+      "model": "clef-flash",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 578,
+        "fp": 605,
+        "fn": 346,
+        "tn": 1525
+      },
+      "f1": 0.425203899502145
+    },
+    {
+      "model": "clef-flash",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 496,
+        "fp": 487,
+        "fn": 428,
+        "tn": 1643
+      },
+      "f1": 0.41372988172940095
+    },
+    {
+      "model": "d3-edge",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 502,
+        "fp": 566,
+        "fn": 422,
+        "tn": 1564
+      },
+      "f1": 0.3980614196549935
+    },
+    {
+      "model": "d3-edge",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 432,
+        "fp": 470,
+        "fn": 492,
+        "tn": 1660
+      },
+      "f1": 0.3882838411052499
+    },
+    {
+      "model": "d3-edge",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 480,
+        "fp": 532,
+        "fn": 444,
+        "tn": 1598
+      },
+      "f1": 0.3832078825628018
+    },
+    {
+      "model": "d3-edge",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 410,
+        "fp": 438,
+        "fn": 514,
+        "tn": 1692
+      },
+      "f1": 0.37237719328214264
+    },
+    {
+      "model": "d3-flash",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 679,
+        "fp": 736,
+        "fn": 245,
+        "tn": 1394
+      },
+      "f1": 0.49171251321664683
+    },
+    {
+      "model": "d3-flash",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 604,
+        "fp": 635,
+        "fn": 320,
+        "tn": 1495
+      },
+      "f1": 0.4845300273628869
+    },
+    {
+      "model": "d3-flash",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 668,
+        "fp": 716,
+        "fn": 256,
+        "tn": 1414
+      },
+      "f1": 0.49081292692309114
+    },
+    {
+      "model": "d3-flash",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 595,
+        "fp": 623,
+        "fn": 329,
+        "tn": 1507
+      },
+      "f1": 0.4828383503857204
+    },
+    {
+      "model": "d3-mini",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 700,
+        "fp": 775,
+        "fn": 224,
+        "tn": 1355
+      },
+      "f1": 0.5004310657961082
+    },
+    {
+      "model": "d3-mini",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 614,
+        "fp": 668,
+        "fn": 310,
+        "tn": 1462
+      },
+      "f1": 0.4892491854673163
+    },
+    {
+      "model": "d3-mini",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 696,
+        "fp": 776,
+        "fn": 228,
+        "tn": 1354
+      },
+      "f1": 0.4950819043306824
+    },
+    {
+      "model": "d3-mini",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 608,
+        "fp": 665,
+        "fn": 316,
+        "tn": 1465
+      },
+      "f1": 0.48375449894435996
+    },
+    {
+      "model": "jev-27b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 765,
+        "fp": 969,
+        "fn": 159,
+        "tn": 1161
+      },
+      "f1": 0.4981388547030371
+    },
+    {
+      "model": "jev-27b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 641,
+        "fp": 746,
+        "fn": 283,
+        "tn": 1384
+      },
+      "f1": 0.48855385420176733
+    },
+    {
+      "model": "jev-27b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 753,
+        "fp": 906,
+        "fn": 171,
+        "tn": 1224
+      },
+      "f1": 0.5013872107563941
+    },
+    {
+      "model": "jev-27b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 629,
+        "fp": 696,
+        "fn": 295,
+        "tn": 1434
+      },
+      "f1": 0.48893896425038036
+    },
+    {
+      "model": "jeva-4b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 309,
+        "fp": 172,
+        "fn": 615,
+        "tn": 1958
+      },
+      "f1": 0.26212278103132286
+    },
+    {
+      "model": "jeva-4b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 279,
+        "fp": 158,
+        "fn": 645,
+        "tn": 1972
+      },
+      "f1": 0.25239527523571664
+    },
+    {
+      "model": "jeva-4b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 318,
+        "fp": 201,
+        "fn": 606,
+        "tn": 1929
+      },
+      "f1": 0.2815486346456415
+    },
+    {
+      "model": "jeva-4b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 295,
+        "fp": 185,
+        "fn": 629,
+        "tn": 1945
+      },
+      "f1": 0.2749331667680286
+    },
+    {
+      "model": "laya-multilingual",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 420,
+        "fp": 466,
+        "fn": 504,
+        "tn": 1664
+      },
+      "f1": 0.3871639040772667
+    },
+    {
+      "model": "laya-multilingual",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 367,
+        "fp": 361,
+        "fn": 557,
+        "tn": 1769
+      },
+      "f1": 0.374871908654876
+    },
+    {
+      "model": "laya-multilingual",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 537,
+        "fp": 792,
+        "fn": 387,
+        "tn": 1338
+      },
+      "f1": 0.4292910724142767
+    },
+    {
+      "model": "laya-multilingual",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 471,
+        "fp": 604,
+        "fn": 453,
+        "tn": 1526
+      },
+      "f1": 0.4241990525501754
+    },
+    {
+      "model": "neohorse-jev-4b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 755,
+        "fp": 1018,
+        "fn": 169,
+        "tn": 1112
+      },
+      "f1": 0.4976273311380247
+    },
+    {
+      "model": "neohorse-jev-4b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 634,
+        "fp": 800,
+        "fn": 290,
+        "tn": 1330
+      },
+      "f1": 0.48611262667045196
+    },
+    {
+      "model": "neohorse-jev-4b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 742,
+        "fp": 1022,
+        "fn": 182,
+        "tn": 1108
+      },
+      "f1": 0.4906946714811228
+    },
+    {
+      "model": "neohorse-jev-4b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 627,
+        "fp": 808,
+        "fn": 297,
+        "tn": 1322
+      },
+      "f1": 0.48098670247255904
+    },
+    {
+      "model": "pplx-decider-v1.1-27b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 748,
+        "fp": 841,
+        "fn": 176,
+        "tn": 1289
+      },
+      "f1": 0.5139309264504915
+    },
+    {
+      "model": "pplx-decider-v1.1-27b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 633,
+        "fp": 676,
+        "fn": 291,
+        "tn": 1454
+      },
+      "f1": 0.5002468470905171
+    },
+    {
+      "model": "pplx-decider-v1.1-27b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 736,
+        "fp": 780,
+        "fn": 188,
+        "tn": 1350
+      },
+      "f1": 0.517676009643591
+    },
+    {
+      "model": "pplx-decider-v1.1-27b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 623,
+        "fp": 635,
+        "fn": 301,
+        "tn": 1495
+      },
+      "f1": 0.49967341853404035
+    },
+    {
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 892,
+        "fp": 1984,
+        "fn": 32,
+        "tn": 146
+      },
+      "f1": 0.45697452816084627
+    },
+    {
+      "model": "qwen3-30b-a3b-instruct-2507",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 705,
+        "fp": 1182,
+        "fn": 219,
+        "tn": 948
+      },
+      "f1": 0.48202519997352417
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 578,
+        "fp": 536,
+        "fn": 346,
+        "tn": 1594
+      },
+      "f1": 0.4299167450460703
+    },
+    {
+      "model": "qwen3.8-27b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 493,
+        "fp": 443,
+        "fn": 431,
+        "tn": 1687
+      },
+      "f1": 0.4141882667176192
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 830,
+        "fp": 1631,
+        "fn": 94,
+        "tn": 499
+      },
+      "f1": 0.46433469638598
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 637,
+        "fp": 960,
+        "fn": 287,
+        "tn": 1170
+      },
+      "f1": 0.4698873474822936
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 147,
+        "fp": 171,
+        "fn": 777,
+        "tn": 1959
+      },
+      "f1": 0.147082942683232
+    },
+    {
+      "model": "vela-2.0-0.3b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 118,
+        "fp": 117,
+        "fn": 806,
+        "tn": 2013
+      },
+      "f1": 0.1333347136222002
+    },
+    {
+      "model": "vela-2.0-0.8b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 856,
+        "fp": 1575,
+        "fn": 68,
+        "tn": 555
+      },
+      "f1": 0.48402422159624153
+    },
+    {
+      "model": "vela-2.0-0.8b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 690,
+        "fp": 1073,
+        "fn": 234,
+        "tn": 1057
+      },
+      "f1": 0.4874916524899183
+    },
+    {
+      "model": "vela-2.0-0.8b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 767,
+        "fp": 1233,
+        "fn": 157,
+        "tn": 897
+      },
+      "f1": 0.47391869189351216
+    },
+    {
+      "model": "vela-2.0-0.8b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 633,
+        "fp": 883,
+        "fn": 291,
+        "tn": 1247
+      },
+      "f1": 0.4755514838426492
+    },
+    {
+      "model": "vela-2.0-4b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 747,
+        "fp": 993,
+        "fn": 177,
+        "tn": 1137
+      },
+      "f1": 0.49737366548163403
+    },
+    {
+      "model": "vela-2.0-4b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 634,
+        "fp": 798,
+        "fn": 290,
+        "tn": 1332
+      },
+      "f1": 0.48812918253540655
+    },
+    {
+      "model": "vela-2.0-4b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 688,
+        "fp": 821,
+        "fn": 236,
+        "tn": 1309
+      },
+      "f1": 0.48444515722927306
+    },
+    {
+      "model": "vela-2.0-4b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 589,
+        "fp": 677,
+        "fn": 335,
+        "tn": 1453
+      },
+      "f1": 0.4720489946112708
+    },
+    {
+      "model": "vela-2.0-9b",
+      "condition": "choice.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 731,
+        "fp": 935,
+        "fn": 193,
+        "tn": 1195
+      },
+      "f1": 0.4969316721957741
+    },
+    {
+      "model": "vela-2.0-9b",
+      "condition": "choice.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 629,
+        "fp": 760,
+        "fn": 295,
+        "tn": 1370
+      },
+      "f1": 0.4889522756160239
+    },
+    {
+      "model": "vela-2.0-9b",
+      "condition": "noul.direct",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 680,
+        "fp": 796,
+        "fn": 244,
+        "tn": 1334
+      },
+      "f1": 0.4935334779152333
+    },
+    {
+      "model": "vela-2.0-9b",
+      "condition": "noul.top10",
+      "questions": 197,
+      "fragments": 3054,
+      "counts": {
+        "tp": 599,
+        "fp": 671,
+        "fn": 325,
+        "tn": 1459
+      },
+      "f1": 0.48633598347910034
+    }
+  ],
+  "global_serial_intervals_checked": 195580,
+  "scope": "archive integrity, primary record coverage and quality/wall point estimates; does not rerun bootstrap or host audit"
+}
