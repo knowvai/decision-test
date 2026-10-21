@@ -66,24 +66,24 @@ Agentic RAG 中，Agent 根据任务制定计划、调用工具，并依据已�
 
 **表 1：中文分类结果 · 16 个配置**
 
-| 分组 | 模型 / 配置 | Accuracy (%) | macro-F1 (%) | 平均延迟 (ms) | P99 (ms) |
-| --- | --- | ---: | ---: | ---: | ---: |
-| 小于 1B | D3-edge | 82.72 | 82.78 | 26.64 | 27.83 |
-| 小于 1B | Vela 2.0-0.8B | 81.67 | 81.64 | 84.03 | 87.28 |
-| 小于 1B | Vela 2.0-0.3B | 77.91 | 77.81 | 15.37 | 16.45 |
-| 小于 1B | Laya Multilingual | 61.23 | 60.85 | 29.31 | 31.19 |
-| 4B | D3-mini | 88.77 | 88.04 | 69.92 | 72.83 |
-| 4B | Vela 2.0-4B | 86.99 | 86.98 | 111.94 | 115.08 |
-| 4B | NeoHorse-Jev-4B | 85.14 | 84.98 | 596.67 | 626.26 |
-| 4B | Jeva-4B（串行参考） | 80.60 | 79.74 | 205.62 | 212.62 |
-| 9B | Clef-Flash | 91.69 | 91.36 | 71.84 | 76.05 |
-| 9B | D3-flash | 89.64 | 89.35 | 71.20 | 73.74 |
-| 9B | Vela 2.0-9B | 86.79 | 87.22 | 112.73 | 116.87 |
-| 27B | PPLX-Decider-v1.1-27B | 91.90 | 91.43 | 204.08 | 230.25 |
-| 27B | JEV-27B | 85.74 | 85.21 | 277.24 | 288.28 |
-| LLM 基线 | Qwen3-30B-A3B-Instruct-2507 | 83.69 | 82.92 | 145.37 | 155.55 |
-| LLM 基线 | Qwen3.8-27B 非思考 | 88.03 | 87.04 | 355.49 | 380.56 |
-| LLM 基线 | Qwen3.8-27B 思考 xhigh | 87.63 | 86.88 | 3124.02 | 12069.45 |
+<table><thead><tr><th align="center">分组</th><th align="left">模型 / 配置</th><th align="right">Accuracy (%)</th><th align="right">macro-F1 (%)</th><th align="right">平均延迟 (ms)</th><th align="right">P99 (ms)</th></tr>
+</thead><tbody><tr><th rowspan="4" scope="rowgroup" align="center">小于 1B</th><td align="left">D3-edge</td><td align="right">82.72</td><td align="right">82.78</td><td align="right">26.64</td><td align="right">27.83</td></tr>
+<tr><td align="left">Vela 2.0-0.8B</td><td align="right">81.67</td><td align="right">81.64</td><td align="right">84.03</td><td align="right">87.28</td></tr>
+<tr><td align="left">Vela 2.0-0.3B</td><td align="right">77.91</td><td align="right">77.81</td><td align="right">15.37</td><td align="right">16.45</td></tr>
+<tr><td align="left">Laya Multilingual</td><td align="right">61.23</td><td align="right">60.85</td><td align="right">29.31</td><td align="right">31.19</td></tr>
+</tbody><tbody><tr><th rowspan="4" scope="rowgroup" align="center">4B</th><td align="left">D3-mini</td><td align="right">88.77</td><td align="right">88.04</td><td align="right">69.92</td><td align="right">72.83</td></tr>
+<tr><td align="left">Vela 2.0-4B</td><td align="right">86.99</td><td align="right">86.98</td><td align="right">111.94</td><td align="right">115.08</td></tr>
+<tr><td align="left">NeoHorse-Jev-4B</td><td align="right">85.14</td><td align="right">84.98</td><td align="right">596.67</td><td align="right">626.26</td></tr>
+<tr><td align="left">Jeva-4B（串行参考）</td><td align="right">80.60</td><td align="right">79.74</td><td align="right">205.62</td><td align="right">212.62</td></tr>
+</tbody><tbody><tr><th rowspan="3" scope="rowgroup" align="center">9B</th><td align="left">Clef-Flash</td><td align="right">91.69</td><td align="right">91.36</td><td align="right">71.84</td><td align="right">76.05</td></tr>
+<tr><td align="left">D3-flash</td><td align="right">89.64</td><td align="right">89.35</td><td align="right">71.20</td><td align="right">73.74</td></tr>
+<tr><td align="left">Vela 2.0-9B</td><td align="right">86.79</td><td align="right">87.22</td><td align="right">112.73</td><td align="right">116.87</td></tr>
+</tbody><tbody><tr><th rowspan="2" scope="rowgroup" align="center">27B</th><td align="left">PPLX-Decider-v1.1-27B</td><td align="right">91.90</td><td align="right">91.43</td><td align="right">204.08</td><td align="right">230.25</td></tr>
+<tr><td align="left">JEV-27B</td><td align="right">85.74</td><td align="right">85.21</td><td align="right">277.24</td><td align="right">288.28</td></tr>
+</tbody><tbody><tr><th rowspan="3" scope="rowgroup" align="center">LLM 基线</th><td align="left">Qwen3-30B-A3B-Instruct-2507</td><td align="right">83.69</td><td align="right">82.92</td><td align="right">145.37</td><td align="right">155.55</td></tr>
+<tr><td align="left">Qwen3.8-27B 非思考</td><td align="right">88.03</td><td align="right">87.04</td><td align="right">355.49</td><td align="right">380.56</td></tr>
+<tr><td align="left">Qwen3.8-27B 思考 xhigh</td><td align="right">87.63</td><td align="right">86.88</td><td align="right">3124.02</td><td align="right">12069.45</td></tr>
+</tbody></table>
 
 Clef-Flash 在单张 A100 上取得 **91.69%** 的准确率，平均请求延迟为 **71.84 ms**。双卡部署的 PPLX-Decider 准确率为 91.90%，正确分类的输入比 Clef-Flash 多 6 条，平均延迟为 204.08 ms。在上述部署配置下，Clef-Flash 使用更少的 GPU 达到了接近的分类质量。
 
@@ -115,42 +115,46 @@ choice 直接采用接口选中的选项；noul 优先采用接口返回的是�
 
 前五项比例均为越高越好。分级保留率与过滤率按各等级的全部片段计算，不是保留结果中的构成比例；问题命中率按问题计算。表格保留全部 28 个模式，并按模型规模分组，不按某一项指标重新排名。这些是原生预测的分级统计，没有改变提示、判定规则或测试样本。
 
-**表 2：分级保留与过滤结果 · 28 个模式**
+表中同时列出平均延迟、P99 和每个问题平均耗时。前两项对应一次片段判断，后一项对应筛完该问题全部候选片段的实测总耗时，单位均为毫秒，包含通信、推理和结果检查，不含模型加载。质量与耗时应一起比较，不能用保留片段数的减少直接推算筛选环节的提速。
 
-| 分组 | 模型 / 模式 | L3 保留率 (%) | L2 保留率 (%) | L1 过滤率 (%) | L0 过滤率 (%) | 有 L3 问题 命中率 (%) | 每题保留 片段数 |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 小于 1B | D3-edge choice | 62.98 | 52.22 | 62.53 | 76.35 | 72.28 | 5.42 |
-| 小于 1B | D3-edge noul | 58.56 | 50.34 | 63.41 | 78.14 | 66.34 | 5.14 |
-| 小于 1B | Vela 2.0-0.3B choice | 86.74 | 90.58 | 14.19 | 25.91 | 92.08 | 12.49 |
-| 小于 1B | Vela 2.0-0.3B noul | 17.68 | 15.48 | 90.91 | 92.26 | 24.75 | 1.61 |
-| 小于 1B | Vela 2.0-0.8B choice | 96.69 | 91.66 | 9.31 | 30.55 | 98.02 | 12.34 |
-| 小于 1B | Vela 2.0-0.8B noul | 88.95 | 81.56 | 24.83 | 46.75 | 92.08 | 10.15 |
-| 小于 1B | Laya Multilingual choice | 55.80 | 42.93 | 65.85 | 81.42 | 67.33 | 4.50 |
-| 小于 1B | Laya Multilingual noul | 68.51 | 55.59 | 49.89 | 66.29 | 77.23 | 6.75 |
-| 4B | D3-mini choice | 87.29 | 72.95 | 47.45 | 67.96 | 85.15 | 7.49 |
-| 4B | D3-mini noul | 86.74 | 72.54 | 47.01 | 68.02 | 85.15 | 7.47 |
-| 4B | Vela 2.0-4B choice | 87.85 | 79.14 | 36.14 | 58.01 | 89.11 | 8.83 |
-| 4B | Vela 2.0-4B noul | 84.53 | 72.01 | 49.22 | 64.74 | 87.13 | 7.66 |
-| 4B | NeoHorse-Jev-4B choice | 91.16 | 79.41 | 39.69 | 55.57 | 91.09 | 9.00 |
-| 4B | NeoHorse-Jev-4B noul | 91.71 | 77.52 | 38.36 | 55.69 | 93.07 | 8.95 |
-| 4B | Jeva-4B choice | 40.33 | 31.76 | 86.47 | 93.39 | 46.53 | 2.44 |
-| 4B | Jeva-4B noul | 41.44 | 32.71 | 85.14 | 92.02 | 47.52 | 2.63 |
-| 9B | D3-flash choice | 85.08 | 70.66 | 49.67 | 69.68 | 84.16 | 7.18 |
-| 9B | D3-flash noul | 83.98 | 69.45 | 51.00 | 70.52 | 84.16 | 7.03 |
-| 9B | Clef-Flash choice | 83.98 | 66.08 | 52.77 | 71.89 | 81.19 | 6.74 |
-| 9B | Clef-Flash noul | 78.45 | 58.68 | 58.76 | 75.04 | 76.24 | 6.01 |
-| 9B | Vela 2.0-9B choice | 91.16 | 76.18 | 41.69 | 59.98 | 92.08 | 8.46 |
-| 9B | Vela 2.0-9B noul | 87.85 | 70.12 | 50.11 | 65.99 | 89.11 | 7.49 |
-| 27B | JEV-27B choice | 93.37 | 80.22 | 40.13 | 58.37 | 92.08 | 8.80 |
-| 27B | JEV-27B noul | 92.27 | 78.87 | 42.79 | 61.41 | 91.09 | 8.42 |
-| 27B | PPLX-Decider-v1.1-27B choice | 93.37 | 77.93 | 42.57 | 65.34 | 91.09 | 8.07 |
-| 27B | PPLX-Decider-v1.1-27B noul | 91.71 | 76.72 | 44.79 | 68.37 | 90.10 | 7.70 |
-| LLM 基线 | Qwen3-30B-A3B-Instruct-2507 非思考 / choice | 98.34 | 96.10 | 4.43 | 7.50 | 99.01 | 14.60 |
-| LLM 基线 | Qwen3.8-27B 非思考 / choice | 72.93 | 60.03 | 63.86 | 77.78 | 71.29 | 5.65 |
+**表 2：分级筛选与耗时 · 28 个模式**
+
+<table><thead><tr><th scope="col" align="center">分组</th><th scope="col" align="left">模型 / 模式</th><th scope="col" align="right">L3 保留率<br>(%)</th><th scope="col" align="right">L2 保留率<br>(%)</th><th scope="col" align="right">L1 过滤率<br>(%)</th><th scope="col" align="right">L0 过滤率<br>(%)</th><th scope="col" align="right">有 L3 问题<br>命中率 (%)</th><th scope="col" align="right">每题保留<br>片段数</th><th scope="col" align="right">平均延迟<br>(ms)</th><th scope="col" align="right">P99<br>(ms)</th><th scope="col" align="right">每个问题<br>平均耗时 (ms)</th></tr>
+</thead><tbody><tr><th scope="rowgroup" rowspan="8" align="center">小于 1B</th><td align="left">D3-edge<br>choice</td><td align="right">62.98</td><td align="right">52.22</td><td align="right">62.53</td><td align="right">76.35</td><td align="right">72.28</td><td align="right">5.42</td><td align="right">29.88</td><td align="right">54.46</td><td align="right">584.97</td></tr>
+<tr><td align="left">D3-edge<br>noul</td><td align="right">58.56</td><td align="right">50.34</td><td align="right">63.41</td><td align="right">78.14</td><td align="right">66.34</td><td align="right">5.14</td><td align="right">29.91</td><td align="right">57.44</td><td align="right">578.32</td></tr>
+<tr><td align="left">Vela 2.0-0.3B<br>choice</td><td align="right">86.74</td><td align="right">90.58</td><td align="right">14.19</td><td align="right">25.91</td><td align="right">92.08</td><td align="right">12.49</td><td align="right">22.68</td><td align="right">100.69</td><td align="right">454.74</td></tr>
+<tr><td align="left">Vela 2.0-0.3B<br>noul</td><td align="right">17.68</td><td align="right">15.48</td><td align="right">90.91</td><td align="right">92.26</td><td align="right">24.75</td><td align="right">1.61</td><td align="right">22.90</td><td align="right">101.99</td><td align="right">464.47</td></tr>
+<tr><td align="left">Vela 2.0-0.8B<br>choice</td><td align="right">96.69</td><td align="right">91.66</td><td align="right">9.31</td><td align="right">30.55</td><td align="right">98.02</td><td align="right">12.34</td><td align="right">85.45</td><td align="right">95.40</td><td align="right">1448.31</td></tr>
+<tr><td align="left">Vela 2.0-0.8B<br>noul</td><td align="right">88.95</td><td align="right">81.56</td><td align="right">24.83</td><td align="right">46.75</td><td align="right">92.08</td><td align="right">10.15</td><td align="right">85.50</td><td align="right">95.76</td><td align="right">1459.89</td></tr>
+<tr><td align="left">Laya Multilingual<br>choice</td><td align="right">55.80</td><td align="right">42.93</td><td align="right">65.85</td><td align="right">81.42</td><td align="right">67.33</td><td align="right">4.50</td><td align="right">28.02</td><td align="right">56.10</td><td align="right">557.98</td></tr>
+<tr><td align="left">Laya Multilingual<br>noul</td><td align="right">68.51</td><td align="right">55.59</td><td align="right">49.89</td><td align="right">66.29</td><td align="right">77.23</td><td align="right">6.75</td><td align="right">28.05</td><td align="right">57.01</td><td align="right">556.07</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="8" align="center">4B</th><td align="left">D3-mini<br>choice</td><td align="right">87.29</td><td align="right">72.95</td><td align="right">47.45</td><td align="right">67.96</td><td align="right">85.15</td><td align="right">7.49</td><td align="right">77.82</td><td align="right">243.82</td><td align="right">1339.72</td></tr>
+<tr><td align="left">D3-mini<br>noul</td><td align="right">86.74</td><td align="right">72.54</td><td align="right">47.01</td><td align="right">68.02</td><td align="right">85.15</td><td align="right">7.47</td><td align="right">77.83</td><td align="right">243.84</td><td align="right">1332.78</td></tr>
+<tr><td align="left">Vela 2.0-4B<br>choice</td><td align="right">87.85</td><td align="right">79.14</td><td align="right">36.14</td><td align="right">58.01</td><td align="right">89.11</td><td align="right">8.83</td><td align="right">117.37</td><td align="right">248.23</td><td align="right">1955.82</td></tr>
+<tr><td align="left">Vela 2.0-4B<br>noul</td><td align="right">84.53</td><td align="right">72.01</td><td align="right">49.22</td><td align="right">64.74</td><td align="right">87.13</td><td align="right">7.66</td><td align="right">117.48</td><td align="right">249.40</td><td align="right">1957.61</td></tr>
+<tr><td align="left">NeoHorse-Jev-4B<br>choice</td><td align="right">91.16</td><td align="right">79.41</td><td align="right">39.69</td><td align="right">55.57</td><td align="right">91.09</td><td align="right">9.00</td><td align="right">1066.52</td><td align="right">6624.51</td><td align="right">16683.04</td></tr>
+<tr><td align="left">NeoHorse-Jev-4B<br>noul</td><td align="right">91.71</td><td align="right">77.52</td><td align="right">38.36</td><td align="right">55.69</td><td align="right">93.07</td><td align="right">8.95</td><td align="right">1046.17</td><td align="right">6645.67</td><td align="right">16370.33</td></tr>
+<tr><td align="left">Jeva-4B<br>choice</td><td align="right">40.33</td><td align="right">31.76</td><td align="right">86.47</td><td align="right">93.39</td><td align="right">46.53</td><td align="right">2.44</td><td align="right">145.54</td><td align="right">294.01</td><td align="right">2403.99</td></tr>
+<tr><td align="left">Jeva-4B<br>noul</td><td align="right">41.44</td><td align="right">32.71</td><td align="right">85.14</td><td align="right">92.02</td><td align="right">47.52</td><td align="right">2.63</td><td align="right">145.84</td><td align="right">294.90</td><td align="right">2409.99</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="6" align="center">9B</th><td align="left">D3-flash<br>choice</td><td align="right">85.08</td><td align="right">70.66</td><td align="right">49.67</td><td align="right">69.68</td><td align="right">84.16</td><td align="right">7.18</td><td align="right">89.43</td><td align="right">377.26</td><td align="right">1536.60</td></tr>
+<tr><td align="left">D3-flash<br>noul</td><td align="right">83.98</td><td align="right">69.45</td><td align="right">51.00</td><td align="right">70.52</td><td align="right">84.16</td><td align="right">7.03</td><td align="right">89.21</td><td align="right">373.72</td><td align="right">1523.43</td></tr>
+<tr><td align="left">Clef-Flash<br>choice</td><td align="right">83.98</td><td align="right">66.08</td><td align="right">52.77</td><td align="right">71.89</td><td align="right">81.19</td><td align="right">6.74</td><td align="right">83.50</td><td align="right">304.81</td><td align="right">1423.45</td></tr>
+<tr><td align="left">Clef-Flash<br>noul</td><td align="right">78.45</td><td align="right">58.68</td><td align="right">58.76</td><td align="right">75.04</td><td align="right">76.24</td><td align="right">6.01</td><td align="right">83.74</td><td align="right">303.77</td><td align="right">1431.40</td></tr>
+<tr><td align="left">Vela 2.0-9B<br>choice</td><td align="right">91.16</td><td align="right">76.18</td><td align="right">41.69</td><td align="right">59.98</td><td align="right">92.08</td><td align="right">8.46</td><td align="right">124.76</td><td align="right">382.91</td><td align="right">2065.92</td></tr>
+<tr><td align="left">Vela 2.0-9B<br>noul</td><td align="right">87.85</td><td align="right">70.12</td><td align="right">50.11</td><td align="right">65.99</td><td align="right">89.11</td><td align="right">7.49</td><td align="right">124.98</td><td align="right">384.46</td><td align="right">2085.35</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="4" align="center">27B</th><td align="left">JEV-27B<br>choice</td><td align="right">93.37</td><td align="right">80.22</td><td align="right">40.13</td><td align="right">58.37</td><td align="right">92.08</td><td align="right">8.80</td><td align="right">395.69</td><td align="right">1801.48</td><td align="right">6283.99</td></tr>
+<tr><td align="left">JEV-27B<br>noul</td><td align="right">92.27</td><td align="right">78.87</td><td align="right">42.79</td><td align="right">61.41</td><td align="right">91.09</td><td align="right">8.42</td><td align="right">394.04</td><td align="right">1799.46</td><td align="right">6262.86</td></tr>
+<tr><td align="left">PPLX-Decider-v1.1-27B<br>choice</td><td align="right">93.37</td><td align="right">77.93</td><td align="right">42.57</td><td align="right">65.34</td><td align="right">91.09</td><td align="right">8.07</td><td align="right">329.76</td><td align="right">1684.17</td><td align="right">5269.62</td></tr>
+<tr><td align="left">PPLX-Decider-v1.1-27B<br>noul</td><td align="right">91.71</td><td align="right">76.72</td><td align="right">44.79</td><td align="right">68.37</td><td align="right">90.10</td><td align="right">7.70</td><td align="right">327.10</td><td align="right">1659.26</td><td align="right">5223.53</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="2" align="center">LLM 基线</th><td align="left">Qwen3-30B-A3B-Instruct-2507<br>非思考 / choice</td><td align="right">98.34</td><td align="right">96.10</td><td align="right">4.43</td><td align="right">7.50</td><td align="right">99.01</td><td align="right">14.60</td><td align="right">209.58</td><td align="right">594.72</td><td align="right">3388.97</td></tr>
+<tr><td align="left">Qwen3.8-27B<br>非思考 / choice</td><td align="right">72.93</td><td align="right">60.03</td><td align="right">63.86</td><td align="right">77.78</td><td align="right">71.29</td><td align="right">5.65</td><td align="right">646.47</td><td align="right">1962.09</td><td align="right">10311.25</td></tr>
+</tbody></table>
 
 **三款重点模型体现了不同的筛选取舍。** D3-mini、D3-flash、Clef-Flash 在 choice 模式下，L3 保留率分别为 **87.29%**、**85.08%**、**83.98%**，L2 保留率分别为 72.95%、70.66%、66.08%。合并 L0/L1 后，三者过滤了 63.62%、65.45%、67.84% 的标注负例。D3-mini 保留的答案信息更多，Clef-Flash 过滤更严格，D3-flash 位于两者之间；分类准确率不能直接代替筛选效果。
 
 在 101 个含 L3 的问题中，三者分别有 **86、85、82 个问题**在筛选后仍保留至少一条 L3；平均每题保留量从 15.50 条降至 **7.49、7.18、6.74 条**。这说明它们能够减少后续需要处理的片段数量，同时保住大部分直接答案片段。不过，命中一条 L3 不等于已覆盖问题的全部要点，也不等于最终回答正确。
+
+D3-mini、D3-flash、Clef-Flash 的 choice 模式平均单次延迟分别为 **77.82、89.43、83.50 ms**；每个问题的平均筛选耗时分别为 **1,339.72、1,536.60、1,423.45 ms**。这些是相同候选范围下的串行实测耗时，不代表并发吞吐量。
 
 **高保留率需要与过滤率一起看。** Qwen3-30B-A3B 保留了 98.34% 的 L3 和 96.10% 的 L2，但仅过滤 4.43% 的 L1、7.50% 的 L0，平均每题仍保留 14.60 条。相反，Jeva-4B 的 choice 模式过滤了 86.47% 的 L1、93.39% 的 L0，但 L3 保留率只有 40.33%。两者分别体现了偏向保留和偏向拒收的代价，不能只凭一列数值判断优劣。
 
@@ -174,36 +178,36 @@ choice 直接采用接口选中的选项；noul 优先采用接口返回的是�
 
 **表 3：L2/L3 合并指标与耗时 · 28 个模式**
 
-| 分组 | 模型 / 模式 | Precision (%) | Recall (%) | F1 (%) [95% 置信区间] | 平均延迟 (ms) | P99 (ms) | 每个问题 平均耗时 (ms) |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| 小于 1B | D3-edge choice | 40.12 | 50.78 | 39.81 [35.63, 43.99] | 29.88 | 54.46 | 584.97 |
-| 小于 1B | D3-edge noul | 39.75 | 47.78 | 38.32 [34.25, 42.72] | 29.91 | 57.44 | 578.32 |
-| 小于 1B | Vela 2.0-0.3B choice | 35.79 | 86.03 | 46.43 [43.00, 49.89] | 22.68 | 100.69 | 454.74 |
-| 小于 1B | Vela 2.0-0.3B noul | 23.61 | 13.26 | 14.71 [11.39, 18.05] | 22.90 | 101.99 | 464.47 |
-| 小于 1B | Vela 2.0-0.8B choice | 36.62 | 89.85 | 48.40 [45.01, 51.76] | 85.45 | 95.40 | 1448.31 |
-| 小于 1B | Vela 2.0-0.8B noul | 37.86 | 78.19 | 47.39 [43.68, 51.01] | 85.50 | 95.76 | 1459.89 |
-| 小于 1B | Laya Multilingual choice | 42.99 | 43.55 | 38.72 [34.61, 42.70] | 28.02 | 56.10 | 557.98 |
-| 小于 1B | Laya Multilingual noul | 40.72 | 59.08 | 42.93 [39.10, 46.47] | 28.05 | 57.01 | 556.07 |
-| 4B | D3-mini choice | 44.53 | 70.58 | 50.04 [45.95, 53.86] | 77.82 | 243.82 | 1339.72 |
-| 4B | D3-mini noul | 43.99 | 69.50 | 49.51 [45.36, 53.50] | 77.83 | 243.84 | 1332.78 |
-| 4B | Vela 2.0-4B choice | 41.21 | 76.81 | 49.74 [46.11, 53.48] | 117.37 | 248.23 | 1955.82 |
-| 4B | Vela 2.0-4B noul | 41.50 | 69.61 | 48.44 [44.46, 52.26] | 117.48 | 249.40 | 1957.61 |
-| 4B | NeoHorse-Jev-4B choice | 41.27 | 77.19 | 49.76 [46.10, 53.37] | 1066.52 | 6624.51 | 16683.04 |
-| 4B | NeoHorse-Jev-4B noul | 40.73 | 76.15 | 49.07 [45.51, 52.58] | 1046.17 | 6645.67 | 16370.33 |
-| 4B | Jeva-4B choice | 35.85 | 24.38 | 26.21 [21.82, 30.83] | 145.54 | 294.01 | 2403.99 |
-| 4B | Jeva-4B noul | 36.24 | 27.90 | 28.15 [23.39, 33.00] | 145.84 | 294.90 | 2409.99 |
-| 9B | D3-flash choice | 43.86 | 67.93 | 49.17 [45.11, 52.99] | 89.43 | 377.26 | 1536.60 |
-| 9B | D3-flash noul | 44.39 | 66.73 | 49.08 [44.94, 53.10] | 89.21 | 373.72 | 1523.43 |
-| 9B | Clef-Flash choice | 41.01 | 61.60 | 45.95 [41.64, 50.27] | 83.50 | 304.81 | 1423.45 |
-| 9B | Clef-Flash noul | 40.61 | 54.87 | 42.52 [37.71, 47.12] | 83.74 | 303.77 | 1431.40 |
-| 9B | Vela 2.0-9B choice | 41.65 | 75.45 | 49.69 [45.91, 53.26] | 124.76 | 382.91 | 2065.92 |
-| 9B | Vela 2.0-9B noul | 43.52 | 69.88 | 49.35 [45.36, 53.18] | 124.98 | 384.46 | 2085.35 |
-| 27B | JEV-27B choice | 41.60 | 77.05 | 49.81 [45.89, 53.63] | 395.69 | 1801.48 | 6283.99 |
-| 27B | JEV-27B noul | 42.07 | 75.51 | 50.14 [46.22, 53.93] | 394.04 | 1799.46 | 6262.86 |
-| 27B | PPLX-Decider-v1.1-27B choice | 44.41 | 75.42 | 51.39 [47.66, 54.85] | 329.76 | 1684.17 | 5269.62 |
-| 27B | PPLX-Decider-v1.1-27B noul | 45.78 | 73.80 | 51.77 [47.95, 55.35] | 327.10 | 1659.26 | 5223.53 |
-| LLM 基线 | Qwen3-30B-A3B-Instruct-2507 非思考 / choice | 33.39 | 95.42 | 45.70 [42.28, 49.08] | 209.58 | 594.72 | 3388.97 |
-| LLM 基线 | Qwen3.8-27B 非思考 / choice | 41.92 | 52.67 | 42.99 [38.42, 47.39] | 646.47 | 1962.09 | 10311.25 |
+<table><thead><tr><th scope="col" align="center">分组</th><th scope="col" align="left">模型 / 模式</th><th scope="col" align="right">Precision<br>(%)</th><th scope="col" align="right">Recall<br>(%)</th><th scope="col" align="right">F1 (%)<br><small>[95% 置信区间]</small></th><th scope="col" align="right">平均延迟<br>(ms)</th><th scope="col" align="right">P99<br>(ms)</th><th scope="col" align="right">每个问题<br>平均耗时 (ms)</th></tr>
+</thead><tbody><tr><th scope="rowgroup" rowspan="8" align="center">小于 1B</th><td align="left">D3-edge<br>choice</td><td align="right">40.12</td><td align="right">50.78</td><td align="right">39.81<br>[35.63, 43.99]</td><td align="right">29.88</td><td align="right">54.46</td><td align="right">584.97</td></tr>
+<tr><td align="left">D3-edge<br>noul</td><td align="right">39.75</td><td align="right">47.78</td><td align="right">38.32<br>[34.25, 42.72]</td><td align="right">29.91</td><td align="right">57.44</td><td align="right">578.32</td></tr>
+<tr><td align="left">Vela 2.0-0.3B<br>choice</td><td align="right">35.79</td><td align="right">86.03</td><td align="right">46.43<br>[43.00, 49.89]</td><td align="right">22.68</td><td align="right">100.69</td><td align="right">454.74</td></tr>
+<tr><td align="left">Vela 2.0-0.3B<br>noul</td><td align="right">23.61</td><td align="right">13.26</td><td align="right">14.71<br>[11.39, 18.05]</td><td align="right">22.90</td><td align="right">101.99</td><td align="right">464.47</td></tr>
+<tr><td align="left">Vela 2.0-0.8B<br>choice</td><td align="right">36.62</td><td align="right">89.85</td><td align="right">48.40<br>[45.01, 51.76]</td><td align="right">85.45</td><td align="right">95.40</td><td align="right">1448.31</td></tr>
+<tr><td align="left">Vela 2.0-0.8B<br>noul</td><td align="right">37.86</td><td align="right">78.19</td><td align="right">47.39<br>[43.68, 51.01]</td><td align="right">85.50</td><td align="right">95.76</td><td align="right">1459.89</td></tr>
+<tr><td align="left">Laya Multilingual<br>choice</td><td align="right">42.99</td><td align="right">43.55</td><td align="right">38.72<br>[34.61, 42.70]</td><td align="right">28.02</td><td align="right">56.10</td><td align="right">557.98</td></tr>
+<tr><td align="left">Laya Multilingual<br>noul</td><td align="right">40.72</td><td align="right">59.08</td><td align="right">42.93<br>[39.10, 46.47]</td><td align="right">28.05</td><td align="right">57.01</td><td align="right">556.07</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="8" align="center">4B</th><td align="left">D3-mini<br>choice</td><td align="right">44.53</td><td align="right">70.58</td><td align="right">50.04<br>[45.95, 53.86]</td><td align="right">77.82</td><td align="right">243.82</td><td align="right">1339.72</td></tr>
+<tr><td align="left">D3-mini<br>noul</td><td align="right">43.99</td><td align="right">69.50</td><td align="right">49.51<br>[45.36, 53.50]</td><td align="right">77.83</td><td align="right">243.84</td><td align="right">1332.78</td></tr>
+<tr><td align="left">Vela 2.0-4B<br>choice</td><td align="right">41.21</td><td align="right">76.81</td><td align="right">49.74<br>[46.11, 53.48]</td><td align="right">117.37</td><td align="right">248.23</td><td align="right">1955.82</td></tr>
+<tr><td align="left">Vela 2.0-4B<br>noul</td><td align="right">41.50</td><td align="right">69.61</td><td align="right">48.44<br>[44.46, 52.26]</td><td align="right">117.48</td><td align="right">249.40</td><td align="right">1957.61</td></tr>
+<tr><td align="left">NeoHorse-Jev-4B<br>choice</td><td align="right">41.27</td><td align="right">77.19</td><td align="right">49.76<br>[46.10, 53.37]</td><td align="right">1066.52</td><td align="right">6624.51</td><td align="right">16683.04</td></tr>
+<tr><td align="left">NeoHorse-Jev-4B<br>noul</td><td align="right">40.73</td><td align="right">76.15</td><td align="right">49.07<br>[45.51, 52.58]</td><td align="right">1046.17</td><td align="right">6645.67</td><td align="right">16370.33</td></tr>
+<tr><td align="left">Jeva-4B<br>choice</td><td align="right">35.85</td><td align="right">24.38</td><td align="right">26.21<br>[21.82, 30.83]</td><td align="right">145.54</td><td align="right">294.01</td><td align="right">2403.99</td></tr>
+<tr><td align="left">Jeva-4B<br>noul</td><td align="right">36.24</td><td align="right">27.90</td><td align="right">28.15<br>[23.39, 33.00]</td><td align="right">145.84</td><td align="right">294.90</td><td align="right">2409.99</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="6" align="center">9B</th><td align="left">D3-flash<br>choice</td><td align="right">43.86</td><td align="right">67.93</td><td align="right">49.17<br>[45.11, 52.99]</td><td align="right">89.43</td><td align="right">377.26</td><td align="right">1536.60</td></tr>
+<tr><td align="left">D3-flash<br>noul</td><td align="right">44.39</td><td align="right">66.73</td><td align="right">49.08<br>[44.94, 53.10]</td><td align="right">89.21</td><td align="right">373.72</td><td align="right">1523.43</td></tr>
+<tr><td align="left">Clef-Flash<br>choice</td><td align="right">41.01</td><td align="right">61.60</td><td align="right">45.95<br>[41.64, 50.27]</td><td align="right">83.50</td><td align="right">304.81</td><td align="right">1423.45</td></tr>
+<tr><td align="left">Clef-Flash<br>noul</td><td align="right">40.61</td><td align="right">54.87</td><td align="right">42.52<br>[37.71, 47.12]</td><td align="right">83.74</td><td align="right">303.77</td><td align="right">1431.40</td></tr>
+<tr><td align="left">Vela 2.0-9B<br>choice</td><td align="right">41.65</td><td align="right">75.45</td><td align="right">49.69<br>[45.91, 53.26]</td><td align="right">124.76</td><td align="right">382.91</td><td align="right">2065.92</td></tr>
+<tr><td align="left">Vela 2.0-9B<br>noul</td><td align="right">43.52</td><td align="right">69.88</td><td align="right">49.35<br>[45.36, 53.18]</td><td align="right">124.98</td><td align="right">384.46</td><td align="right">2085.35</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="4" align="center">27B</th><td align="left">JEV-27B<br>choice</td><td align="right">41.60</td><td align="right">77.05</td><td align="right">49.81<br>[45.89, 53.63]</td><td align="right">395.69</td><td align="right">1801.48</td><td align="right">6283.99</td></tr>
+<tr><td align="left">JEV-27B<br>noul</td><td align="right">42.07</td><td align="right">75.51</td><td align="right">50.14<br>[46.22, 53.93]</td><td align="right">394.04</td><td align="right">1799.46</td><td align="right">6262.86</td></tr>
+<tr><td align="left">PPLX-Decider-v1.1-27B<br>choice</td><td align="right">44.41</td><td align="right">75.42</td><td align="right">51.39<br>[47.66, 54.85]</td><td align="right">329.76</td><td align="right">1684.17</td><td align="right">5269.62</td></tr>
+<tr><td align="left">PPLX-Decider-v1.1-27B<br>noul</td><td align="right">45.78</td><td align="right">73.80</td><td align="right">51.77<br>[47.95, 55.35]</td><td align="right">327.10</td><td align="right">1659.26</td><td align="right">5223.53</td></tr>
+</tbody><tbody><tr><th scope="rowgroup" rowspan="2" align="center">LLM 基线</th><td align="left">Qwen3-30B-A3B-Instruct-2507<br>非思考 / choice</td><td align="right">33.39</td><td align="right">95.42</td><td align="right">45.70<br>[42.28, 49.08]</td><td align="right">209.58</td><td align="right">594.72</td><td align="right">3388.97</td></tr>
+<tr><td align="left">Qwen3.8-27B<br>非思考 / choice</td><td align="right">41.92</td><td align="right">52.67</td><td align="right">42.99<br>[38.42, 47.39]</td><td align="right">646.47</td><td align="right">1962.09</td><td align="right">10311.25</td></tr>
+</tbody></table>
 
 需要说明的是，这个 F1 并不等于最终问答的正确率。T2Ranking 把同一问题下的多个正例都计为正确，而实际回答一个问题通常只需要其中几条；反过来，也有问题确实依赖跨文档的多条互补信息。也就是说，标签衡量的是“片段是否满足信息需求”，而不是“它是否是回答所必需的那一条”。因此 F1 可以用来横向比较不同模型的筛选能力，但不能直接换算成端到端的问答质量。
 
