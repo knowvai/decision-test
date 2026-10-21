@@ -150,75 +150,18 @@ choice 直接采用接口选中的选项；noul 优先采用接口返回的是�
 <tr><td align="left">Qwen3.8-27B<br>非思考 / choice</td><td align="right">72.93</td><td align="right">60.03</td><td align="right">63.86</td><td align="right">77.78</td><td align="right">71.29</td><td align="right">5.65</td><td align="right">646.47</td><td align="right">1962.09</td><td align="right">10311.25</td></tr>
 </tbody></table>
 
-**三款重点模型体现了不同的筛选取舍。** D3-mini、D3-flash、Clef-Flash 在 choice 模式下，L3 保留率分别为 **87.29%**、**85.08%**、**83.98%**，L2 保留率分别为 72.95%、70.66%、66.08%。合并 L0/L1 后，三者过滤了 63.62%、65.45%、67.84% 的标注负例。D3-mini 保留的答案信息更多，Clef-Flash 过滤更严格，D3-flash 位于两者之间；分类准确率不能直接代替筛选效果。
+**综合答案保留、无效内容过滤与耗时，D3-mini 的 choice 模式是本次测试中更均衡的选择。** 它保留了 **87.29%** 的 L3 和 **72.95%** 的 L2，同时过滤了 **63.62%** 的 L0/L1；平均每题保留量从 15.50 条降至 **7.49 条**。101 个含 L3 的问题中，仍有 **86 个**至少保留一条 L3。平均单次延迟为 **77.82 ms**，每题筛选耗时为 **1,339.72 ms**，单卡 4B 配置已具备较好的筛选效果。
 
-在 101 个含 L3 的问题中，三者分别有 **86、85、82 个问题**在筛选后仍保留至少一条 L3；平均每题保留量从 15.50 条降至 **7.49、7.18、6.74 条**。这说明它们能够减少后续需要处理的片段数量，同时保住大部分直接答案片段。不过，命中一条 L3 不等于已覆盖问题的全部要点，也不等于最终回答正确。
+**Clef-Flash 更适合强调过滤效果的需求，D3-flash 则未显示出相对 D3-mini 的综合优势。** 在 choice 模式下，Clef-Flash 过滤了 **67.84%** 的 L0/L1，平均每题保留 **6.74 条**，但 L3 保留率降至 **83.98%**，每题耗时为 **1,423.45 ms**。D3-flash 的 L3 保留率为 **85.08%**，L0/L1 过滤率为 **65.45%**，每题耗时为 **1,536.60 ms**：过滤略强于 D3-mini，但答案保留率更低、耗时更长。因此，本次片段筛选结果不足以支持仅因模型规模更大而优先采用 D3-flash。
 
-D3-mini、D3-flash、Clef-Flash 的 choice 模式平均单次延迟分别为 **77.82、89.43、83.50 ms**；每个问题的平均筛选耗时分别为 **1,339.72、1,536.60、1,423.45 ms**。这些是相同候选范围下的串行实测耗时，不代表并发吞吐量。
+**PPLX-Decider 提供了更高的答案保留率，但需要更多资源和时间。** 其 choice 模式保留了 **93.37%** 的 L3、**77.93%** 的 L2，101 个含 L3 的问题中命中 **92 个**。代价是采用双卡 27B 配置，每题耗时 **5,269.62 ms**，约为 D3-mini 的 **3.9 倍**；L0/L1 过滤率为 **60.52%**，平均每题保留 **8.07 条**。它更适合将减少答案遗漏置于耗时和过滤率之前的取舍，而不是全面优于小模型。
 
-**高保留率需要与过滤率一起看。** Qwen3-30B-A3B 保留了 98.34% 的 L3 和 96.10% 的 L2，但仅过滤 4.43% 的 L1、7.50% 的 L0，平均每题仍保留 14.60 条。相反，Jeva-4B 的 choice 模式过滤了 86.47% 的 L1、93.39% 的 L0，但 L3 保留率只有 40.33%。两者分别体现了偏向保留和偏向拒收的代价，不能只凭一列数值判断优劣。
+**高保留率本身不足以说明筛选有效。** Qwen3-30B-A3B 保留了 98.34% 的 L3 和 96.10% 的 L2，但仅过滤 4.43% 的 L1、7.50% 的 L0，平均每题仍保留 14.60 条。相比之下，D3-mini 和 Clef-Flash 能在保留大部分直接答案片段的同时，明显减少无效候选。D3-mini 的 choice 与 noul 结果接近；Clef-Flash 改用 noul 后过滤更严格，L3 保留率却降至 78.45%，不能将接口切换直接视为效果提升。
 
-**choice 与 noul 也应按相同标准比较。** D3-mini 两种模式的结果接近；Clef-Flash 改用 noul 后，L1 过滤率从 52.77% 提高到 58.76%，L3 保留率则从 83.98% 降至 78.45%。接口变化可能改变保留与过滤的取舍，并非固定带来质量提升。
-
-分级结果表明，三款重点模型对 L3 的保留率高于 L2，对 L0 的过滤率高于 L1。区分“主题相关”与“确实提供答案信息”仍有改进空间。L2 可能包含部分答案，不宜为了减少片段数量而统一排除；后续优化应同时观察 L3、L2 的损失与 L0/L1 的过滤收益，而不是只追求更高召回率或更少保留量。
-
-<details>
-<summary>补充：精确率、召回率、F1 与请求耗时</summary>
-
-原测试的合并指标与耗时保留在表 3，数值和统计口径均未改变。它们衡量与 L2/L3 正例集合的一致程度，作为分级结果的补充，而非答案是否足够或最终问答质量的评分。
-
-- **Precision（精确率）**：保留的片段中，标注为有答案证据的比例。越高，表示保留结果中无证据片段的占比越低。
-- **Recall（召回率）**：所有标注为有答案证据的片段中，被模型保留下来的比例。越高，表示遗漏的证据越少。
-- **F1**：精确率与召回率的调和平均，用于综合衡量误收与漏选。只有两者都较高，F1 才会高；它不是“判断正确的片段占比”。
-- **95% 置信区间**：F1 后方括号中的范围，通过对测试问题进行重采样估计，反映有限样本带来的统计不确定性，不代表模型输出的置信度。表 2 的分级比例是点估计，不能借用此 F1 区间判断其差异是否显著。
-
-表中的 Precision、Recall 和 F1 均先按问题计算，再对 183 个含证据问题等权取平均，避免候选片段多的问题占据更大权重。因此，表中 F1 不能由表中的平均 Precision 和平均 Recall 直接算出。
-
-平均延迟与 P99 对应一次片段判断；每个问题平均耗时对应筛完该问题全部候选片段的平均总耗时。三项均以毫秒计，包含通信、推理和结果检查，不含模型加载。
-
-**表 3：L2/L3 合并指标与耗时 · 28 个模式**
-
-<table><thead><tr><th scope="col" align="center">分组</th><th scope="col" align="left">模型 / 模式</th><th scope="col" align="right">Precision<br>(%)</th><th scope="col" align="right">Recall<br>(%)</th><th scope="col" align="right">F1 (%)<br><small>[95% 置信区间]</small></th><th scope="col" align="right">平均延迟<br>(ms)</th><th scope="col" align="right">P99<br>(ms)</th><th scope="col" align="right">每个问题<br>平均耗时 (ms)</th></tr>
-</thead><tbody><tr><th scope="rowgroup" rowspan="8" align="center">小于 1B</th><td align="left">D3-edge<br>choice</td><td align="right">40.12</td><td align="right">50.78</td><td align="right">39.81<br>[35.63, 43.99]</td><td align="right">29.88</td><td align="right">54.46</td><td align="right">584.97</td></tr>
-<tr><td align="left">D3-edge<br>noul</td><td align="right">39.75</td><td align="right">47.78</td><td align="right">38.32<br>[34.25, 42.72]</td><td align="right">29.91</td><td align="right">57.44</td><td align="right">578.32</td></tr>
-<tr><td align="left">Vela 2.0-0.3B<br>choice</td><td align="right">35.79</td><td align="right">86.03</td><td align="right">46.43<br>[43.00, 49.89]</td><td align="right">22.68</td><td align="right">100.69</td><td align="right">454.74</td></tr>
-<tr><td align="left">Vela 2.0-0.3B<br>noul</td><td align="right">23.61</td><td align="right">13.26</td><td align="right">14.71<br>[11.39, 18.05]</td><td align="right">22.90</td><td align="right">101.99</td><td align="right">464.47</td></tr>
-<tr><td align="left">Vela 2.0-0.8B<br>choice</td><td align="right">36.62</td><td align="right">89.85</td><td align="right">48.40<br>[45.01, 51.76]</td><td align="right">85.45</td><td align="right">95.40</td><td align="right">1448.31</td></tr>
-<tr><td align="left">Vela 2.0-0.8B<br>noul</td><td align="right">37.86</td><td align="right">78.19</td><td align="right">47.39<br>[43.68, 51.01]</td><td align="right">85.50</td><td align="right">95.76</td><td align="right">1459.89</td></tr>
-<tr><td align="left">Laya Multilingual<br>choice</td><td align="right">42.99</td><td align="right">43.55</td><td align="right">38.72<br>[34.61, 42.70]</td><td align="right">28.02</td><td align="right">56.10</td><td align="right">557.98</td></tr>
-<tr><td align="left">Laya Multilingual<br>noul</td><td align="right">40.72</td><td align="right">59.08</td><td align="right">42.93<br>[39.10, 46.47]</td><td align="right">28.05</td><td align="right">57.01</td><td align="right">556.07</td></tr>
-</tbody><tbody><tr><th scope="rowgroup" rowspan="8" align="center">4B</th><td align="left">D3-mini<br>choice</td><td align="right">44.53</td><td align="right">70.58</td><td align="right">50.04<br>[45.95, 53.86]</td><td align="right">77.82</td><td align="right">243.82</td><td align="right">1339.72</td></tr>
-<tr><td align="left">D3-mini<br>noul</td><td align="right">43.99</td><td align="right">69.50</td><td align="right">49.51<br>[45.36, 53.50]</td><td align="right">77.83</td><td align="right">243.84</td><td align="right">1332.78</td></tr>
-<tr><td align="left">Vela 2.0-4B<br>choice</td><td align="right">41.21</td><td align="right">76.81</td><td align="right">49.74<br>[46.11, 53.48]</td><td align="right">117.37</td><td align="right">248.23</td><td align="right">1955.82</td></tr>
-<tr><td align="left">Vela 2.0-4B<br>noul</td><td align="right">41.50</td><td align="right">69.61</td><td align="right">48.44<br>[44.46, 52.26]</td><td align="right">117.48</td><td align="right">249.40</td><td align="right">1957.61</td></tr>
-<tr><td align="left">NeoHorse-Jev-4B<br>choice</td><td align="right">41.27</td><td align="right">77.19</td><td align="right">49.76<br>[46.10, 53.37]</td><td align="right">1066.52</td><td align="right">6624.51</td><td align="right">16683.04</td></tr>
-<tr><td align="left">NeoHorse-Jev-4B<br>noul</td><td align="right">40.73</td><td align="right">76.15</td><td align="right">49.07<br>[45.51, 52.58]</td><td align="right">1046.17</td><td align="right">6645.67</td><td align="right">16370.33</td></tr>
-<tr><td align="left">Jeva-4B<br>choice</td><td align="right">35.85</td><td align="right">24.38</td><td align="right">26.21<br>[21.82, 30.83]</td><td align="right">145.54</td><td align="right">294.01</td><td align="right">2403.99</td></tr>
-<tr><td align="left">Jeva-4B<br>noul</td><td align="right">36.24</td><td align="right">27.90</td><td align="right">28.15<br>[23.39, 33.00]</td><td align="right">145.84</td><td align="right">294.90</td><td align="right">2409.99</td></tr>
-</tbody><tbody><tr><th scope="rowgroup" rowspan="6" align="center">9B</th><td align="left">D3-flash<br>choice</td><td align="right">43.86</td><td align="right">67.93</td><td align="right">49.17<br>[45.11, 52.99]</td><td align="right">89.43</td><td align="right">377.26</td><td align="right">1536.60</td></tr>
-<tr><td align="left">D3-flash<br>noul</td><td align="right">44.39</td><td align="right">66.73</td><td align="right">49.08<br>[44.94, 53.10]</td><td align="right">89.21</td><td align="right">373.72</td><td align="right">1523.43</td></tr>
-<tr><td align="left">Clef-Flash<br>choice</td><td align="right">41.01</td><td align="right">61.60</td><td align="right">45.95<br>[41.64, 50.27]</td><td align="right">83.50</td><td align="right">304.81</td><td align="right">1423.45</td></tr>
-<tr><td align="left">Clef-Flash<br>noul</td><td align="right">40.61</td><td align="right">54.87</td><td align="right">42.52<br>[37.71, 47.12]</td><td align="right">83.74</td><td align="right">303.77</td><td align="right">1431.40</td></tr>
-<tr><td align="left">Vela 2.0-9B<br>choice</td><td align="right">41.65</td><td align="right">75.45</td><td align="right">49.69<br>[45.91, 53.26]</td><td align="right">124.76</td><td align="right">382.91</td><td align="right">2065.92</td></tr>
-<tr><td align="left">Vela 2.0-9B<br>noul</td><td align="right">43.52</td><td align="right">69.88</td><td align="right">49.35<br>[45.36, 53.18]</td><td align="right">124.98</td><td align="right">384.46</td><td align="right">2085.35</td></tr>
-</tbody><tbody><tr><th scope="rowgroup" rowspan="4" align="center">27B</th><td align="left">JEV-27B<br>choice</td><td align="right">41.60</td><td align="right">77.05</td><td align="right">49.81<br>[45.89, 53.63]</td><td align="right">395.69</td><td align="right">1801.48</td><td align="right">6283.99</td></tr>
-<tr><td align="left">JEV-27B<br>noul</td><td align="right">42.07</td><td align="right">75.51</td><td align="right">50.14<br>[46.22, 53.93]</td><td align="right">394.04</td><td align="right">1799.46</td><td align="right">6262.86</td></tr>
-<tr><td align="left">PPLX-Decider-v1.1-27B<br>choice</td><td align="right">44.41</td><td align="right">75.42</td><td align="right">51.39<br>[47.66, 54.85]</td><td align="right">329.76</td><td align="right">1684.17</td><td align="right">5269.62</td></tr>
-<tr><td align="left">PPLX-Decider-v1.1-27B<br>noul</td><td align="right">45.78</td><td align="right">73.80</td><td align="right">51.77<br>[47.95, 55.35]</td><td align="right">327.10</td><td align="right">1659.26</td><td align="right">5223.53</td></tr>
-</tbody><tbody><tr><th scope="rowgroup" rowspan="2" align="center">LLM 基线</th><td align="left">Qwen3-30B-A3B-Instruct-2507<br>非思考 / choice</td><td align="right">33.39</td><td align="right">95.42</td><td align="right">45.70<br>[42.28, 49.08]</td><td align="right">209.58</td><td align="right">594.72</td><td align="right">3388.97</td></tr>
-<tr><td align="left">Qwen3.8-27B<br>非思考 / choice</td><td align="right">41.92</td><td align="right">52.67</td><td align="right">42.99<br>[38.42, 47.39]</td><td align="right">646.47</td><td align="right">1962.09</td><td align="right">10311.25</td></tr>
-</tbody></table>
-
-需要说明的是，这个 F1 并不等于最终问答的正确率。T2Ranking 把同一问题下的多个正例都计为正确，而实际回答一个问题通常只需要其中几条；反过来，也有问题确实依赖跨文档的多条互补信息。也就是说，标签衡量的是“片段是否满足信息需求”，而不是“它是否是回答所必需的那一条”。因此 F1 可以用来横向比较不同模型的筛选能力，但不能直接换算成端到端的问答质量。
-
-</details>
+两项测试的侧重点因此有所不同：**分类任务中，Clef-Flash 的准确率与延迟表现更突出；片段筛选中，D3-mini choice 更值得优先考虑。** 上述判断基于本次原生配置的实测结果。片段保留与问题命中衡量的是筛选效果，不等于最终回答正确率；这里的串行耗时也不代表并发吞吐量。
 
 ## 测试说明
 
 两项测试均使用 A100-PCIE-40GB。27B 模型及 LLM 基线采用双卡 TP=2，其余使用单卡，并采用各自对应的部署引擎。正式请求逐条执行，不重试、不截断输入。分类延迟不含模型加载与预热；片段筛选未针对模型调优提示词或校准阈值。
-
-片段正式集原有 200 个问题、3,105 个片段。为保证完整输入下的可比性，统一采用共同覆盖的 197 个问题、3,054 个片段，另外 3 个问题单独记录覆盖情况。T2Ranking 标签衡量信息需求满足程度，不承担事实核验。本次测试对象为分类与筛选组件，架构示意不代表端到端问答测试结果。模型之间的小幅分差不应直接解释为稳定的质量优势。
-
-原始汇总：[中文分类](../../research/2026-10-16-decision-classification-summary.html) · [片段筛选](../../research/2026-10-19-answer-evidence-summary.html)。
 
 Jev 背景与接口说明参考 TypeSafe 的 [System One 文档](https://docs.typesafe.ai/concepts/system-one) 和 [RAG 片段分类示例](https://docs.typesafe.ai/cookbooks/classifying_rag_passages)。文中“开源”沿用社区对公开代码或权重模型的常见称呼，具体使用条件以各模型许可证为准。
