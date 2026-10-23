@@ -1,4 +1,4 @@
-# Agentic RAG 中的决策模型实测
+# 决策模型在 Agentic RAG 中的应用实测
 
 ![开源 Decision 模型实测](assets/00-cover.png)
 
