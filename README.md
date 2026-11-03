@@ -1,18 +1,19 @@
 # Decision 模型测试材料
 
-整理 2026-10-15 至 2026-10-19 的中文分类、答案证据片段筛选，以及相关的部署验收、并发和参数对照实验。
-这里保存的是已有测试材料，没有为本次整理重新调用模型或修改得分。
+汇集中文分类、答案证据片段筛选、自建 Agentic RAG 端到端对照，以及相关的部署验收、并发和参数对照实验。
+这里保存的是已有测试记录与整理结果，端到端数据单独核算，不与前两项任务得分混合。
 
 ## 文章
 
-[开源 Decision 模型实测](docs/articles/2026-10-20-decision-agentic-rag/README.md)：结合两项测试讨论 Decision 模型在 Agentic RAG 中的路由选择与片段筛选，包含完整结果表、指标说明和流程动图。
+[决策模型在 Agentic RAG 中的应用实测](docs/articles/2026-10-20-decision-agentic-rag/README.md)：从分类、片段筛选到完整问答，比较决策模型的判断质量、调用耗时与端到端收益。
 
-## 两个主场景
+## 测试场景
 
 | 场景 | 数据与规模 | 查看结果 |
 | --- | --- | --- |
 | 中文分类 | MASSIVE v1.1 中文测试集，2,974 条、18 类；15 款模型、16 个配置，共 47,584 条正式记录 | [HTML 汇总](docs/research/2026-10-16-decision-classification-summary.html) · [Markdown 结果](docs/research/2026-10-16-decision-classification-final-results.md) |
 | 答案证据片段筛选 | T2Ranking 原始四级标签，L2/L3 为正例；共同测试 197 个问题、3,054 个片段；15 款模型、28 个直接筛选模式 | [HTML 汇总](docs/research/2026-10-19-answer-evidence-summary.html) · [完整结果](docs/research/2026-10-19-answer-evidence-results.md) |
+| Agentic RAG 端到端 | 内网与阿里云两套主 LLM，各比较原流程与接入 D3；240 次正式请求，每种配置 60 次 | [文章](docs/articles/2026-10-20-decision-agentic-rag/README.md#完整端到端问答测试) · [方法与逐次数据](docs/articles/2026-10-20-decision-agentic-rag/e2e/README.md) |
 
 片段筛选的 reranker Top10 对照单独放在[附录](docs/research/2026-10-19-answer-evidence-reranker-appendix.html)，不混入主 HTML 排名。
 包含工程、验证、正式和独立无证据诊断阶段，直接筛选与 Top10 合计 **195,580 次调用、14,952 条完整筛选记录**。
@@ -49,6 +50,12 @@ python3.12 -m venv .venv
 `verify.py` 校验归档和逐文件哈希，从原始记录重算两个主场景的质量点估计与耗时，核对记录数量及片段请求的串行时间区间。
 它不重新生成 bootstrap 置信区间，也不冒充原主机环境审计。`test_offline.py` 禁止网络连接，测试使用模拟接口，不调用模型。
 
+端到端数据使用独立的标准库脚本核算，不需要安装上述依赖：
+
+```sh
+python3 docs/articles/2026-10-20-decision-agentic-rag/e2e/verify.py
+```
+
 需要解包、重新生成报告或查看冻结源码时：
 
 ```sh
@@ -63,7 +70,7 @@ python3.12 -m venv .venv
 - 分类、旧相关性筛选、新答案证据筛选、开发集调优和并发测试分开存放，不能把它们合并成同一张排行榜。
 - 片段分数按原始公开标签计算；没有人工重新标注，也没有把 F1 当作分类准确率。
 - 原严格审计的失败记录和允许在线 reranker 排序波动后的修订审计都保留，没有覆盖旧结论。
-- 服务器地址和本地用户目录做了脱敏；密钥、环境文件、生成的鉴权配置、运行缓存和模型权重不入库。第三方数据原文通过固定版本下载，不在本仓库重新分发。
-- 11 个模型/重排器条目有明确的上游版本引用，其余 5 个的版本缺口在[部署说明](docs/DEPLOYMENT.md)中列出。不将“可以离线核对结果”写成“任意机器都能一键复现全部 GPU 实验”。
+- 服务器地址和本地用户目录做了脱敏；密钥、环境文件、生成的鉴权配置、运行缓存和模型权重不入库。MASSIVE、T2Ranking 数据集原文通过固定版本下载；端到端材料仅保留核对答案所需的返回法规片段，不包含完整知识库。
+- 分类与片段筛选涉及的 11 个模型/重排器条目有明确的上游版本引用，其余 5 个的版本缺口在[部署说明](docs/DEPLOYMENT.md)中列出。端到端服务的版本与部署边界另见其[附录](docs/articles/2026-10-20-decision-agentic-rag/e2e/README.md)。不将“可以离线核对结果”写成“任意机器都能一键复现全部 GPU 实验”。
 
 第三方模型、数据集和运行时分别遵循各自条款，见[来源与许可](THIRD_PARTY.md)。
